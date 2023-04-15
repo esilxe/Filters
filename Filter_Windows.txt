@@ -1,4 +1,4 @@
-! Title:        Block List for Windows
+! Title:        ESILXE's Block List for Windows
 ! Author:       esilxe
 ! Version:      3.4.15
 ! Last updated: 2023-04-15
