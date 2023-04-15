@@ -1,0 +1,953 @@
+! Title:        Block List for Windows
+! Author:       esilxe
+! Version:      3.4.15
+! Last updated: 2023-04-15
+! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
+
+
+! 1. Matching attributes by CSS selector with wild character  https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+! web.com##[href*="ad.web.com"]   # Matches all attributes that its value contains "ad.web.com"
+! 2. Matching attributes (class/href) with literal text or literal regular expression (must always be specific, ie. prefixed with the hostname)
+! web.com##div:matches-attr(class="/[\w]{7}/")
+
+! --------------- Common Contents Block Start ---------------
+##.contentBlock
+##.js-consent-banner
+###onetrust-consent-sdk
+
+! --------------- Common Params Remove Start ---------------
+*$removeparam=/^utm_/
+*$removeparam=/from/
+*$removeparam=/spm/
+
+! ------------------- User Defined Blocking -------------------
+! 02/08/2020 https://dictionary.cambridge.org
+dictionary.cambridge.org###cookiewarning
+dictionary.cambridge.org###loginPopup
+dictionary.cambridge.org##.i-amphtml-layout.amp-active.i-amphtml-layout-nodisplay.i-amphtml-element.tb.lp-10.tc-bd.hflx-c.bo
+
+! 2020 https://item.taobao.com
+item.taobao.com##.sufei-dialog-kissy.sufei-dialog
+
+! 2020-2022 https://detail.tmall.com
+detail.tmall.com##.sufei-dialog
+detail.tmall.com###J_TmallApkRateTab
+detail.tmall.com###ks-component475
+
+!  *.3dmgame.com
+3dmgame.com##.addapp
+3dmgame.com##.addvide300
+3dmgame.com##.clear_.listlab
+3dmgame.com##.Content_R
+
+||tj.shwswl.cn/*$image
+3dmgame.com##.quickdown3.a_list
+3dmgame.com##.quickdown2.tab2.tab
+3dmgame.com##.downl_list
+3dmgame.com##.title_btn.L_title
+3dmgame.com##.fl.Indexbox6-4
+3dmgame.com##.clear_.Indexbox1-item
+3dmgame.com##.dj_chinesemode.Content_L > [href="https://www.3dmgame.com/app.html"]
+
+! mail.rambler.ru 27/03/2020
+mail.rambler.ru##.AutoAppContainer.yqff
+mail.rambler.ru##.AutoAppContainer.mrwrf
+mail.rambler.ru##.AutoAppContainer.pfhph > div:nth-of-type(1)
+mail.rambler.ru##.AutoAppContainer.pfhph > div:nth-of-type(2)
+mail.rambler.ru##.AutoAppContainer.pfhph > div:nth-of-type(3)
+mail.rambler.ru##body > div:nth-of-type(6)
+
+! gamersky.com  2021-2022
+gamersky.com##.bgAdWrap
+gamersky.com##.close
+gamersky.com##.lxyygg.yyggtit.Midtit
+gamersky.com##.con > div:nth-of-type(4)
+gamersky.com##.__ns__pop2top.block.Mid2L_ctt > .__ns__pop2top
+gamersky.com##.__ns__pop2top.Mid_L > .__ns__pop2top
+gamersky.com##.__ns__pop2top.Mid_R > .__ns__pop2top
+gamersky.com##.gsBackgroundLeft
+gamersky.com##.gsBackgroundRight
+gamersky.com##.Mid0
+gamersky.com##.Mid7
+gamersky.com##.Mid_ad
+gamersky.com##.Mid2_R
+gamersky.com##.Mid5_R
+gamersky.com##.Mid1R_pic
+mail.rambler.ru##.nrbjkyc.AppContainer-adWrapper-1o.AppContainer-fullHeight-3i
+gamersky.com##.yyimg
+gamersky.com###ADcover
+gamersky.com###adscontainer_banner_new_top_index_1060_1
+gamersky.com###adscontainer_block_300_3
+gamersky.com###adscontainer_conmmon_qtz
+gamersky.com###adTips
+down.gamersky.com##.Content-right
+
+mail.rambler.ru##body > div:nth-of-type(6)
+
+gamersky.com###FuGai
+gamersky.com###gsincome_tips_all_tips
+gamersky.com###gsincome_tips_all_acg_tips > div:nth-of-type(1)
+
+gamersky.com##.header
+gamersky.com###new_top_allsite_acg_970_1 > div:nth-of-type(1)
+gamersky.com###new_top_allsite_970_1
+gamersky.com###new_top_allsite_970_2
+gamersky.com###new_top_allsite_970_3
+gamersky.com###new_top_allsite_970_4
+gamersky.com###new_top_allsite_970_5
+gamersky.com###new_top_allsite_970_6
+gamersky.com###new_page_allsite_620
+
+gamersky.com###top_pd_1060_1
+
+imgf.gamersky.com/img/szd/*
+image.gamersky.com/webimg13/web/h5/icon/*
+||ol.gamersky.com/news/202005/1291261.shtml$image
+||g.ieeod0.com/b/1/*$subdocument
+||g.ieeod0.com/b/1/*$media
+||ol.gamersky.com/news/202109/1424305.shtml$image
+||imgf.gamersky.com/img/tqbc2010/37_620x75_0915.mp4$media
+
+gamersky.com##.MidLpic
+gamersky.com##div.MidLtit:nth-of-type(6)
+gamersky.com##.gs_comm_content_bot_fun
+gamersky.com##.cmt-textarea-con
+gamersky.com##.cmt-textarea-bot
+gamersky.com##.action-login
+gamersky.com##div.MidLtit:nth-of-type(7)
+gamersky.com##.Mid_top > .Mid_top
+gamersky.com##.Relevant
+gamersky.com##.Comment > .lx0.MidLtit
+gamersky.com##.home.Top
+gamersky.com##.app.alik
+gamersky.com###ADback
+
+! 10/06/2020 https://myanimelist.net
+myanimelist.net##.root
+myanimelist.net##.fade-in.popup-background.welcome-back
+
+! https://*.ali213.net
+||*b*.ali213.net/*$image
+||*b*.ali213.net/*$image
+ali213.net##a.s-bg:nth-of-type(1)
+ali213.net##.ali-index-bg
+ali213.net###newsdl_r
+ali213.net###newsdl_l
+ali213.net##.s1-r-img
+ali213.net##.bg-shadow3.section7.section
+ali213.net##a.s-bg:nth-of-type(2)
+ali213.net##a.s-bg:nth-of-type(3)
+ali213.net##a.s-bg:nth-of-type(4)
+ali213.net##a.s-bg:nth-of-type(5)
+ali213.net##a.s-bg:nth-of-type(6)
+ali213.net##.to-other-game
+
+! 2020-2023 huya.com
+huya.com##.danmu-report-tips
+uya.com###J_roomGgTop
+huya.com###huya-ab
+huya.com###chatRoom > .room-gg-chat
+huya.com##.player-gift-wrap
+huya.com##.player-app-qrcode
+huya.com##.mod-index-list > div.live-box
+huya.com###player-login-guide-tip
+huya.com##.liveList-header-r
+huya.com##[class*="LoginBd--"]
+huya.com##[class*="tips-msg"]
+huya.com##.player-play-big
+
+! 05/07/2020 https://www.right.com.cn
+www.right.com.cn##h2
+www.right.com.cn##.a_mu
+www.right.com.cn###diy1
+
+! 2023 discord.com [Two methods with same results-]
+!discord.com##[class*="layerContainer-"]
+discord.com##div:matches-attr(class="/^layerContainer-/")
+
+! 2020-2023
+drive.google.com##.a-ee-zh-k
+translate.google.com##.notification-area
+accounts.google.com###animated-container
+chrome.google.com##elementtagname[aria-labelledby^=""]
+
+! 11/07/2020 https://www.pixivision.net
+pixivision.net##.within-area.with-popup.white._floated-bottom-bar
+pixivision.net##._sticky.sidebar-contents-container
+
+! 2020-2021 https://www.bing.com
+www.bing.com##.sa_as
+www.bing.com###b_notificationContainer_bop
+
+! 2020--2021 oxfordlearnersdictionaries.com
+oxfordlearnersdictionaries.com###cookieLaw
+
+! 2020-08-29 https://support.microsoft.com
+microsoft.com##body > .ng-isolate-scope.ng-scope
+microsoft.com##.context-uhf.uhfc-universal-context.x-hidden-vp-mobile-st
+
+! 2021-09-24 https://windows.com
+windows.com##.context-uhf.uhfc-universal-context.x-hidden-vp-mobile-st
+
+! 2020-09-08 https://lookup.icann.org
+lookup.icann.org##rwc-cookie-notification
+
+! 2020-2023 baidu.com, tieba.com
+baidu.com###web-multi-bottom
+baidu.com###dialog1
+baidu.com##.module-canvas
+baidu.com##.wp-guide-dialog-body
+baidu.com##.norecognition
+baidu.com##.module-device-mask
+baidu.com##.player-pause-code
+baidu.com##.hover_btn
+baidu.com##.before-content
+baidu.com##.float-banner
+baidu.com##.tieba-custom-pass-login
+baidu.com##.task-panel-entrance
+baidu.com##.fresh-share-exp-e
+baidu.com###con-ar > .xpath-log.result-op
+
+baike.baidu.com##.share-list
+baike.baidu.com##.wgt-baikeapp-promote-container
+
+pan.baidu.com##div.wp-s-header__right-item:nth-of-type(2)
+pan.baidu.com##span.wp-s-header__right-item
+pan.baidu.com##.is-vip-end.wp-s-header-user__drop
+pan.baidu.com##.popper__arrow
+pan.baidu.com##.wp-s-header-user__tooltip.wp-s-header-user__member-warn-container.u-tooltip-light.u-tooltip-popper
+pan.baidu.com##.is-vip-expire.wp-s-header-user__drop
+pan.baidu.com##.wp-s-aside-nav__main-bottom > a.wp-s-aside-nav__main-item.item.u-tooltip > .wp-s-aside-nav__main-item-wrap
+pan.baidu.com##.nd-operate-guidance
+pan.baidu.com##.nd-dialog-workspace--bg.nd-dialog-common-header.u-dialog__wrapper > .u-dialog__mini.u-dialog
+pan.baidu.com##.nd-dialog-workspace--bg.nd-dialog-common-header.u-dialog__wrapper
+pan.baidu.com##.v-modal
+pan.baidu.com##.wp-s-aside-nav__main-item.wp-s-aside-nav-bubble
+pan.baidu.com##.is-dot.u-badge__content
+
+
+tieba.baidu.com##.label_text
+tieba.baidu.com##.j_click_close.close_btn
+tieba.baidu.com###fixed_bar
+tieba.baidu.com###aside-ad
+tieba.baidu.com##div.thread_item_box.clearfix
+tieba.baidu.com##.fengchao-wrap-feed
+
+tieba.baidu.com###branding_ads
+tieba.baidu.com##.tbui_slideshow_container.plat_recom_carousel
+! 2023-03-05 https://tieba.baidu.com
+tieba.baidu.com##.notice-wrap-fixed.notice-wrap-top.notice_item.item
+tieba.baidu.com##.app_download_box
+tieba.baidu.com###spage_game_tab_wrapper
+http://tb2.bdstatic.com/tb/static-user/widget/my_tieba/images/*$image
+||tb2.bdstatic.com/tb/static-pb/widget/post_list/img/*$image
+tieba.baidu.com##[ad-dom-img="true"]
+
+zhidao.baidu.com##.task-list-button
+zhidao.baidu.com##.jump-goto-star
+
+
+! 2021-2023 https://www.bbc.com
+bbc.com###sign_in
+bbc.com###sign_in-bg
+
+! 2021-2022 https://www.88kan.com
+88kan.com###ad_rightBottom
+88kan.com##.mb.download
+
+! 2021-2023 bilibili.com
+||bilibili.com^$removeparam=zw
+||bilibili.com^$removeparam=/vd_source/
+||bilibili.com^$removeparam=/hotRank/
+||bilibili.com^$removeparam=/launch_id/
+||bilibili.com^$removeparam=/live_from/
+
+bilibili.com##.adblock-tips
+bilibili.com##.unlogin
+bilibili.com##.login-tip
+bilibili.com##.unlogin-popover
+bilibili.com##.unlogin-popover-avatar
+bilibili.com##.bilibili-player-video-popup-vote
+bilibili.com##.bpx-player-video-toast-row
+bilibili.com##.trial-version-wrap
+bilibili.com###AHP_Notice
+bilibili.com##.bili-login-card
+bilibili.com##.bpx-player-popup-vote
+bilibili.com##.bili-show.bili-score
+bilibili.com##.bili-show.bili-vote
+bilibili.com##.bili-show.bili-guide.bili-guide-all
+www.bilibili.com##.bili-mini-mask
+www.bilibili.com##.trial-feed-wrap
+www.bilibili.com##div.recommended-card:nth-of-type(7)
+www.bilibili.com##div.is-rcmd.bili-video-card:nth-of-type(2)
+www.bilibili.com##div.is-rcmd.bili-video-card:nth-of-type(14)
+www.bilibili.com##.video-card-ad-small.ad-report
+www.bilibili.com##div.block-bangumi.block-area > .gg-floor-module
+www.bilibili.com##.sanlian-box
+live.bilibili.com##.task-gather-entry
+live.bilibili.com##.w-100.over-hidden.p-relative.flip-view
+live.bilibili.com##.shop-popover
+! 关注
+www.bilibili.com##.bpx-player-top-wrap
+! 视频暂停后右下角显示的图标
+www.bilibili.com##.bpx-player-state-wrap
+! 推荐
+www.bilibili.com##.bili-show.bili-cmd-shrink
+! Card Ads
+bilibili.com##[href*="cm.bilibili.com"]
+www.bilibili.com##.lazy-img
+
+! 未登录时，试看30秒的提示
+bilibili.com##.bpx-player-toast-wrap
+
+
+! 2021-2023 https://www.facebook.com
+facebook.com###pagelet_growth_expanding_cta
+facebook.com###headerArea
+facebook.com##[data-nosnippet=""]
+
+! 2022-11-20 https://twitter.com
+twitter.com###credential_picker_container
+twitter.com##[data-testid="BottomBar"]
+
+! 2021-03-13 https://stackoverflow.com
+stackoverflow.com##.js-dismissable-hero
+stackoverflow.com##.js-consent-banner
+
+! 2021-2023 csdn.net
+csdn.net##.trips-bottom-left.trips
+csdn.net##.passport-login-mark
+csdn.net##.passport-login-container
+csdn.net##.trips
+csdn.net##csdn-toolbar-profile-nologin
+csdn.net##.csdn-toolbar-fl.toolbar-btn-vip.toolbar-btn
+csdn.net##.csdn-toolbar-plugin
+csdn.net##.leftPop
+csdn.net##.common-nps-box.aside-box
+csdn.net##.common-nps-box.recommend-nps-box
+csdn.net##.el-carousel__item
+csdn.net##.so-questionnaire
+csdn.net##.right-nps
+!kunpeng-sc.csdnimg.cn##.picture-ad
+csdn.net##[src*="kunpeng-sc.csdnimg.cn"]
+
+! 2021-2023 share.dmhy.org
+share.dmhy.org###\31 280_adv
+share.dmhy.org###\31 280_ad
+share.dmhy.org###pkpk
+
+! 2021-2023 youtube.com
+||youtube.com^$removeparam=/embeds_euri/
+||youtube.com^$removeparam=/source_ve_path/
+youtube-nocookie.com##.ytp-scroll-min.ytp-pause-overlay
+youtube.com##.opened
+youtube.com###lightbox
+youtube.com##.ytd-popup-container.style-scope > .yt-tooltip-renderer.style-scope
+youtube.com##.ytd-popup-container.style-scope > .yt-bubble-hint-renderer.style-scope
+youtube.com##tp-yt-paper-dialog.ytd-popup-container.style-scope
+youtube.com##ytd-feed-nudge-renderer.ytd-item-section-renderer.style-scope
+
+
+! 2021-03-23 https://www.58pic.com
+58pic.com##.is-has.login-model.qt-model-t
+58pic.com##div.normalCard.search_poster
+
+! 2021-03-26 https://so.ooopic.com
+so.ooopic.com##.wt-middel-model-div
+so.ooopic.com##.wt-aside-fixed
+weili.ooopic.com###public-mask-login
+
+! 2021-03-26 https://www.zhisheji.com
+www.zhisheji.com##.popup-login-gift
+
+! 2021-03-26 https://www.51miz.com
+www.51miz.com##.center.none
+www.51miz.com###popupShade
+
+! 2021-03-26 https://uiiiuiii.com
+uiiiuiii.com##.modal-show.modal-part-middle.modal-part.modal-login-panel
+uiiiuiii.com##.modal-show.modal-mark.mark
+
+! 2021-03-28 https://ke.qq.com
+ke.qq.com##.folded
+ke.qq.com###zoom-warn
+sj.qq.com##[class*="GameDetail_brand"]
+sj.qq.com##[class*="GameDetail_fixedDownload"]
+sj.qq.com##[class*="Header_downloadQRCodeContainer"]
+sj.qq.com##[class*="BannerV2_bannerV2"]
+sj.qq.com##[class*="SimpleSwipeGameCard_WECHAT_GAME_CARD"]
+sj.qq.com##[class*="PopularDownload_popularDownload"]
+sj.qq.com##[class*="Advertisement_advertisement"]
+
+! 2021-03-28 https://www.alamy.com
+www.alamy.com###automationCookieBannerText
+
+! 2021-03-29 https://selicefec.wordpress.com
+wordpress.com##.widget_eu_cookie_law_widget.widget
+wordpress.com##.is-compact.gdpr-banner.card
+
+! 2021-04-02 https://www.vg247.com
+vg247.com##.vertical-align-content
+vg247.com##.ot-fade-in.onetrust-pc-dark-filter
+
+! 2021-04-04 https://zhihu.com
+!zhihu.com##div:last-of-type[class*="css-"]
+
+! 2021-04-07 https://www.gameinformer.com
+www.gameinformer.com##.sliding-popup-bottom
+
+! 2021-2023 polygon.com
+polygon.com##.adblock-allowlist-messaging__article-wrapper
+polygon.com##.adblock-allowlist-messaging__iframe
+polygon.com##.adblock-allowlist-messaging__wrapper
+polygon.com##.desktop
+polygon.com##.image__background
+polygon.com##.c-toaster-stuck.c-toaster-active.c-toaster
+
+
+! 2021-04-08 https://www.huijiwiki.com
+www.huijiwiki.com###fndAdContainer
+
+! 2021-04-11 https://www.if.ci
+www.if.ci##.navigation-next.navigation
+
+! 2021-04-13 https://cdn.concert.io
+cdn.concert.io##.desktop
+
+! hoyoverse.com hoyolab.om mihoyo.com,  miyoushe.com mihoyogift.com
+
+||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_)/
+||hoyolab.com^$removeparam=/game_biz|lang/
+
+||hoyoverse.com^$removeparam=/^(hyl_|mhy_|bbs_)/
+||hoyoverse.com^$removeparam=/^(game_biz|lang)/
+
+||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_)/
+||youtube.com^$removeparam=/game_biz|lang/
+
+||miyoushe.com^$removeparam=/^(mys_|mhy_|bbs_)/
+||mihoyogift.com^$removeparam=/^(mys_|mhy_|bbs_)/
+||mihoyo.com^$removeparam=/^(mys_|mhy_|bbs_)/
+
+mihoyo.com##.mihoyo-cookie-tips--bottom.mihoyo-cookie-tips
+hoyoverse.com##.mihoyo-cookie-tips--bottom.mihoyo-cookie-tips
+hoyolab.com##.mihoyo-cookie-tips--pc.mihoyo-cookie-tips--bottom.mihoyo-cookie-tips
+hoyolab.com##.mhy-page-header-block.mhy-page-header-md.mhy-article-page-header.mhy-page-header
+
+! 2021-05-25 https://www.youdao.com
+www.youdao.com##.win-download.dialog-guide-download
+
+! 2021-07-04 https://share.acgnx.se
+share.acgnx.se##[href^="*://* taobao.com/*"]
+||share.acgnx.se/images/*$image
+
+! 2021-07-22 http://www.zongheng.com
+www.zongheng.com##.adClickCss
+
+! 2021-07-22 https://read.qidian.com
+qidian.com##.wrap > .hidden
+! 2022-05-28 https://book.qidian.com
+qidian.com##.top-bg-op-box
+qidian.com##.top-bg-box
+
+! 2021-08-18 https://www.pixivision.net
+www.pixivision.net##._gdpr-notify-header
+
+! 2021-08-19 https://www.xinxindm.com
+www.xinxindm.com##.widget-weixin
+
+! 2021-08-30 http://www.kanshujun.cc
+www.kanshujun.cc###HMcoupletDivright
+www.kanshujun.cc###HMimageleft
+www.kanshujun.cc###HMRichBox
+www.kanshujun.cc###HMcoupletIconleft
+
+! 2021-09-05 https://bbs.nga.cn
+bbs.nga.cn###m_posts_c > span
+bbs.nga.cn##.null
+tagtic.cn
+jg.yaowanla.com
+
+! 2021-2023 juejin.cn
+juejin.cn##.recommend-box
+juejin.cn##.banner
+
+! 2021-11-26 https://www.ted.com
+www.ted.com###recommends-banner
+
+! 2021-12-05 https://dnf.52pk.com
+||t.xuchuang.com/a/c$subdocument
+
+
+! 2022-01-11 https://www.theguardian.com
+||sourcepoint.theguardian.com/index.html$subdocument
+
+! 2022-01-17 https://pro.imdb.com
+pro.imdb.com##.logged-out-modal-v2.a-section
+pro.imdb.com##.ab_widget
+
+! 2022-01-18 https://dict.youdao.com
+dict.youdao.com##.win-download.dialog-guide-download
+
+! 2022-01-21 https://spiralabyss.org
+spiralabyss.org##.modal-content
+
+! 2022-2023 https://www.gushiwen.cn
+gushiwen.cn##.main3 > .right
+gushiwen.cn###threeWeixin2
+gushiwen.cn##div.abcd > div
+
+! 2022-01-25 https://wx1.ha.189.cn
+||wx1.ha.189.cn/xxptWap/static/img/textBg.09050a0.png$image
+wx1.ha.189.cn##.section3.section1.section
+wx1.ha.189.cn##.confirm_btn
+
+! 2022-01-27 https://www.youdao.com
+youdao.com###doc2
+youdao.com###margin3
+youdao.com###footer
+youdao.com##.ads
+
+! 2022-01-27 https://www.iciba.com
+iciba.com##.MobileDownload_download___VlWK
+iciba.com##.PcDownload_pc__p_4rP
+iciba.com##.Contact_footer___Mjbg
+iciba.com##.Func_func__wzVTn
+iciba.com##.record.jsx-2211446375
+
+
+! 2022-02-07 https://www.deepmind.com
+www.deepmind.com###cookieBar
+
+! 2022-03-06 https://hot.cnbeta.com
+cnbeta.com###artibody > .article-global
+cnbeta.com##.cnbeta-article-body > .tac
+cnbeta.com###upcoming_box
+cnbeta.com##[id="[a-Z]{10}"]
+! 2022-09-08 https://www.cnbeta.com
+cnbeta.com##.s-carousel.cb-single-carousel.swiper-wrapper
+cnbeta.com##.cnbeta-home-side
+cnbeta.com##div.swiper-slide:nth-of-type(1)
+cnbeta.com##div.cooperation.item:nth-of-type(8)
+cnbeta.com###J_all_item_1311159 > dl
+cnbeta.com##.fr
+
+! 2022-03-12 https://finance.sina.com.cn
+sina.com.cn##.sina-extension-content
+sina.com.cn##.sina-extension-modal
+||sinaimg.cn/finance*$image
+finance.sina.com.cn##.clearfix.top-banner
+finance.sina.com.cn##.zc-app
+finance.sina.com.cn##.zc-app-btn.right-bar-btn
+finance.sina.com.cn##.btn-audio.right-bar-btn
+||i2.sinaimg.cn/dy/deco/2013/0912/close.png$image
+finance.sina.com.cn##.tab-related-fixed.tab-related
+finance.sina.com.cn###tab_related_btn
+finance.sina.com.cn##.clearfix.blk-zcapp
+
+! 2022-03.14-3.17 http://sdhtby.com
+sdhtby.com##.classification_works.works_recommend
+sdhtby.com##.subtitle
+sdhtby.com##.sidebar-btn
+sdhtby.com##.sidebar-main.read-section
+sdhtby.com##.clearfix.footer
+
+! 2022-03-14 https://www.dmzj.com
+www.dmzj.com###show_tip_bg
+www.dmzj.com##.float_code
+www.dmzj.com##.ad_bottom_code
+
+! 2022-03-14 https://manhua.dmzj.com
+manhua.dmzj.com##.out.login_tip
+manhua.dmzj.com###show_tip_bg
+
+! 2022-03-14 https://www.mangabz.com
+mangabz.com###HMcoupletDivright
+mangabz.com###HMcoupletDivleft
+mangabz.com##.top-bar
+||*.mangabz.com/wxhfm.html$subdocument
+
+! 2022-03-18 https://www.landian.vip
+www.landiannews.com##section.module-radius
+! 2022-12-27 https://www.landiannews.com
+www.landiannews.com##section.module-radius.home-html-code:nth-of-type(3)
+
+! 2022-03-18 https://www.solidot.org
+solidot.org###ads
+
+! 2022-03-18 https://www.88hd.tv
+www.88hd.tv##.download
+
+! 2022-03-29 https://www.moe321.com
+||static-res-1251729847.file.myqcloud.com/moe321/main_bg.jpg$image
+
+! 2022 etymonline.com
+||cdn.etymonline.com/web/logo.png$image
+
+! 2022-02023 itee.com
+gitee.com##.pendan-widget
+gitee.com##.register-guide
+gitee.com#?[style*="flex !important;"]
+
+! 2022-04-07 https://manhua.fffdm.com
+manhua.fffdm.com###fix_top_dom
+
+! 2022-04-07 https://www.1kkk.com
+www.1kkk.com##.view-comment-sub
+||css99tel.cdndm5.com/v202111301550/blue/images/1kkk_read.png$image
+
+! 2022-04-07 http://manhua.ikukudm.com
+||manhua.ikukudm.com/*$image
+||manhua.ikukudm.com/*$image
+manhua.ikukudm.com###HMrichA
+manhua.ikukudm.com###HMRichBox
+
+! 2022-04-07 https://www.bd2020.co
+www.bd2020.co###HMimageleft
+www.bd2020.co###HMimageright
+
+! 2022-04-09 https://www.81zw.com
+www.81zw.com##.box_con > div > div > div
+www.81zw.com##.ywtop
+www.81zw.com##.box_con > div > div
+
+! 2022-04-11 https://www.ttkcloud.icu
+||iw233.cn/API/MirlKoi.php$image
+
+! 2022-04-18 https://m.zhangyue.com
+m.zhangyue.com##.show.pc.guide-into-app
+
+! 2022-04-19 https://www.tiemug.com
+tiemug.com###HMcoupletDivleft
+tiemug.com###HMcoupletDivright
+tiemug.com###HMRichBox
+
+! 2022-04-19 https://www.sxpdf.com
+sxpdf.com##.header-sub
+
+! 2022-04-19 https://www.tiemug.com
+www.tiemug.com##p:nth-of-type(2)
+www.tiemug.com###chapter-content > center
+
+! 2022-04-19 https://www.81book.com
+www.81book.com##.box_con > div > div > div
+www.81book.com###jubao
+
+! 2022-04-19 http://www.2cycd.com
+2cycd.com###HMRichBox
+
+! 2022-04-20 https://www.idejian.com
+www.idejian.com##.qr_code
+
+! 2022-04-26 http://www.linshuwu.com
+www.linshuwu.com###rtext > p
+
+! 2022-05-04 https://imiliy.cn
+imiliy.cn##._th_hidden._th_cover-all-show-times
+
+! 2022-05-14 https://www.52xbq.com
+52xbq.com###txt > a
+52xbq.com##div.baocuo_style
+
+! 2022-05-14 https://www.aixswx.com
+www.aixswx.com##dd:nth-of-type(5)
+www.aixswx.com##div#center_tip:nth-of-type(2)
+www.aixswx.com##div#center_tip:nth-of-type(4)
+www.aixswx.com##dd:nth-of-type(13)
+www.aixswx.com##dd:nth-of-type(12)
+
+! 2022-05-21 https://www.paypal-community.com
+www.paypal-community.com##.lia-cookie-banner-alert
+
+
+! 2022-05-24 https://www.qiuyewx.com
+www.qiuyewx.com##.other_links
+www.qiuyewx.com###notice
+
+! 2022-05-25 https://www.wanben.org
+www.wanben.org##.readerRight
+www.wanben.org##.readerCon > div
+
+! 2022-05-28 https://www.qidian.com
+qidian.com##.top-op-box
+! 2022-06-21 https://book.qidian.com
+qidian.com##.games-op-wrap
+qidian.com##.mb10.right-op-wrap
+
+! 2022-06-05 https://www.imiaobige.com
+www.imiaobige.com##p:nth-of-type(1)
+
+! 2022-06-20 https://www.wxsy.net
+www.wxsy.net##.erwm > .erwm
+
+! 2022-06-21 https://www.mhuayun.com
+www.mhuayun.com##.banner-recommand
+
+! 2022-06-27 https://mora.jp
+mora.jp##.boxShadow.jack.jack_r
+mora.jp##.boxShadow.jack.left_jack
+
+! 2022-07-04 https://www.qbiqu.com
+qbiqu.com##.reader_mark0
+qbiqu.com##.reader_mark1
+
+! 2022-07-09 https://www.manhuadb.com
+www.manhuadb.com##div.m-0.row:nth-of-type(1)
+www.manhuadb.com##.pt-3.m-0.row
+
+! 2022-07-09 https://manhua.dmzj.com
+manhua.dmzj.com##.float_code
+manhua.dmzj.com##div:nth-of-type(5)
+manhua.dmzj.com##.ad_bottom_code
+manhua.dmzj.com##div:nth-of-type(14)
+manhua.dmzj.com##div:nth-of-type(16)
+manhua.dmzj.com###app_manhua
+
+! 2022-09-08 https://www.docin.com
+www.docin.com##.clear.tools_bar_small.reader_tools_bar_wrap
+www.docin.com##.backToTop
+www.docin.com##.slideButton
+
+! 2022-09-14 https://m.weibo.cn
+m.weibo.cn##.wrap
+
+! 2022-09-28 https://www.linguee.com
+www.linguee.com##.wide_in_main.l_deepl_ad_container
+
+
+! 2022-10-16 https://uiiiuiii.com
+uiiiuiii.com##.show-full
+uiiiuiii.com##.singular-txt-show
+
+! 2022-11-09 https://www.reddit.com
+||www.redditstatic.com/desktop2x/img/upsell/appQrCode/$image
+
+! 2022-11-16 https://www.5yju.com
+www.5yju.com###coupletleft
+www.5yju.com###HMRichBox
+www.5yju.com###coupletright
+
+! 2022-11-23 https://onlinevideoconverter.party
+onlinevideoconverter.party###lkz2n
+
+! 2022-11-24 https://www.similarweb.com
+www.similarweb.com##.cookies-notification
+
+! 2022-2023 https://www.geeksforgeeks.org
+geeksforgeeks.org##.show-consent.hide-consent.cookie-consent
+geeksforgeeks.org##.shell
+geeksforgeeks.org##.login-modal-div
+
+! 2023-01-07 https://www.androidauthority.com
+www.androidauthority.com##div.-_-Pg:nth-of-type(26)
+
+! 2023 https://www.douyin.com
+||p3-pc-sign.douyinpic.com/$image
+douyin.com##.fullscreen_capture
+douyin.com:.box-align-center
+douyin.com:.login-mask-enter-done
+douyin.com:.box-align-center
+douyin.com##.login-mask-enter-done.screen-mask
+douyin.com##[xmlns="http://www.w3.org/2000/svg"]
+douyin.com##[data-e2e="recommend-guide-mask"]
+douyin.com###douyin-sidebar
+douyin.com###captcha_container
+
+
+! 2023-01-09 https://juejin.cn
+juejin.cn##div.banner-block.sidebar-block > .banner
+juejin.cn##.sticky-block.sidebar-block
+
+! 2023-01-10 https://duckduckgo.com
+duckduckgo.com##.english.badge-link--pctaexp.atb-new.js-badge-link.ddg-extension-hide.badge-link--serp.badge-link
+
+! 2023-01-11 https://www.kisssub.org
+kisssub.org##div.text_center.clear:nth-of-type(3)
+kisssub.org##td.cell:nth-of-type(5)
+kisssub.org##td.cell:nth-of-type(1)
+kisssub.org##td.cell:nth-of-type(3)
+kisssub.org##.alt1 > td.cell > .link
+
+! 2023-01-11 https://www.anirena.com
+||www.anirena.com/images/background4.jpg$image
+
+! 2023 smzdm.com
+smzdm.com##.qrcode
+smzdm.com##.icon-mobile
+smzdm.com##.z-right-widget
+smzdm.com##.z-side-stuff.side-stuff-inner
+
+! 2023-01-12 https://www.embibe.com
+www.embibe.com##.flotingbar.container
+www.embibe.com##div.mobile-header-singup.footer-signup-btn.practiceev.wp-block-image:nth-of-type(12)
+www.embibe.com##div.wp-block-image:nth-of-type(3)
+www.embibe.com##div.mobile-header-singup.footer-signup-btn.practiceev.wp-block-image:nth-of-type(21)
+
+! 2023-01-13 https://www.163.com
+163.com##.newsapp-qrcode
+163.com##.ns_side_qrcode
+
+! 2023-01-19 https://cowlevel.net
+cowlevel.net##.on.flex-center.flex-box.vm-register-footer
+
+! 2023-01-23 https://juejin.cn
+juejin.cn##.vip-entry.nav-item
+juejin.cn##.guide-collect-popover
+
+! 2023 moegirl.org.cn
+zh.moegirl.org.cn##div.moe-card:nth-of-type(2)
+zh.moegirl.org.cn##.gap-1.flex-column.flex.inner-wrapper > div.moe-card
+||app.moegirl.org.cn/background/*
+zh.moegirl.org.cn##.undefined
+zh.moegirl.org.cn##href:has-text("poster.taptap.cn/appsem/")
+zh.moegirl.org.cn##a:has-text("近期关闭")
+zh.moegirl.org.cn##[style="height: 90px;"]
+!zh.moegirl.org.cn##[style=""]
+zh.moegirl.org.cn##div.desktop-only.moe-flexible-container
+zh.moegirl.org.cn##.n-button--medium-type.n-button--primary-type.n-button
+||app.moegirl.org.cn/insight-assets/images/20230404-ShenQiShe/800x300.jpg$image
+||app.moegirl.org.cn/insight-assets/images/20230404-ShenQiShe/800x300.jpg$image
+moegirl.org.cn##[href*="mp.weixin.qq.com/s?__biz=MzkzMjIwMzYzMA"]
+
+! 2023-01-28 https://slashdot.org
+slashdot.org###announcement
+
+! 2023-01-31 https://www.freebuf.com
+freebuf.com##.user-guide
+freebuf.com##.ant-layout > .floating-view > .qianbao.floating-view-item
+freebuf.com##.content-view > .floating-view > .qianbao.floating-view-item
+freebuf.com##.qianbao.floating-view-item
+
+! 2023-02-04 https://detail.zol.com.cn
+detail.zol.com.cn###questionnaire
+detail.zol.com.cn##.hide.qrcode
+detail.zol.com.cn###callFeedBack
+detail.zol.com.cn##[href="https://bbs.zol.com.cn/huodong/d2_27450.html"] > i
+detail.zol.com.cn##[href="https://bbs.zol.com.cn/huodong/d2_27450.html"]
+detail.zol.com.cn###J_QrcodeNew
+
+! 2023-02-10 https://sms-activate.org
+sms-activate.org##.show.popupDesctopApp.fade.modal
+sms-activate.org##.show.fade.modal-backdrop
+sms-activate.org##.show.acceptCookieNotice.cookie
+sms-activate.org##.slick-dotted.slick-slider.slick-initialized.main-info-slider
+
+! 2023-02-12 https://chengyu.qianp.com
+||p.qianp.com/bg.jpg$image
+
+! 2023-02-13 https://www.bloomberg.com
+www.bloomberg.com###fortress-paywall-container-root
+
+! 2023-02-16 https://www.zxcs.info
+||www.zxcs.info/upload/mh/20210711013826w97e9n_small.jpg$image
+
+! 2023-02-17 https://book.douban.com
+douban.com##.extra
+douban.com##div[ad-status="appended"]
+
+! 2023-02-26 https://www.sanqiu.mobi
+sanqiu.mobi##.waifu
+
+! 2023-03-03 https://www.naturalreaders.com
+naturalreaders.com##.ng-star-inserted.pw-main-bottom
+
+! 2023-03-03 https://www.pcgamer.com
+pcgamer.com##.exit-intent__background.exit-intent
+
+! 2023-03-04 https://detail.zol.com.cn
+detail.zol.com.cn###zolapp-float-qrcode
+detail.zol.com.cn##.price_commerce_tip
+
+! 2023-03-04 https://www.goodreads.com
+www.goodreads.com##.Overlay--floating.Overlay
+
+! 2023-03-05 https://wenku.baidu.com
+wenku.baidu.com##.new-privilege-wrap.vip-privilege-card-wrap.vip-privilege
+wenku.baidu.com##.inner-vip.comp-vip-pop
+wenku.baidu.com##.vip-activity-wrap-new
+wenku.baidu.com##.vip-member-pop-content
+wenku.baidu.com##div.small-btn:nth-of-type(3)
+
+! 2023-03-05 https://music.apple.com
+music.apple.com##cwc-music-upsell-banner-web
+
+! 2023-03-06 https://vk.com
+vk.com###page_bottom_banners_root
+
+! 2023-03-06 https://download.cnet.com
+download.cnet.com##.c-globalModal_contentWrapper
+download.cnet.com##.c-globalModal_backdrop
+
+! 2023-03-06 https://www.amazon.com
+www.amazon.com##.nav-flyout.nav-signin-tt
+
+opentip.kaspersky.com##[theme="dark"]
+
+metadefender.opswat.com##.cookieWrapper
+
+!dictionary.cambridge.org###onetrust-consent-sdk
+
+! 2023-03-09 https://maimai.cn
+maimai.cn##.downloadFixed
+
+! 2023-03-12 https://so.ali213.net
+so.ali213.net##.alertbox
+
+! 2023-03-14 https://www.collinsdictionary.com
+collinsdictionary.com###rightcol-above-sticky
+
+! 2023-03-15 https://www.youku.com
+www.youku.com##.promotelogin_infobottom
+
+! 2023-03-15 https://bitport.io
+bitport.io##.mfp-content
+bitport.io##.mfp-ready.mfp-auto-cursor.mfp-close-btn-in.mfp-wrap
+
+! 2023-03-15 https://m.ximalaya.com
+m.ximalaya.com##.btn-open.schema-link.init-code
+m.ximalaya.com##.Z_E.album-btn-container
+www.ximalaya.com##.xz_.dl-pc
+www.ximalaya.com##.Kl_.container
+
+! 2023-03-16 https://blog.51cto.com
+blog.51cto.com##.right-fixadv
+blog.51cto.com##.first
+blog.51cto.com##.mb24.ac-box
+blog.51cto.com##.action-aside-left.action-aside
+blog.51cto.com##.signIn
+blog.51cto.com##.editArticle > .new_bloger
+
+! 2023 https://outlook.live.com
+outlook.live.com##span:has-text( Microsoft 365 )
+!outlook.live.com##span:has-text(广告)
+!outlook.live.com##[data-icon-name="OutlookLogo"]
+outlook.live.com##:xpath(/html/body/div[2]/div/div[2]/div[2]/div[2]/div[1]/div/div/div[1]/div/div[3]/div[1]/div[2]/div/div[1]/div/div)
+outlook.live.com##:xpath(/html/body/div[2]/div/div[2]/div[2]/div[2]/div[1]/div/div/div[3]/div/div[3]/div[1]/div[2]/div/div[1]/div/div)
+
+!outlook.live.com##:xpath(/html/body/div[2]/div/div[2]/div[2]/div[2]/div[1]/div/div/div[4])
+outlook.live.com##:xpath(//div[@id="MainModule"]/div/div/div[4])
+
+! 2023-04-03 https://www.1688.com
+1688.com##.active.section-bottom
+
+beqege.cc##div:has(div):has-text("下载APP")
+
+! 2023-04-05 https://myanimelist.net
+myanimelist.net##.ga-impression.bottom-bar
+
+
+! 2023-04-10 https://www.aliyundrive.com
+aliyundrive.com##[class*="membership-wrapper"]
+
+! 2023-04-10 https://www.flaticon.com
+www.flaticon.com###bn-icon-list
+
+! 2023 hao123.com
+hao123.com##.siye-gap.siye
+hao123.com##.topbe-wrapper
+hao123.com##.rightTip-ad.rightTip
+hao123.com##.right-img
+
+! 2023-04-12 https://36kr.com
+36kr.com##.app-track-card
+
