@@ -1,6 +1,6 @@
 ! Title:        ESILXE's Block List for Android
 ! Author:       esilxe
-! Version:      1.0
+! Version:      3.4.15
 ! Last updated: 2023-04-15
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Android.txt
 
