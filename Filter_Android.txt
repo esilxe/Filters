@@ -1,4 +1,4 @@
-! Title:        Block List for Android
+! Title:        ESILXE's Block List for Android
 ! Author:       esilxe
 ! Version:      1.0
 ! Last updated: 2023-04-15
