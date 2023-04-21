@@ -9,7 +9,7 @@
 vgtime.com##.vg_download_app 
 
 ! 30/07/2020 https://wap.gamersky.com
-gamersky.com##.ymw-header2019
+wap.gamersky.com##.ymw-header2019
 wap.gamersky.com###gsTgWapTop
 wap.gamersky.com##div:nth-of-type(5)
 wap.gamersky.com##section.ymw-rel-list
