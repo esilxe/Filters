@@ -13,24 +13,15 @@ wap.gamersky.com##.ymw-rel-list.ymw-aside-box
 wap.gamersky.com##.ymw-rel-mgame.ymw-aside-box.ymw-hot-h5-game
 wap.gamersky.com##.ymw-header2021.ymwBootDownload
 
-! 2021-2023 baidu.com bdstatic.com
-||dd-static.jd.com/ddimg/jfs/t1/*$image
-||pic.rmb.bdstatic.com/*$image
-||pic.rmb.bdstatic.com/bjh/*$image
-
 ! 2023-01-27 https://m.douban.com
 m.douban.com##.TalionNav-static
 m.douban.com##.subject-banner
 m.douban.com##div.center
 
-! 2023-02-21 https://lingjingxingzhe.com
-||puep.qpic.cn/*$image
-
 ! 2023 https://m.ximalaya.com
 m.ximalaya.com##._Hi.gap.change-logo
 m.ximalaya.com##._iV.downloadButton.schema-link.init-code
 m.ximalaya.com##.xK_.uu_.btn-open.schema-link.init-code
-||s1.xmcdn.com/yx/ximalaya-mobile-resource/last/dist/images/play_tips_collect@2x_c675c1b.png$image
 m.ximalaya.com##.xK_.T_W.btn-open.schema-link.init-code
 
 ! 2023-04-04 https://m.bilibili.com
