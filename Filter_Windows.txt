@@ -1,7 +1,7 @@
-! Title:        ESILXE's Block List for Windows
-! Author:       esilxe
-! Version:      3.4.15
-! Last updated: 2023-04-15
+! Title:       ESILXE's Block List for Windows
+! Author:      esilxe
+! Version:     3.4.21
+! Last updated:  2023-04-21
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
@@ -16,11 +16,21 @@
 ###onetrust-consent-sdk
 
 ! --------------- Common Params Remove Start ---------------
-*$removeparam=/^utm_/
-*$removeparam=/from/
-*$removeparam=/spm/
+*$removeparam=/^utm_|^from|^spm/
+$removeparam=/share_app_name|share_medium|share_source/
 
-! ------------------- User Defined Blocking -------------------
+||jd.com^$removeparam=/^ad_od|^gx/
+||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
+
+! --------------- Block whole websites or page---------------
+||adjust.com^
+||bit.ly^
+||suo.yt^
+||ourl.co^
+||soo.run^
+
+
+! ************************************************** User Defined PC Blocking List **************************************************
 ! 02/08/2020 https://dictionary.cambridge.org
 dictionary.cambridge.org###cookiewarning
 dictionary.cambridge.org###loginPopup
@@ -58,6 +68,7 @@ mail.rambler.ru##.AutoAppContainer.pfhph > div:nth-of-type(3)
 mail.rambler.ru##body > div:nth-of-type(6)
 
 ! gamersky.com  2021-2022
+!||www.gamersky.com/zhuanti/JumpToLoadPage/^$document
 gamersky.com##.bgAdWrap
 gamersky.com##.close
 gamersky.com##.lxyygg.yyggtit.Midtit
@@ -122,9 +133,10 @@ gamersky.com##.home.Top
 gamersky.com##.app.alik
 gamersky.com###ADback
 
-! 10/06/2020 https://myanimelist.net
+! 2020-2023  myanimelist.net
 myanimelist.net##.root
 myanimelist.net##.fade-in.popup-background.welcome-back
+myanimelist.net##.ga-impression.bottom-bar
 
 ! https://*.ali213.net
 ||*b*.ali213.net/*$image
@@ -207,6 +219,10 @@ baidu.com##.tieba-custom-pass-login
 baidu.com##.task-panel-entrance
 baidu.com##.fresh-share-exp-e
 baidu.com###con-ar > .xpath-log.result-op
+baidu.com##[tpl="feed-ad"]
+
+baijiahao.baidu.com##.headDeflectorContainer
+baijiahao.baidu.com##.infinite-scroll-component__outerdiv
 
 baike.baidu.com##.share-list
 baike.baidu.com##.wgt-baikeapp-promote-container
@@ -242,7 +258,13 @@ tieba.baidu.com###spage_game_tab_wrapper
 http://tb2.bdstatic.com/tb/static-user/widget/my_tieba/images/*$image
 ||tb2.bdstatic.com/tb/static-pb/widget/post_list/img/*$image
 tieba.baidu.com##[ad-dom-img="true"]
+tieba.baidu.com##[data-field="{}"]
 
+wenku.baidu.com##.new-privilege-wrap.vip-privilege-card-wrap.vip-privilege
+wenku.baidu.com##.inner-vip.comp-vip-pop
+wenku.baidu.com##.vip-activity-wrap-new
+wenku.baidu.com##.vip-member-pop-content
+wk.baidu.com##.reader-pop-manager-view-containter
 zhidao.baidu.com##.task-list-button
 zhidao.baidu.com##.jump-goto-star
 
@@ -256,11 +278,8 @@ bbc.com###sign_in-bg
 88kan.com##.mb.download
 
 ! 2021-2023 bilibili.com
-||bilibili.com^$removeparam=zw
-||bilibili.com^$removeparam=/vd_source/
-||bilibili.com^$removeparam=/hotRank/
-||bilibili.com^$removeparam=/launch_id/
-||bilibili.com^$removeparam=/live_from/
+||bilibili.com^$removeparam=/vd_source|share_source|zw/
+||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from/
 
 bilibili.com##.adblock-tips
 bilibili.com##.unlogin
@@ -300,6 +319,7 @@ www.bilibili.com##.lazy-img
 ! 未登录时，试看30秒的提示
 bilibili.com##.bpx-player-toast-wrap
 
+bilibili.com##.bpx-player-relation-wrap
 
 ! 2021-2023 https://www.facebook.com
 facebook.com###pagelet_growth_expanding_cta
@@ -330,6 +350,8 @@ csdn.net##.so-questionnaire
 csdn.net##.right-nps
 !kunpeng-sc.csdnimg.cn##.picture-ad
 csdn.net##[src*="kunpeng-sc.csdnimg.cn"]
+csdn.net## .el-dialog__wrapper
+csdn.net##.v-modal
 
 ! 2021-2023 share.dmhy.org
 share.dmhy.org###\31 280_adv
@@ -337,8 +359,7 @@ share.dmhy.org###\31 280_ad
 share.dmhy.org###pkpk
 
 ! 2021-2023 youtube.com
-||youtube.com^$removeparam=/embeds_euri/
-||youtube.com^$removeparam=/source_ve_path/
+||youtube.com^$removeparam=/embeds_euri|source_ve_path/
 youtube-nocookie.com##.ytp-scroll-min.ytp-pause-overlay
 youtube.com##.opened
 youtube.com###lightbox
@@ -346,7 +367,10 @@ youtube.com##.ytd-popup-container.style-scope > .yt-tooltip-renderer.style-scope
 youtube.com##.ytd-popup-container.style-scope > .yt-bubble-hint-renderer.style-scope
 youtube.com##tp-yt-paper-dialog.ytd-popup-container.style-scope
 youtube.com##ytd-feed-nudge-renderer.ytd-item-section-renderer.style-scope
-
+! Video title in the player frame
+youtube.com##.ytp-chrome-top
+!youtube.com##.ytp-title-text
+!youtube.com##.ytp-show-cards-title
 
 ! 2021-03-23 https://www.58pic.com
 58pic.com##.is-has.login-model.qt-model-t
@@ -378,6 +402,11 @@ sj.qq.com##[class*="BannerV2_bannerV2"]
 sj.qq.com##[class*="SimpleSwipeGameCard_WECHAT_GAME_CARD"]
 sj.qq.com##[class*="PopularDownload_popularDownload"]
 sj.qq.com##[class*="Advertisement_advertisement"]
+sj.qq.com##[class*="BrandBanner_container"]
+sj.qq.com##[class*="Layout_tips_"]
+sj.qq.com##[dt-eid="yyb_brand"]
+sj.qq.com##[dt-eid="yybn_game_buttonlayer"]
+
 
 ! 2021-03-28 https://www.alamy.com
 www.alamy.com###automationCookieBannerText
@@ -415,15 +444,11 @@ www.if.ci##.navigation-next.navigation
 cdn.concert.io##.desktop
 
 ! hoyoverse.com hoyolab.om mihoyo.com,  miyoushe.com mihoyogift.com
-
 ||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_)/
-||hoyolab.com^$removeparam=/game_biz|lang/
-
 ||hoyoverse.com^$removeparam=/^(hyl_|mhy_|bbs_)/
-||hoyoverse.com^$removeparam=/^(game_biz|lang)/
 
 ||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_)/
-||youtube.com^$removeparam=/game_biz|lang/
+||youtube.com^$removeparam=/^(game_biz|lang)/
 
 ||miyoushe.com^$removeparam=/^(mys_|mhy_|bbs_)/
 ||mihoyogift.com^$removeparam=/^(mys_|mhy_|bbs_)/
@@ -433,6 +458,10 @@ mihoyo.com##.mihoyo-cookie-tips--bottom.mihoyo-cookie-tips
 hoyoverse.com##.mihoyo-cookie-tips--bottom.mihoyo-cookie-tips
 hoyolab.com##.mihoyo-cookie-tips--pc.mihoyo-cookie-tips--bottom.mihoyo-cookie-tips
 hoyolab.com##.mhy-page-header-block.mhy-page-header-md.mhy-article-page-header.mhy-page-header
+hoyolab.com##.mhy-page-header-block.mhy-page-header-md.mhy-page-header--top.mhy-page-header--fixed.mhy-article-page-author-header.mhy-page-header > .mhy-page-header-mask
+
+miyoushe.com##.mhy-qrcode-bottom-card.fixed_side
+miyoushe.com##.mhy-qrcode-bottom-card-show
 
 ! 2021-05-25 https://www.youdao.com
 www.youdao.com##.win-download.dialog-guide-download
@@ -474,6 +503,8 @@ juejin.cn##.banner
 
 ! 2021-11-26 https://www.ted.com
 www.ted.com###recommends-banner
+www.ted.com##.px-10.rounded-t-md.w-full.z-50.right-0.left-0.bottom-0.sticky
+www.ted.com##.md\:hidden
 
 ! 2021-12-05 https://dnf.52pk.com
 ||t.xuchuang.com/a/c$subdocument
@@ -496,6 +527,7 @@ spiralabyss.org##.modal-content
 gushiwen.cn##.main3 > .right
 gushiwen.cn###threeWeixin2
 gushiwen.cn##div.abcd > div
+gushiwen.cn###btmwx
 
 ! 2022-01-25 https://wx1.ha.189.cn
 ||wx1.ha.189.cn/xxptWap/static/img/textBg.09050a0.png$image
@@ -532,18 +564,23 @@ cnbeta.com##div.cooperation.item:nth-of-type(8)
 cnbeta.com###J_all_item_1311159 > dl
 cnbeta.com##.fr
 
-! 2022-03-12 https://finance.sina.com.cn
+! 2022-2023  sina.com.cn
 sina.com.cn##.sina-extension-content
 sina.com.cn##.sina-extension-modal
 ||sinaimg.cn/finance*$image
-finance.sina.com.cn##.clearfix.top-banner
-finance.sina.com.cn##.zc-app
-finance.sina.com.cn##.zc-app-btn.right-bar-btn
-finance.sina.com.cn##.btn-audio.right-bar-btn
+sina.com.cn##.clearfix.top-banner
+sina.com.cn##.zc-app
+sina.com.cn##.zc-app-btn.right-bar-btn
+sina.com.cn##.btn-audio.right-bar-btn
 ||i2.sinaimg.cn/dy/deco/2013/0912/close.png$image
-finance.sina.com.cn##.tab-related-fixed.tab-related
-finance.sina.com.cn###tab_related_btn
-finance.sina.com.cn##.clearfix.blk-zcapp
+sina.com.cn##.tab-related-fixed.tab-related
+sina.com.cn###tab_related_btn
+sina.com.cn##.clearfix.blk-zcapp
+ina.com.cn##[class*="otherContent_"]
+ina.com.cn##[id*="sinaadToolkitBox"]
+sina.com.cn##.article-content-left > div > .sinaads-done.sinaads
+tech.sina.com.cn##.clearfix.blk-zcapp
+tech.sina.com.cn##.clearfix.blk-related
 
 ! 2022-03.14-3.17 http://sdhtby.com
 sdhtby.com##.classification_works.works_recommend
@@ -583,6 +620,7 @@ www.88hd.tv##.download
 
 ! 2022 etymonline.com
 ||cdn.etymonline.com/web/logo.png$image
+www.etymonline.com###detail-app-guide
 
 ! 2022-02023 itee.com
 gitee.com##.pendan-widget
@@ -615,6 +653,7 @@ www.81zw.com##.box_con > div > div
 ||iw233.cn/API/MirlKoi.php$image
 
 ! 2022-04-18 https://m.zhangyue.com
+zhangyue.com##.newgift
 m.zhangyue.com##.show.pc.guide-into-app
 
 ! 2022-04-19 https://www.tiemug.com
@@ -710,6 +749,7 @@ www.docin.com##.slideButton
 
 ! 2022-09-14 https://m.weibo.cn
 m.weibo.cn##.wrap
+video.h5.weibo.cn##.footer-bar.m-btn-orange.m-btn-block.m-btn
 
 ! 2022-09-28 https://www.linguee.com
 www.linguee.com##.wide_in_main.l_deepl_ad_container
@@ -779,13 +819,15 @@ smzdm.com##.z-side-stuff.side-stuff-inner
 
 ! 2023-01-12 https://www.embibe.com
 www.embibe.com##.flotingbar.container
-www.embibe.com##div.mobile-header-singup.footer-signup-btn.practiceev.wp-block-image:nth-of-type(12)
 www.embibe.com##div.wp-block-image:nth-of-type(3)
+www.embibe.com##div.mobile-header-singup.footer-signup-btn.practiceev.wp-block-image:nth-of-type(12)
 www.embibe.com##div.mobile-header-singup.footer-signup-btn.practiceev.wp-block-image:nth-of-type(21)
 
-! 2023-01-13 https://www.163.com
+! 2023 163.com
 163.com##.newsapp-qrcode
 163.com##.ns_side_qrcode
+163.com##.advertisement
+open.163.com##.open-download
 
 ! 2023-01-19 https://cowlevel.net
 cowlevel.net##.on.flex-center.flex-box.vm-register-footer
@@ -861,13 +903,6 @@ detail.zol.com.cn##.price_commerce_tip
 ! 2023-03-04 https://www.goodreads.com
 www.goodreads.com##.Overlay--floating.Overlay
 
-! 2023-03-05 https://wenku.baidu.com
-wenku.baidu.com##.new-privilege-wrap.vip-privilege-card-wrap.vip-privilege
-wenku.baidu.com##.inner-vip.comp-vip-pop
-wenku.baidu.com##.vip-activity-wrap-new
-wenku.baidu.com##.vip-member-pop-content
-wenku.baidu.com##div.small-btn:nth-of-type(3)
-
 ! 2023-03-05 https://music.apple.com
 music.apple.com##cwc-music-upsell-banner-web
 
@@ -879,7 +914,10 @@ download.cnet.com##.c-globalModal_contentWrapper
 download.cnet.com##.c-globalModal_backdrop
 
 ! 2023-03-06 https://www.amazon.com
-www.amazon.com##.nav-flyout.nav-signin-tt
+amazon.com##.nav-flyout.nav-signin-tt
+amazon.com##sp-cc
+amazon.co.uk###sp-cc
+
 
 opentip.kaspersky.com##[theme="dark"]
 
@@ -921,8 +959,7 @@ blog.51cto.com##.editArticle > .new_bloger
 outlook.live.com##span:has-text( Microsoft 365 )
 !outlook.live.com##span:has-text(广告)
 !outlook.live.com##[data-icon-name="OutlookLogo"]
-outlook.live.com##:xpath(/html/body/div[2]/div/div[2]/div[2]/div[2]/div[1]/div/div/div[1]/div/div[3]/div[1]/div[2]/div/div[1]/div/div)
-outlook.live.com##:xpath(/html/body/div[2]/div/div[2]/div[2]/div[2]/div[1]/div/div/div[3]/div/div[3]/div[1]/div[2]/div/div[1]/div/div)
+
 
 !outlook.live.com##:xpath(/html/body/div[2]/div/div[2]/div[2]/div[2]/div[1]/div/div/div[4])
 outlook.live.com##:xpath(//div[@id="MainModule"]/div/div/div[4])
@@ -932,15 +969,11 @@ outlook.live.com##:xpath(//div[@id="MainModule"]/div/div/div[4])
 
 beqege.cc##div:has(div):has-text("下载APP")
 
-! 2023-04-05 https://myanimelist.net
-myanimelist.net##.ga-impression.bottom-bar
-
-
 ! 2023-04-10 https://www.aliyundrive.com
 aliyundrive.com##[class*="membership-wrapper"]
 
 ! 2023-04-10 https://www.flaticon.com
-www.flaticon.com###bn-icon-list
+flaticon.com###bn-icon-list
 
 ! 2023 hao123.com
 hao123.com##.siye-gap.siye
@@ -950,4 +983,41 @@ hao123.com##.right-img
 
 ! 2023-04-12 https://36kr.com
 36kr.com##.app-track-card
+
+! 2023 jianshu.com
+jianshu.com##.navbar-collapse
+jianshu.com###index-aside-download-qrbox
+
+! 2023 eibo.com
+weibo.com##.woo-modal-main
+weibo.com##.woo-modal-mask
+!weibo.com##div.woo-modal-wrap.woo-box-justifyCenter.woo-box-alignCenter.woo-box-flex
+weibo.com##[class*="LoginCard_wrap"]
+
+! 2023-04-17 https://leetcode.cn
+leetcode.cn##.modal-container
+
+! 2023 open.spotify.com
+open.spotify.com##[title="Upgrade to Premium"]
+open.spotify.com##[href="https://open.spotify.com/download"]
+
+! 2023- douyu.com
+douyu.com##.ScreenBannerAd
+douyu.com##.Bottom-ad
+
+! 2023-04-20 https://www.douyu.com
+www.douyu.com##.is-advert
+www.douyu.com##[href*="g.wan.douyu.com"]
+
+! 2023-04-20 https://www.hoyolab.com
+www.hoyolab.com##.mhy-side-section.login-box-side
+
+! 2023-04-20 https://live.bilibili.com
+live.bilibili.com##.login-guide
+
+! 2020  medium.com
+medium.com##.mx.mw.mv.mu.mt.ms.mr.mq.mp.mo.mn.mm.ml.mk.mj.mi.mh.mg.mf.me.md.mc.mb.ma.lz.ly.lx.lw.lv.lu.lt.ai.ls.lr.t.lq
+
+! 2022 vgtime.com
+vgtime.com##.vg_download_app
 
