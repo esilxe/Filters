@@ -184,8 +184,11 @@ accounts.google.com###animated-container
 chrome.google.com##elementtagname[aria-labelledby^=""]
 
 ! 11/07/2020 https://www.pixivision.net
-pixivision.net##.within-area.with-popup.white._floated-bottom-bar
 pixivision.net##._sticky.sidebar-contents-container
+pixiv.net##.dIGjtZ.sc-12xjnzy-0
+
+pixivision.net##.within-area.with-popup.white._floated-bottom-bar
+pixivision.net##._gdpr-notify-header
 
 ! 2020-2021 https://www.bing.com
 www.bing.com##.sa_as
@@ -406,7 +409,7 @@ sj.qq.com##[class*="BrandBanner_container"]
 sj.qq.com##[class*="Layout_tips_"]
 sj.qq.com##[dt-eid="yyb_brand"]
 sj.qq.com##[dt-eid="yybn_game_buttonlayer"]
-
+sj.qq.com##[class*="BrandBanner_mask"]
 
 ! 2021-03-28 https://www.alamy.com
 www.alamy.com###automationCookieBannerText
@@ -478,9 +481,6 @@ qidian.com##.wrap > .hidden
 ! 2022-05-28 https://book.qidian.com
 qidian.com##.top-bg-op-box
 qidian.com##.top-bg-box
-
-! 2021-08-18 https://www.pixivision.net
-www.pixivision.net##._gdpr-notify-header
 
 ! 2021-08-19 https://www.xinxindm.com
 www.xinxindm.com##.widget-weixin
