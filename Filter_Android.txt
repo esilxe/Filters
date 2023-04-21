@@ -4,59 +4,19 @@
 ! Last updated: 2023-04-21
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Android.txt
 
-
-! 25/07/2020 https://www.vgtime.com
-vgtime.com##.vg_download_app 
-
 ! 30/07/2020 https://wap.gamersky.com
-!wap.gamersky.com##.ymw-header2019
-!wap.gamersky.com###gsTgWapTop
-!wap.gamersky.com##div:nth-of-type(5)
-!wap.gamersky.com##section.ymw-rel-list
-!wap.gamersky.com##.ymw-rel-list.ymw-aside-box
-!wap.gamersky.com##.ymw-rel-mgame.ymw-aside-box.ymw-hot-h5-game
-!wap.gamersky.com##.ymw-header2021.ymwBootDownload
-
-
-! 2020-08-16 https://dictionary.cambridge.org
-cambridge.org##body > div:nth-of-type(4)
-
-! 2020-09-03 https://medium.com
-medium.com##.mx.mw.mv.mu.mt.ms.mr.mq.mp.mo.mn.mm.ml.mk.mj.mi.mh.mg.mf.me.md.mc.mb.ma.lz.ly.lx.lw.lv.lu.lt.ai.ls.lr.t.lq
-
-! 2021-02-15 https://www.amazon.co.uk
-amazon.co.uk###sp-cc
-amazon.com##sp-cc
-
-! 2021-04-04 https://www.spotify.com
-spotify.com###onetrust-consent-sdk
-
-
-! 2021-07-23 https://m.zhangyue.com
-zhangyue.com##.newgift
-zhangyue.com##.show.pc.guide-into-app
-
+wap.gamersky.com##.ymw-header2019
+wap.gamersky.com###gsTgWapTop
+wap.gamersky.com##div:nth-of-type(5)
+wap.gamersky.com##section.ymw-rel-list
+wap.gamersky.com##.ymw-rel-list.ymw-aside-box
+wap.gamersky.com##.ymw-rel-mgame.ymw-aside-box.ymw-hot-h5-game
+wap.gamersky.com##.ymw-header2021.ymwBootDownload
 
 ! 2021-2023 baidu.com bdstatic.com
-wk.baidu.com##.reader-pop-manager-view-containter
-baijiahao.baidu.com##.headDeflectorContainer
-baijiahao.baidu.com##.infinite-scroll-component__outerdiv
 ||dd-static.jd.com/ddimg/jfs/t1/*$image
 ||pic.rmb.bdstatic.com/*$image
 ||pic.rmb.bdstatic.com/bjh/*$image
-
-! 2022-04-02 https://www.oxfordlearnersdictionaries.com
-oxfordlearnersdictionaries.com###onetrust-consent-sdk
-
-! 2022-05-29 https://m.wanben.org
-m.wanben.org##.aznav
-m.wanben.org##.raderCon > p
-m.wanben.org##.appguide-wrap
-
-! 2022-08-08 https://www.tiktok.com
-
-! 2022-11-24 https://stackoverflow.com
-stackoverflow.com##.js-consent-banner
 
 ! 2023-01-27 https://m.douban.com
 m.douban.com##.TalionNav-static
@@ -66,12 +26,6 @@ m.douban.com##div.center
 ! 2023-02-21 https://lingjingxingzhe.com
 ||puep.qpic.cn/*$image
 
-! 2023-03-08 https://www.collinsdictionary.com
-www.collinsdictionary.com###onetrust-consent-sdk
-
-! 2023-03-08 https://www.etymonline.com
-www.etymonline.com###detail-app-guide
-
 ! 2023 https://m.ximalaya.com
 m.ximalaya.com##._Hi.gap.change-logo
 m.ximalaya.com##._iV.downloadButton.schema-link.init-code
@@ -79,31 +33,10 @@ m.ximalaya.com##.xK_.uu_.btn-open.schema-link.init-code
 ||s1.xmcdn.com/yx/ximalaya-mobile-resource/last/dist/images/play_tips_collect@2x_c675c1b.png$image
 m.ximalaya.com##.xK_.T_W.btn-open.schema-link.init-code
 
-! 2023-03-25 https://video.h5.weibo.cn
-video.h5.weibo.cn##.footer-bar.m-btn-orange.m-btn-block.m-btn
-
-! 2023-03-29 https://sj.qq.com
-sj.qq.com##[dt-eid="yyb_brand"]
-sj.qq.com##[dt-eid="yybn_game_buttonlayer"]
-sj.qq.com##div:matches-attr(class="/Layout_tips_/")
-sj.qq.com##div:matches-attr(class="/BannerV2_bannerV2/")
-sj.qq.com##div:matches-attr(class="/BrandBanner_container/")
-
-! 2023-04-01 https://www.ted.com
-www.ted.com##.px-10.rounded-t-md.w-full.z-50.right-0.left-0.bottom-0.sticky
-www.ted.com##.md\:hidden
-
 ! 2023-04-04 https://m.bilibili.com
 m.bilibili.com##.m-video2-awaken-btn-v2
 m.bilibili.com##.visible-open-app-btn > .m-video-main-launchapp.launch-app-btn
-www.bilibili.com##.bili-mini-mask
-www.bilibili.com##.bpx-player-top-wrap
-bilibili.com##.openapp-content
+m.bilibili.com##.openapp-content
 m.bilibili.com##.openapp-mask
-
-! 2023-04-11 https://so.gushiwen.cn
-gushiwen.cn###threeWeixin2
-gushiwen.cn##.main3 > .right
-gushiwen.cn###btmwx
 
 
