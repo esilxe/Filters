@@ -1,7 +1,7 @@
 ! Title:        ESILXE's Block List for Android
 ! Author:       esilxe
-! Version:      3.4.15
-! Last updated: 2023-04-15
+! Version:      3.4.21
+! Last updated: 2023-04-21
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Android.txt
 
 
@@ -23,9 +23,6 @@ cambridge.org##body > div:nth-of-type(4)
 
 ! 2020-09-03 https://medium.com
 medium.com##.mx.mw.mv.mu.mt.ms.mr.mq.mp.mo.mn.mm.ml.mk.mj.mi.mh.mg.mf.me.md.mc.mb.ma.lz.ly.lx.lw.lv.lu.lt.ai.ls.lr.t.lq
-
-! 2021-02-13 https://mobile.twitter.com
-twitter.com##.r-184en5c.r-ipm5af.r-zchlnj.r-u8s1d.r-1d2f490
 
 ! 2021-02-15 https://www.amazon.co.uk
 amazon.co.uk###sp-cc
