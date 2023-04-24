@@ -1,7 +1,7 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Version:     3.4.21
-! Last updated:  2023-04-21
+! Version:     3.4.24
+! Last updated:  2023-04-24
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
@@ -9,6 +9,8 @@
 ! web.com##[href*="ad.web.com"]   # Matches all attributes that its value contains "ad.web.com"
 ! 2. Matching attributes (class/href) with literal text or literal regular expression (must always be specific, ie. prefixed with the hostname)
 ! web.com##div:matches-attr(class="/[\w]{7}/")
+! 3. Matches domains with regex
+! @@*$ghide,domain=/img[a-z]{3,5}\.com/
 
 ! --------------- Common Contents Block Start ---------------
 ##.contentBlock
@@ -18,16 +20,16 @@
 ! --------------- Common Params Remove Start ---------------
 *$removeparam=/^utm_|^from|^spm/
 $removeparam=/share_app_name|share_medium|share_source/
+*$removeparam=/^X-Amz-/
 
 ||jd.com^$removeparam=/^ad_od|^gx/
 ||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
 
 ! --------------- Block whole websites or page---------------
 ||adjust.com^
-||bit.ly^
-||suo.yt^
-||ourl.co^
-||soo.run^
+||suo.yt^|soo.run^|ourl.co^|bit.ly^
+||prod.outgoing.prod.webservices.mozgcp.net^
+
 
 
 ! ************************************************** User Defined PC Blocking List **************************************************
@@ -67,7 +69,7 @@ mail.rambler.ru##.AutoAppContainer.pfhph > div:nth-of-type(2)
 mail.rambler.ru##.AutoAppContainer.pfhph > div:nth-of-type(3)
 mail.rambler.ru##body > div:nth-of-type(6)
 
-! gamersky.com  2021-2022
+! 2021-2023  gamersky.com  fhyx.com  fhyx.hk
 !||www.gamersky.com/zhuanti/JumpToLoadPage/^$document
 gamersky.com##.bgAdWrap
 gamersky.com##.close
@@ -132,6 +134,13 @@ gamersky.com##.Comment > .lx0.MidLtit
 gamersky.com##.home.Top
 gamersky.com##.app.alik
 gamersky.com###ADback
+
+fhyx.com##.appdown_detail_alert
+fhyx.com##a.products_right_menu_li:nth-of-type(2)
+fhyx.com##.fhyxhk_adv
+fhyx.hk##.appdown_detail_alert
+fhyx.hk##a.products_right_menu_li:nth-of-type(2)
+fhyx.hk##.fhyxhk_adv
 
 ! 2020-2023  myanimelist.net
 myanimelist.net##.root
@@ -344,6 +353,7 @@ csdn.net##.passport-login-container
 csdn.net##.trips
 csdn.net##csdn-toolbar-profile-nologin
 csdn.net##.csdn-toolbar-fl.toolbar-btn-vip.toolbar-btn
+csdn.net##.csdn-toolbar-fl.toolbar-btn-write-new.toolbar-btn-write.toolbar-btn
 csdn.net##.csdn-toolbar-plugin
 csdn.net##.leftPop
 csdn.net##.common-nps-box.aside-box
@@ -355,6 +365,7 @@ csdn.net##.right-nps
 csdn.net##[src*="kunpeng-sc.csdnimg.cn"]
 csdn.net## .el-dialog__wrapper
 csdn.net##.v-modal
+
 
 ! 2021-2023 share.dmhy.org
 share.dmhy.org###\31 280_adv
@@ -410,6 +421,9 @@ sj.qq.com##[class*="Layout_tips_"]
 sj.qq.com##[dt-eid="yyb_brand"]
 sj.qq.com##[dt-eid="yybn_game_buttonlayer"]
 sj.qq.com##[class*="BrandBanner_mask"]
+qq.com##.ad-right-wrap
+qq.com##.recommend-con
+qq.com##.cf.gg-3.qq-gg.layout
 
 ! 2021-03-28 https://www.alamy.com
 www.alamy.com###automationCookieBannerText
@@ -576,11 +590,12 @@ sina.com.cn##.btn-audio.right-bar-btn
 sina.com.cn##.tab-related-fixed.tab-related
 sina.com.cn###tab_related_btn
 sina.com.cn##.clearfix.blk-zcapp
-ina.com.cn##[class*="otherContent_"]
-ina.com.cn##[id*="sinaadToolkitBox"]
+sina.com.cn##[class*="otherContent"]
+sina.com.cn##[id*="sinaadToolkitBox"]
 sina.com.cn##.article-content-left > div > .sinaads-done.sinaads
-tech.sina.com.cn##.clearfix.blk-zcapp
-tech.sina.com.cn##.clearfix.blk-related
+sina.com.cn##.clearfix.blk-zcapp
+sina.com.cn##.clearfix.blk-related
+
 
 ! 2022-03.14-3.17 http://sdhtby.com
 sdhtby.com##.classification_works.works_recommend
@@ -828,6 +843,7 @@ www.embibe.com##div.mobile-header-singup.footer-signup-btn.practiceev.wp-block-i
 163.com##.ns_side_qrcode
 163.com##.advertisement
 open.163.com##.open-download
+163.com##.top_ad_column.common_ad_item.at_item
 
 ! 2023-01-19 https://cowlevel.net
 cowlevel.net##.on.flex-center.flex-box.vm-register-footer
@@ -1020,4 +1036,15 @@ medium.com##.mx.mw.mv.mu.mt.ms.mr.mq.mp.mo.mn.mm.ml.mk.mj.mi.mh.mg.mf.me.md.mc.m
 
 ! 2022 vgtime.com
 vgtime.com##.vg_download_app
+
+! 2023  sohu.com
+sohu.com##.left-bottom-float
+sohu.com###nav_button
+sohu.com##.container
+sohu.com##div:matches-attr(id=/god/)
+sohu.com##div:matches-attr(class=/god/)
+
+! 2023-04-23 https://manybooks.net
+manybooks.net##.ui-front.ui-widget-content.ui-widget.ui-corner-all.ui-dialog
+manybooks.net##.ui-front.ui-widget-overlay
 
