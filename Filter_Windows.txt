@@ -1,7 +1,7 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
 ! Version:     3.4
-! Last updated:  2023-04-24
+! Last updated:  2023-04-27
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
@@ -18,11 +18,10 @@
 ###onetrust-consent-sdk
 
 ! --------------- Common Params Remove Start ---------------
-*$removeparam=/^utm_|^from|^spm/
-$removeparam=/share_app_name|share_medium|share_source/
-*$removeparam=/^X-Amz-/
+*$removeparam=/^utm_|^spm/
+*$removeparam=/share_app_name|share_medium|share_source/
 
-||jd.com^$removeparam=/^ad_od|^gx/
+||jd.com^$removeparam=/^ad_od|^gx|cu/
 ||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
 
 ! --------------- Block whole websites or page---------------
@@ -217,6 +216,7 @@ windows.com##.context-uhf.uhfc-universal-context.x-hidden-vp-mobile-st
 lookup.icann.org##rwc-cookie-notification
 
 ! 2020-2023 baidu.com, tieba.com
+!||baidu.com^$removeparam=/sfc|fr|client_type|client_version|unique|is_video|share|st/
 baidu.com###web-multi-bottom
 baidu.com###dialog1
 baidu.com##.module-canvas
@@ -270,7 +270,8 @@ tieba.baidu.com###spage_game_tab_wrapper
 http://tb2.bdstatic.com/tb/static-user/widget/my_tieba/images/*$image
 ||tb2.bdstatic.com/tb/static-pb/widget/post_list/img/*$image
 tieba.baidu.com##[ad-dom-img="true"]
-tieba.baidu.com##[data-field="{}"]
+tieba.baidu.com##.lu-home-wrapper
+tieba.baidu.com###aside-ad-wrapper
 
 wenku.baidu.com##.new-privilege-wrap.vip-privilege-card-wrap.vip-privilege
 wenku.baidu.com##.inner-vip.comp-vip-pop
@@ -290,8 +291,8 @@ bbc.com###sign_in-bg
 88kan.com##.mb.download
 
 ! 2021-2023 bilibili.com
-||bilibili.com^$removeparam=/vd_source|share_source|zw/
-||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from/
+!||bilibili.com^$removeparam=/vd_source|share_source|zw/
+!||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from/
 
 bilibili.com##.adblock-tips
 bilibili.com##.unlogin
@@ -304,6 +305,9 @@ bilibili.com##.trial-version-wrap
 bilibili.com###AHP_Notice
 bilibili.com##.bili-login-card
 bilibili.com##.bpx-player-popup-vote
+bilibili.com##.bpx-player-skipcard
+bilibili.com##.bpx-player-follow
+bilibili.com##.bpx-player-top-left-logo
 bilibili.com##.bili-show.bili-score
 bilibili.com##.bili-show.bili-vote
 bilibili.com##.bili-show.bili-guide.bili-guide-all
@@ -332,6 +336,8 @@ www.bilibili.com##.lazy-img
 bilibili.com##.bpx-player-toast-wrap
 
 bilibili.com##.bpx-player-relation-wrap
+
+
 
 ! 2021-2023 https://www.facebook.com
 facebook.com###pagelet_growth_expanding_cta
@@ -1015,7 +1021,7 @@ leetcode.cn##.modal-container
 
 ! 2023 open.spotify.com
 open.spotify.com##[title="Upgrade to Premium"]
-open.spotify.com##[href="https://open.spotify.com/download"]
+open.spotify.com##[href*="/download"]
 
 ! 2023- douyu.com
 douyu.com##.ScreenBannerAd
