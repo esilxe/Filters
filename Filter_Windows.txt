@@ -1,7 +1,7 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Version:     3.4
-! Last updated:  2023-04-27
+! Version:     23.5
+! Last updated:  2023-05-05
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
@@ -23,6 +23,12 @@
 
 ||jd.com^$removeparam=/^ad_od|^gx|cu/
 ||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
+||youtube.com^$removeparam=/embeds_euri|source_ve_path/
+!||github.com^$removeparam=/^ref_/
+
+!||bilibili.com^$removeparam=/vd_source|share_source|zw/
+!||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from/
+!||baidu.com^$removeparam=/sfc|fr|client_type|client_version|unique|is_video|share|st/
 
 ! --------------- Block whole websites or page---------------
 ||adjust.com^
@@ -216,7 +222,6 @@ windows.com##.context-uhf.uhfc-universal-context.x-hidden-vp-mobile-st
 lookup.icann.org##rwc-cookie-notification
 
 ! 2020-2023 baidu.com, tieba.com
-!||baidu.com^$removeparam=/sfc|fr|client_type|client_version|unique|is_video|share|st/
 baidu.com###web-multi-bottom
 baidu.com###dialog1
 baidu.com##.module-canvas
@@ -252,7 +257,8 @@ pan.baidu.com##.nd-dialog-workspace--bg.nd-dialog-common-header.u-dialog__wrappe
 pan.baidu.com##.v-modal
 pan.baidu.com##.wp-s-aside-nav__main-item.wp-s-aside-nav-bubble
 pan.baidu.com##.is-dot.u-badge__content
-
+pan.baidu.com##.wp-s-header-user__tooltip
+pan.baidu.com##.wp-s-header-user__member-status
 
 tieba.baidu.com##.label_text
 tieba.baidu.com##.j_click_close.close_btn
@@ -291,9 +297,6 @@ bbc.com###sign_in-bg
 88kan.com##.mb.download
 
 ! 2021-2023 bilibili.com
-!||bilibili.com^$removeparam=/vd_source|share_source|zw/
-!||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from/
-
 bilibili.com##.adblock-tips
 bilibili.com##.unlogin
 bilibili.com##.login-tip
@@ -322,6 +325,8 @@ www.bilibili.com##.sanlian-box
 live.bilibili.com##.task-gather-entry
 live.bilibili.com##.w-100.over-hidden.p-relative.flip-view
 live.bilibili.com##.shop-popover
+! live gift
+live.bilibili.com###gift-control-vm
 ! 关注
 www.bilibili.com##.bpx-player-top-wrap
 ! 视频暂停后右下角显示的图标
@@ -379,7 +384,6 @@ share.dmhy.org###\31 280_ad
 share.dmhy.org###pkpk
 
 ! 2021-2023 youtube.com
-||youtube.com^$removeparam=/embeds_euri|source_ve_path/
 youtube-nocookie.com##.ytp-scroll-min.ytp-pause-overlay
 youtube.com##.opened
 youtube.com###lightbox
@@ -872,6 +876,8 @@ zh.moegirl.org.cn##.n-button--medium-type.n-button--primary-type.n-button
 ||app.moegirl.org.cn/insight-assets/images/20230404-ShenQiShe/800x300.jpg$image
 ||app.moegirl.org.cn/insight-assets/images/20230404-ShenQiShe/800x300.jpg$image
 moegirl.org.cn##[href*="mp.weixin.qq.com/s?__biz=MzkzMjIwMzYzMA"]
+zh.moegirl.org.cn##.desktop-only
+zh.moegirl.org.cn##[target="undefined"]
 
 ! 2023-01-28 https://slashdot.org
 slashdot.org###announcement
@@ -991,8 +997,10 @@ outlook.live.com##:xpath(//div[@id="MainModule"]/div/div/div[4])
 
 beqege.cc##div:has(div):has-text("下载APP")
 
-! 2023-04-10 https://www.aliyundrive.com
+! 2023-04-10 aliyundrive.com
 aliyundrive.com##[class*="membership-wrapper"]
+aliyundrive.com##[class*="webContainer"]
+aliyundrive.com##[class*="share-list-banner"]
 
 ! 2023-04-10 https://www.flaticon.com
 flaticon.com###bn-icon-list
@@ -1042,6 +1050,7 @@ medium.com##.mx.mw.mv.mu.mt.ms.mr.mq.mp.mo.mn.mm.ml.mk.mj.mi.mh.mg.mf.me.md.mc.m
 
 ! 2022 vgtime.com
 vgtime.com##.vg_download_app
+vgtime.com##.reser_href
 
 ! 2023  sohu.com
 sohu.com##.left-bottom-float
