@@ -1,7 +1,7 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Version:     23.5
-! Last updated:  2023-05-05
+! Version:     23.5.10
+! Last updated:  2023.05.10
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
@@ -18,23 +18,24 @@
 ###onetrust-consent-sdk
 
 ! --------------- Common Params Remove Start ---------------
-*$removeparam=/^utm_|^spm/
-*$removeparam=/share_app_name|share_medium|share_source/
+*$removeparam=/^utm_|^spm
+!*$removeparam=/share_app_name|share_medium|share_source|is_share|share_from/
 
 ||jd.com^$removeparam=/^ad_od|^gx|cu/
 ||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
 ||youtube.com^$removeparam=/embeds_euri|source_ve_path/
 !||github.com^$removeparam=/^ref_/
 
-!||bilibili.com^$removeparam=/vd_source|share_source|zw/
+!||bilibili.com^$removeparam=/vd_source|zw/
 !||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from/
 !||baidu.com^$removeparam=/sfc|fr|client_type|client_version|unique|is_video|share|st/
 
 ! --------------- Block whole websites or page---------------
+!||suo.yt^|soo.run^|ourl.co^|bit.ly^
 ||adjust.com^
-||suo.yt^|soo.run^|ourl.co^|bit.ly^
 ||prod.outgoing.prod.webservices.mozgcp.net^
-
+||shop-links.co^
+||linkstars.com^
 
 
 ! ************************************************** User Defined PC Blocking List **************************************************
@@ -240,6 +241,8 @@ baidu.com##[tpl="feed-ad"]
 
 baijiahao.baidu.com##.headDeflectorContainer
 baijiahao.baidu.com##.infinite-scroll-component__outerdiv
+baijiahao.baidu.com##:xpath(/html/body/div[1]/div/div/div[2]/div/div[2]/div/div[2])
+baijiahao.baidu.com##:xpath(/html/body/div[1]/div/div/div[2]/div/div[2]/div/div[4])
 
 baike.baidu.com##.share-list
 baike.baidu.com##.wgt-baikeapp-promote-container
@@ -278,6 +281,8 @@ http://tb2.bdstatic.com/tb/static-user/widget/my_tieba/images/*$image
 tieba.baidu.com##[ad-dom-img="true"]
 tieba.baidu.com##.lu-home-wrapper
 tieba.baidu.com###aside-ad-wrapper
+tieba.baidu.com##[add-shield-track="1"]
+tieba.baidu.com##.xiu8_follow_warn
 
 wenku.baidu.com##.new-privilege-wrap.vip-privilege-card-wrap.vip-privilege
 wenku.baidu.com##.inner-vip.comp-vip-pop
@@ -446,8 +451,10 @@ wordpress.com##.is-compact.gdpr-banner.card
 vg247.com##.vertical-align-content
 vg247.com##.ot-fade-in.onetrust-pc-dark-filter
 
-! 2021-04-04 https://zhihu.com
-!zhihu.com##div:last-of-type[class*="css-"]
+! 2021-2023 zhihu.com
+zhihu.com##.Card.Pc-card
+zhihu.com##[class*="css-"]:has-text("登录知乎")
+!zhihu.com##.Modal-enter-done.undefined.Modal-wrapper
 
 ! 2021-04-07 https://www.gameinformer.com
 www.gameinformer.com##.sliding-popup-bottom
@@ -471,7 +478,7 @@ www.if.ci##.navigation-next.navigation
 cdn.concert.io##.desktop
 
 ! hoyoverse.com hoyolab.om mihoyo.com,  miyoushe.com mihoyogift.com
-||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_)/
+||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_|subType)/
 ||hoyoverse.com^$removeparam=/^(hyl_|mhy_|bbs_)/
 
 ||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_)/
@@ -486,6 +493,9 @@ hoyoverse.com##.mihoyo-cookie-tips--bottom.mihoyo-cookie-tips
 hoyolab.com##.mihoyo-cookie-tips--pc.mihoyo-cookie-tips--bottom.mihoyo-cookie-tips
 hoyolab.com##.mhy-page-header-block.mhy-page-header-md.mhy-article-page-header.mhy-page-header
 hoyolab.com##.mhy-page-header-block.mhy-page-header-md.mhy-page-header--top.mhy-page-header--fixed.mhy-article-page-author-header.mhy-page-header > .mhy-page-header-mask
+!hoyolab.com##.custom-mihoyo-common-mask
+hoyolab.com##[class*="components-home-assets-__home_---qr-code"]
+hoyolab.com##[class*="components-pc-assets-__qr_---qr-box-sea"]
 
 miyoushe.com##.mhy-qrcode-bottom-card.fixed_side
 miyoushe.com##.mhy-qrcode-bottom-card-show
@@ -806,7 +816,7 @@ geeksforgeeks.org##.login-modal-div
 ! 2023-01-07 https://www.androidauthority.com
 www.androidauthority.com##div.-_-Pg:nth-of-type(26)
 
-! 2023 https://www.douyin.com
+! 2023 douyin.com tiktok.com
 ||p3-pc-sign.douyinpic.com/$image
 douyin.com##.fullscreen_capture
 douyin.com:.box-align-center
@@ -817,6 +827,8 @@ douyin.com##[xmlns="http://www.w3.org/2000/svg"]
 douyin.com##[data-e2e="recommend-guide-mask"]
 douyin.com###douyin-sidebar
 douyin.com###captcha_container
+tiktok.com###login-modal
+tiktok.com##[style="z-index: 1001; position: fixed;"]
 
 
 ! 2023-01-09 https://juejin.cn
@@ -889,12 +901,20 @@ freebuf.com##.content-view > .floating-view > .qianbao.floating-view-item
 freebuf.com##.qianbao.floating-view-item
 
 ! 2023-02-04 https://detail.zol.com.cn
-detail.zol.com.cn###questionnaire
-detail.zol.com.cn##.hide.qrcode
-detail.zol.com.cn###callFeedBack
-detail.zol.com.cn##[href="https://bbs.zol.com.cn/huodong/d2_27450.html"] > i
-detail.zol.com.cn##[href="https://bbs.zol.com.cn/huodong/d2_27450.html"]
-detail.zol.com.cn###J_QrcodeNew
+zol.com.cn###questionnaire
+zol.com.cn###callFeedBack
+zol.com.cn##[href*="https://bbs.zol.com.cn/huodong/"]
+zol.com.cn###zolapp-float-qrcode
+zol.com.cn##.price_commerce_tip
+zol.com.cn##.expand-to-show
+zol.com.cn###J_QrcodeNew
+zol.com.cn##.hide.qrcode
+zol.com.cn##.qrcon-icon.icon
+zol.com.cn##.ad-topwrap
+zol.com.cn##.article_aside_hot_feed
+zol.com.cn##.qr-code-layer
+zol.com.cn##[class="wrapper clearfix"]
+zol.com.cn##.gmine_ad
 
 ! 2023-02-10 https://sms-activate.org
 sms-activate.org##.show.popupDesctopApp.fade.modal
@@ -924,10 +944,6 @@ naturalreaders.com##.ng-star-inserted.pw-main-bottom
 ! 2023-03-03 https://www.pcgamer.com
 pcgamer.com##.exit-intent__background.exit-intent
 
-! 2023-03-04 https://detail.zol.com.cn
-detail.zol.com.cn###zolapp-float-qrcode
-detail.zol.com.cn##.price_commerce_tip
-
 ! 2023-03-04 https://www.goodreads.com
 www.goodreads.com##.Overlay--floating.Overlay
 
@@ -946,7 +962,6 @@ amazon.com##.nav-flyout.nav-signin-tt
 amazon.com##sp-cc
 amazon.co.uk###sp-cc
 
-
 opentip.kaspersky.com##[theme="dark"]
 
 metadefender.opswat.com##.cookieWrapper
@@ -962,8 +977,8 @@ so.ali213.net##.alertbox
 ! 2023-03-14 https://www.collinsdictionary.com
 collinsdictionary.com###rightcol-above-sticky
 
-! 2023-03-15 https://www.youku.com
-www.youku.com##.promotelogin_infobottom
+! 2023-03-15  youku.com
+youku.com##.promotelogin_infobottom
 
 ! 2023-03-15 https://bitport.io
 bitport.io##.mfp-content
@@ -1062,4 +1077,19 @@ sohu.com##div:matches-attr(class=/god/)
 ! 2023-04-23 https://manybooks.net
 manybooks.net##.ui-front.ui-widget-content.ui-widget.ui-corner-all.ui-dialog
 manybooks.net##.ui-front.ui-widget-overlay
+
+! 2023-05-05 https://outlook.live.com
+outlook.live.com##div:has-text(/^Get the latest premium/)
+outlook.live.com##div:has-text(/^Upgrade Your Account/)
+outlook.live.com##div:has(div:has(div:has(div:has(div:has(button[aria-label="Click to see more"])))))
+outlook.live.com##div:has(span:has-text(Go ad-free))
+outlook.live.com##span:has-text(/^Microsoft Outlook/)
+
+! 2023  ithome.com
+ithome.com##.shareto
+ithome.com##.app.sfa
+ithome.com##.sideweixin.sfa
+m.ithome.com##.open-app-banner
+m.ithome.com##.fixed-btn > .open-app-a
+m.ithome.com##.open-app.ft-item
 
