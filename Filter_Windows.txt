@@ -1,7 +1,7 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Version:     23.5.10
-! Last updated:  2023.05.10
+! Version:     23.5.11
+! Last updated:  2023.05.11
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
@@ -19,7 +19,7 @@
 
 ! --------------- Common Params Remove Start ---------------
 *$removeparam=/^utm_|^spm
-!*$removeparam=/share_app_name|share_medium|share_source|is_share|share_from/
+*$removeparam=/share_app_name|share_medium|share_source|is_share|share_from/
 
 ||jd.com^$removeparam=/^ad_od|^gx|cu/
 ||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
@@ -46,6 +46,7 @@ dictionary.cambridge.org##.i-amphtml-layout.amp-active.i-amphtml-layout-nodispla
 
 ! 2020 https://item.taobao.com
 item.taobao.com##.sufei-dialog-kissy.sufei-dialog
+item.taobao.com##.tb-doctor
 
 ! 2020-2022 https://detail.tmall.com
 detail.tmall.com##.sufei-dialog
@@ -99,6 +100,7 @@ gamersky.com###adscontainer_banner_new_top_index_1060_1
 gamersky.com###adscontainer_block_300_3
 gamersky.com###adscontainer_conmmon_qtz
 gamersky.com###adTips
+gamersky.com##.fixedCode
 down.gamersky.com##.Content-right
 
 mail.rambler.ru##body > div:nth-of-type(6)
@@ -422,6 +424,9 @@ uiiiuiii.com##.modal-show.modal-part-middle.modal-part.modal-login-panel
 uiiiuiii.com##.modal-show.modal-mark.mark
 
 ! 2021-03-28 https://ke.qq.com
+qq.com##.ad-right-wrap
+qq.com##.recommend-con
+qq.com##.cf.gg-3.qq-gg.layout
 ke.qq.com##.folded
 ke.qq.com###zoom-warn
 sj.qq.com##[class*="GameDetail_brand"]
@@ -436,9 +441,7 @@ sj.qq.com##[class*="Layout_tips_"]
 sj.qq.com##[dt-eid="yyb_brand"]
 sj.qq.com##[dt-eid="yybn_game_buttonlayer"]
 sj.qq.com##[class*="BrandBanner_mask"]
-qq.com##.ad-right-wrap
-qq.com##.recommend-con
-qq.com##.cf.gg-3.qq-gg.layout
+weread.qq.com##.wr_book_detail_footer_float.wr_book_detail_footer
 
 ! 2021-03-28 https://www.alamy.com
 www.alamy.com###automationCookieBannerText
@@ -1092,4 +1095,10 @@ ithome.com##.sideweixin.sfa
 m.ithome.com##.open-app-banner
 m.ithome.com##.fixed-btn > .open-app-a
 m.ithome.com##.open-app.ft-item
+
+! 2023 诚通网盘
+z701.com##div.mb-3.bg-light.card
+
+! 2022 www.99danhao.cn
+www.99danhao.cn##.layui-m-layer0.layui-m-layer
 
