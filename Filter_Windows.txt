@@ -1,7 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Version:     23.5.11
-! Last updated:  2023.05.11
+! Last updated:  2023.05.12
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
@@ -25,6 +24,8 @@
 ||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
 ||youtube.com^$removeparam=/embeds_euri|source_ve_path/
 !||github.com^$removeparam=/^ref_/
+||gcores.com^$removeparam=/x-oss-process/
+
 
 !||bilibili.com^$removeparam=/vd_source|zw/
 !||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from/
@@ -481,7 +482,7 @@ www.if.ci##.navigation-next.navigation
 cdn.concert.io##.desktop
 
 ! hoyoverse.com hoyolab.om mihoyo.com,  miyoushe.com mihoyogift.com
-||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_|subType)/
+||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_|subType|x-oss-process)/
 ||hoyoverse.com^$removeparam=/^(hyl_|mhy_|bbs_)/
 
 ||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_)/
@@ -890,9 +891,10 @@ zh.moegirl.org.cn##div.desktop-only.moe-flexible-container
 zh.moegirl.org.cn##.n-button--medium-type.n-button--primary-type.n-button
 ||app.moegirl.org.cn/insight-assets/images/20230404-ShenQiShe/800x300.jpg$image
 ||app.moegirl.org.cn/insight-assets/images/20230404-ShenQiShe/800x300.jpg$image
-moegirl.org.cn##[href*="mp.weixin.qq.com/s?__biz=MzkzMjIwMzYzMA"]
+moegirl.org.cn##[href*="mp.weixin.qq.com/s?__biz="]
 zh.moegirl.org.cn##.desktop-only
 zh.moegirl.org.cn##[target="undefined"]
+
 
 ! 2023-01-28 https://slashdot.org
 slashdot.org###announcement
