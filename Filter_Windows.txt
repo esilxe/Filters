@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.05.12
+! Last updated:  2023.05.13
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
@@ -482,15 +482,15 @@ www.if.ci##.navigation-next.navigation
 cdn.concert.io##.desktop
 
 ! hoyoverse.com hoyolab.om mihoyo.com,  miyoushe.com mihoyogift.com
-||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_|subType|x-oss-process)/
-||hoyoverse.com^$removeparam=/^(hyl_|mhy_|bbs_)/
+||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
+||hoyoverse.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 
 ||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_)/
 ||youtube.com^$removeparam=/^(game_biz|lang)/
 
-||miyoushe.com^$removeparam=/^(mys_|mhy_|bbs_)/
-||mihoyogift.com^$removeparam=/^(mys_|mhy_|bbs_)/
-||mihoyo.com^$removeparam=/^(mys_|mhy_|bbs_)/
+||miyoushe.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
+||mihoyogift.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
+||mihoyo.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 
 mihoyo.com##.mihoyo-cookie-tips--bottom.mihoyo-cookie-tips
 hoyoverse.com##.mihoyo-cookie-tips--bottom.mihoyo-cookie-tips
@@ -1098,9 +1098,11 @@ m.ithome.com##.open-app-banner
 m.ithome.com##.fixed-btn > .open-app-a
 m.ithome.com##.open-app.ft-item
 
-! 2023 诚通网盘
-z701.com##div.mb-3.bg-light.card
-
-! 2022 www.99danhao.cn
+! 2023 www.99danhao.cn
 www.99danhao.cn##.layui-m-layer0.layui-m-layer
+
+! 2023 诚通网盘
+z701.com,089m.com,089u.com##div.mb-3.bg-light.card
+z701.com,089m.com,089u.com##div.mb-3.card.h-100
+z701.com,089m.com,089u.com##.bg-light.card
 
