@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.05.13
+! Last updated:  2023.05.15
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
@@ -17,19 +17,18 @@
 ###onetrust-consent-sdk
 
 ! --------------- Common Params Remove Start ---------------
-*$removeparam=/^utm_|^spm
+*$removeparam=/^utm_|^spm|^ref_/
 *$removeparam=/share_app_name|share_medium|share_source|is_share|share_from/
 
 ||jd.com^$removeparam=/^ad_od|^gx|cu/
 ||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
 ||youtube.com^$removeparam=/embeds_euri|source_ve_path/
-!||github.com^$removeparam=/^ref_/
 ||gcores.com^$removeparam=/x-oss-process/
 
 
-!||bilibili.com^$removeparam=/vd_source|zw/
-!||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from/
-!||baidu.com^$removeparam=/sfc|fr|client_type|client_version|unique|is_video|share|st/
+||bilibili.com^$removeparam=/vd_source|zw/
+||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from/
+||baidu.com^$removeparam=/sfc|fr|client_type|client_version|unique|is_video|share|st/
 
 ! --------------- Block whole websites or page---------------
 !||suo.yt^|soo.run^|ourl.co^|bit.ly^
@@ -294,7 +293,7 @@ wenku.baidu.com##.vip-member-pop-content
 wk.baidu.com##.reader-pop-manager-view-containter
 zhidao.baidu.com##.task-list-button
 zhidao.baidu.com##.jump-goto-star
-
+zhidao.baidu.com##.answerlist.wgt-ads
 
 ! 2021-2023 https://www.bbc.com
 bbc.com###sign_in
@@ -482,7 +481,7 @@ www.if.ci##.navigation-next.navigation
 cdn.concert.io##.desktop
 
 ! hoyoverse.com hoyolab.om mihoyo.com,  miyoushe.com mihoyogift.com
-||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
+!||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 ||hoyoverse.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 
 ||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_)/
@@ -870,6 +869,13 @@ www.embibe.com##div.mobile-header-singup.footer-signup-btn.practiceev.wp-block-i
 163.com##.advertisement
 open.163.com##.open-download
 163.com##.top_ad_column.common_ad_item.at_item
+163.com##.gWel-inner
+163.com###extra-banner
+163.com##li:has-text("网易邮箱会员")
+163.com##li:has-text(升级VIP)
+163.com##.jL2.js-component-component
+163.com##[id*="AdDiv"]
+163.com###_mail_component_53_53
 
 ! 2023-01-19 https://cowlevel.net
 cowlevel.net##.on.flex-center.flex-box.vm-register-footer
