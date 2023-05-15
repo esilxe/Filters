@@ -294,6 +294,7 @@ wk.baidu.com##.reader-pop-manager-view-containter
 zhidao.baidu.com##.task-list-button
 zhidao.baidu.com##.jump-goto-star
 zhidao.baidu.com##.answerlist.wgt-ads
+zhidao.baidu.com##.qbleftdown.wgt-ads
 
 ! 2021-2023 https://www.bbc.com
 bbc.com###sign_in
