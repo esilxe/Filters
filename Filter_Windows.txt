@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.05.15
+! Last updated:  2023.05.16
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
@@ -28,7 +28,9 @@
 
 ||bilibili.com^$removeparam=/vd_source|zw/
 ||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from/
-||baidu.com^$removeparam=/sfc|fr|client_type|client_version|unique|is_video|share|st/
+! baidu.com   st|fr
+||baidu.com^$removeparam=/sfc|client_type|client_version|unique|is_video|share|entry/
+
 
 ! --------------- Block whole websites or page---------------
 !||suo.yt^|soo.run^|ourl.co^|bit.ly^
@@ -248,6 +250,10 @@ baijiahao.baidu.com##:xpath(/html/body/div[1]/div/div/div[2]/div/div[2]/div/div[
 
 baike.baidu.com##.share-list
 baike.baidu.com##.wgt-baikeapp-promote-container
+
+haokan.baidu.com##[id*="TANGRAM__PSP"]
+haokan.baidu.com##.login-popover
+haokan.baidu.com##.type1.page-top-rightinfo-download.page-top-rightinfo-btn
 
 pan.baidu.com##div.wp-s-header__right-item:nth-of-type(2)
 pan.baidu.com##span.wp-s-header__right-item
@@ -488,7 +494,7 @@ cdn.concert.io##.desktop
 ||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_)/
 ||youtube.com^$removeparam=/^(game_biz|lang)/
 
-||miyoushe.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
+||miyoushe.com^$removeparam=/^(hyl_|mhy_|^bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 ||mihoyogift.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 ||mihoyo.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 
@@ -500,6 +506,7 @@ hoyolab.com##.mhy-page-header-block.mhy-page-header-md.mhy-page-header--top.mhy-
 !hoyolab.com##.custom-mihoyo-common-mask
 hoyolab.com##[class*="components-home-assets-__home_---qr-code"]
 hoyolab.com##[class*="components-pc-assets-__qr_---qr-box-sea"]
+hoyolab.com##.mhy-side-section.login-box-side
 
 miyoushe.com##.mhy-qrcode-bottom-card.fixed_side
 miyoushe.com##.mhy-qrcode-bottom-card-show
@@ -925,7 +932,6 @@ zol.com.cn##.qrcon-icon.icon
 zol.com.cn##.ad-topwrap
 zol.com.cn##.article_aside_hot_feed
 zol.com.cn##.qr-code-layer
-zol.com.cn##[class="wrapper clearfix"]
 zol.com.cn##.gmine_ad
 
 ! 2023-02-10 https://sms-activate.org
@@ -1065,9 +1071,6 @@ douyu.com##.Bottom-ad
 ! 2023-04-20 https://www.douyu.com
 www.douyu.com##.is-advert
 www.douyu.com##[href*="g.wan.douyu.com"]
-
-! 2023-04-20 https://www.hoyolab.com
-www.hoyolab.com##.mhy-side-section.login-box-side
 
 ! 2023-04-20 https://live.bilibili.com
 live.bilibili.com##.login-guide
