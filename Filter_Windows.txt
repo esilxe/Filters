@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.05.16
+! Last updated:  2023.05.22
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
@@ -20,12 +20,12 @@
 *$removeparam=/^utm_|^spm|^ref_/
 *$removeparam=/share_app_name|share_medium|share_source|is_share|share_from/
 
+||amazon.com=/ref|^pd_rd_|^pf_rd/
+
 ||jd.com^$removeparam=/^ad_od|^gx|cu/
 ||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
 ||youtube.com^$removeparam=/embeds_euri|source_ve_path/
 ||gcores.com^$removeparam=/x-oss-process/
-
-
 ||bilibili.com^$removeparam=/vd_source|zw/
 ||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from/
 ! baidu.com   st|fr
@@ -60,6 +60,7 @@ detail.tmall.com###ks-component475
 3dmgame.com##.addvide300
 3dmgame.com##.clear_.listlab
 3dmgame.com##.Content_R
+3dmgame.com##.warp_f
 
 ||tj.shwswl.cn/*$image
 3dmgame.com##.quickdown3.a_list
@@ -237,11 +238,12 @@ baidu.com##.player-pause-code
 baidu.com##.hover_btn
 baidu.com##.before-content
 baidu.com##.float-banner
-baidu.com##.tieba-custom-pass-login
 baidu.com##.task-panel-entrance
 baidu.com##.fresh-share-exp-e
 baidu.com###con-ar > .xpath-log.result-op
 baidu.com##[tpl="feed-ad"]
+baidu.com##.tieba-custom-pass-login
+
 
 baijiahao.baidu.com##.headDeflectorContainer
 baijiahao.baidu.com##.infinite-scroll-component__outerdiv
@@ -291,6 +293,7 @@ tieba.baidu.com##.lu-home-wrapper
 tieba.baidu.com###aside-ad-wrapper
 tieba.baidu.com##[add-shield-track="1"]
 tieba.baidu.com##.xiu8_follow_warn
+tieba.baidu.com##.bus-top-activity-wrap
 
 wenku.baidu.com##.new-privilege-wrap.vip-privilege-card-wrap.vip-privilege
 wenku.baidu.com##.inner-vip.comp-vip-pop
@@ -390,7 +393,9 @@ csdn.net##.right-nps
 csdn.net##[src*="kunpeng-sc.csdnimg.cn"]
 csdn.net## .el-dialog__wrapper
 csdn.net##.v-modal
-
+csdn.net##.top-bar
+csdn.net##.flex-hc.flex-vb.flex > div.flex > .ml-12
+csdn.net##.tool-active-list
 
 ! 2021-2023 share.dmhy.org
 share.dmhy.org###\31 280_adv
@@ -462,9 +467,10 @@ vg247.com##.vertical-align-content
 vg247.com##.ot-fade-in.onetrust-pc-dark-filter
 
 ! 2021-2023 zhihu.com
-zhihu.com##.Card.Pc-card
+!zhihu.com##.Card.Pc-card
 zhihu.com##[class*="css-"]:has-text("登录知乎")
 !zhihu.com##.Modal-enter-done.undefined.Modal-wrapper
+zhihu.com##.Banner-link
 
 ! 2021-04-07 https://www.gameinformer.com
 www.gameinformer.com##.sliding-popup-bottom
@@ -488,7 +494,7 @@ www.if.ci##.navigation-next.navigation
 cdn.concert.io##.desktop
 
 ! hoyoverse.com hoyolab.om mihoyo.com,  miyoushe.com mihoyogift.com
-!||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
+||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 ||hoyoverse.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 
 ||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_)/
@@ -507,6 +513,10 @@ hoyolab.com##.mhy-page-header-block.mhy-page-header-md.mhy-page-header--top.mhy-
 hoyolab.com##[class*="components-home-assets-__home_---qr-code"]
 hoyolab.com##[class*="components-pc-assets-__qr_---qr-box-sea"]
 hoyolab.com##.mhy-side-section.login-box-side
+hoyolab.com###driver-page-overlay
+hoyolab.com##.mhy-guider-popover.mhy-popover-group-b
+www.hoyolab.com##.appearance-dark.is-hoyoverse.is-pc.bbs-theme.mhy-account-flow-dialog.mhy-account-flow
+act.hoyolab.com##[class*="components-home-assets-__sign-guide_---guide"]
 
 miyoushe.com##.mhy-qrcode-bottom-card.fixed_side
 miyoushe.com##.mhy-qrcode-bottom-card-show
@@ -1048,8 +1058,10 @@ hao123.com##.right-img
 36kr.com##.app-track-card
 
 ! 2023 jianshu.com
-jianshu.com##.navbar-collapse
 jianshu.com###index-aside-download-qrbox
+jianshu.com###note-fixed-ad-container
+jianshu.com###note-ad
+jianshu.com##a:has-text(抽奖)
 
 ! 2023 eibo.com
 weibo.com##.woo-modal-main
@@ -1116,3 +1128,8 @@ z701.com,089m.com,089u.com##div.mb-3.bg-light.card
 z701.com,089m.com,089u.com##div.mb-3.card.h-100
 z701.com,089m.com,089u.com##.bg-light.card
 
+! 2023 https://www.a9vg.com
+a9vg.com##.a9-guide-download
+
+! 2023 xiaohongshu.com
+xiaohongshu.com##.login-modal.reds-modal-open.reds-modal
