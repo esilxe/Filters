@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.05.22
+! Last updated:  2023.05.25
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
@@ -27,9 +27,10 @@
 ||youtube.com^$removeparam=/embeds_euri|source_ve_path/
 ||gcores.com^$removeparam=/x-oss-process/
 ||bilibili.com^$removeparam=/vd_source|zw/
-||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from/
+||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from|broadcast_type|is_room_feed/
 ! baidu.com   st|fr
 ||baidu.com^$removeparam=/sfc|client_type|client_version|unique|is_video|share|entry/
+||taobao.com^$removeparam=/traceId|relationId|union_lens/
 
 
 ! --------------- Block whole websites or page---------------
@@ -203,10 +204,8 @@ translate.google.com##.notification-area
 accounts.google.com###animated-container
 chrome.google.com##elementtagname[aria-labelledby^=""]
 
-! 11/07/2020 https://www.pixivision.net
+! 2020 https://www.pixivision.net
 pixivision.net##._sticky.sidebar-contents-container
-pixiv.net##.dIGjtZ.sc-12xjnzy-0
-
 pixivision.net##.within-area.with-popup.white._floated-bottom-bar
 pixivision.net##._gdpr-notify-header
 
@@ -874,6 +873,7 @@ smzdm.com##.qrcode
 smzdm.com##.icon-mobile
 smzdm.com##.z-right-widget
 smzdm.com##.z-side-stuff.side-stuff-inner
+smzdm.com##.qrcode-title
 
 ! 2023-01-12 https://www.embibe.com
 www.embibe.com##.flotingbar.container
@@ -1133,3 +1133,4 @@ a9vg.com##.a9-guide-download
 
 ! 2023 xiaohongshu.com
 xiaohongshu.com##.login-modal.reds-modal-open.reds-modal
+
