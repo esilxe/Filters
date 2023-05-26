@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.05.25
+! Last updated:  2023.05.26
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
@@ -271,6 +271,7 @@ pan.baidu.com##.wp-s-aside-nav__main-item.wp-s-aside-nav-bubble
 pan.baidu.com##.is-dot.u-badge__content
 pan.baidu.com##.wp-s-header-user__tooltip
 pan.baidu.com##.wp-s-header-user__member-status
+pan.baidu.com##.nd-chat-guide
 
 tieba.baidu.com##.label_text
 tieba.baidu.com##.j_click_close.close_btn
@@ -554,6 +555,11 @@ jg.yaowanla.com
 ! 2021-2023 juejin.cn
 juejin.cn##.recommend-box
 juejin.cn##.banner
+juejin.cn##div.banner-block.sidebar-block > .banner
+juejin.cn##.sticky-block.sidebar-block
+juejin.cn##.vip-entry.nav-item
+juejin.cn##.guide-collect-popover
+juejin.cn##.dark-mode-transition.dark-mode-notification
 
 ! 2021-11-26 https://www.ted.com
 www.ted.com###recommends-banner
@@ -850,11 +856,6 @@ douyin.com###captcha_container
 tiktok.com###login-modal
 tiktok.com##[style="z-index: 1001; position: fixed;"]
 
-
-! 2023-01-09 https://juejin.cn
-juejin.cn##div.banner-block.sidebar-block > .banner
-juejin.cn##.sticky-block.sidebar-block
-
 ! 2023-01-10 https://duckduckgo.com
 duckduckgo.com##.english.badge-link--pctaexp.atb-new.js-badge-link.ddg-extension-hide.badge-link--serp.badge-link
 
@@ -898,10 +899,6 @@ open.163.com##.open-download
 ! 2023-01-19 https://cowlevel.net
 cowlevel.net##.on.flex-center.flex-box.vm-register-footer
 
-! 2023-01-23 https://juejin.cn
-juejin.cn##.vip-entry.nav-item
-juejin.cn##.guide-collect-popover
-
 ! 2023 moegirl.org.cn
 zh.moegirl.org.cn##div.moe-card:nth-of-type(2)
 zh.moegirl.org.cn##.gap-1.flex-column.flex.inner-wrapper > div.moe-card
@@ -918,6 +915,7 @@ zh.moegirl.org.cn##.n-button--medium-type.n-button--primary-type.n-button
 moegirl.org.cn##[href*="mp.weixin.qq.com/s?__biz="]
 zh.moegirl.org.cn##.desktop-only
 zh.moegirl.org.cn##[target="undefined"]
+zh.moegirl.org.cn##i:has-text("【广告】点击")
 
 
 ! 2023-01-28 https://slashdot.org
