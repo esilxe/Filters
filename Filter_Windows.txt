@@ -1,7 +1,7 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.05.26
-! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
+! Updated:     2023.05.26
+! Source:      https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 
 ! 1. Matching attributes by CSS selector with wild character  https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
