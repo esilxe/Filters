@@ -1,8 +1,7 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Updated:     2023.05.26
-! Source:      https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
-
+! Last updated:  2023.06.04
+! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 ! 1. Matching attributes by CSS selector with wild character  https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
 ! web.com##[href*="ad.web.com"]   # Matches all attributes that its value contains "ad.web.com"
@@ -17,21 +16,22 @@
 ###onetrust-consent-sdk
 
 ! --------------- Common Params Remove Start ---------------
-*$removeparam=/^utm_|^spm|^ref_/
+*$removeparam=/^utm_|^spm|^from_|^ref|^track/
 *$removeparam=/share_app_name|share_medium|share_source|is_share|share_from/
 
-||amazon.com=/ref|^pd_rd_|^pf_rd/
+||amazon.com=/^pd_rd_|^pf_rd/
 
 ||jd.com^$removeparam=/^ad_od|^gx|cu/
 ||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
-||youtube.com^$removeparam=/embeds_euri|source_ve_path/
 ||gcores.com^$removeparam=/x-oss-process/
 ||bilibili.com^$removeparam=/vd_source|zw/
 ||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from|broadcast_type|is_room_feed/
 ! baidu.com   st|fr
 ||baidu.com^$removeparam=/sfc|client_type|client_version|unique|is_video|share|entry/
 ||taobao.com^$removeparam=/traceId|relationId|union_lens/
+||yangkeduo.com$removeparam=/goods_sign|duoduo_type|campaign|customParameters|cpsSign|_x_ddjb_act|launch_pdd|cid/
 
+||epicgames.com^$removeparam=/client_id/
 
 ! --------------- Block whole websites or page---------------
 !||suo.yt^|soo.run^|ourl.co^|bit.ly^
@@ -39,7 +39,6 @@
 ||prod.outgoing.prod.webservices.mozgcp.net^
 ||shop-links.co^
 ||linkstars.com^
-
 
 ! ************************************************** User Defined PC Blocking List **************************************************
 ! 02/08/2020 https://dictionary.cambridge.org
@@ -174,6 +173,11 @@ ali213.net##a.s-bg:nth-of-type(4)
 ali213.net##a.s-bg:nth-of-type(5)
 ali213.net##a.s-bg:nth-of-type(6)
 ali213.net##.to-other-game
+ali213.net##.glzj_tj
+ali213.net##.n_show_s
+ali213.net##.fengxiang.share-container
+!  suggest on the right
+ali213.net##.right_box.gl_r
 
 ! 2020-2023 huya.com
 huya.com##.danmu-report-tips
@@ -403,17 +407,19 @@ share.dmhy.org###\31 280_ad
 share.dmhy.org###pkpk
 
 ! 2021-2023 youtube.com
+||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_|game_biz|lang)/
+||youtube.com^$removeparam=/embeds_euri|source_ve_path|embeds_referring_/
 youtube-nocookie.com##.ytp-scroll-min.ytp-pause-overlay
 youtube.com##.opened
 youtube.com###lightbox
 youtube.com##.ytd-popup-container.style-scope > .yt-tooltip-renderer.style-scope
 youtube.com##.ytd-popup-container.style-scope > .yt-bubble-hint-renderer.style-scope
-youtube.com##tp-yt-paper-dialog.ytd-popup-container.style-scope
 youtube.com##ytd-feed-nudge-renderer.ytd-item-section-renderer.style-scope
 ! Video title in the player frame
 youtube.com##.ytp-chrome-top
 !youtube.com##.ytp-title-text
 !youtube.com##.ytp-show-cards-title
+!youtube.com##tp-yt-paper-dialog.ytd-popup-container.style-scope
 
 ! 2021-03-23 https://www.58pic.com
 58pic.com##.is-has.login-model.qt-model-t
@@ -496,9 +502,6 @@ cdn.concert.io##.desktop
 ! hoyoverse.com hoyolab.om mihoyo.com,  miyoushe.com mihoyogift.com
 ||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 ||hoyoverse.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
-
-||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_)/
-||youtube.com^$removeparam=/^(game_biz|lang)/
 
 ||miyoushe.com^$removeparam=/^(hyl_|mhy_|^bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 ||mihoyogift.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
@@ -870,6 +873,7 @@ kisssub.org##.alt1 > td.cell > .link
 ||www.anirena.com/images/background4.jpg$image
 
 ! 2023 smzdm.com
+||smzdm.com^$removeparam=/^zdm|send_|invite/
 smzdm.com##.qrcode
 smzdm.com##.icon-mobile
 smzdm.com##.z-right-widget
@@ -960,6 +964,7 @@ www.bloomberg.com###fortress-paywall-container-root
 ! 2023-02-17 https://book.douban.com
 douban.com##.extra
 douban.com##div[ad-status="appended"]
+douban.com###landing-bar
 
 ! 2023-02-26 https://www.sanqiu.mobi
 sanqiu.mobi##.waifu
@@ -1131,4 +1136,7 @@ a9vg.com##.a9-guide-download
 
 ! 2023 xiaohongshu.com
 xiaohongshu.com##.login-modal.reds-modal-open.reds-modal
+
+! 2023  linkedin.com
+linkedin.com##.full-lockout
 
