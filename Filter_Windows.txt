@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.06.04
+! Last updated:  2023.06.05
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 ! 1. Matching attributes by CSS selector with wild character  https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
@@ -979,6 +979,7 @@ pcgamer.com##.exit-intent__background.exit-intent
 www.goodreads.com##.Overlay--floating.Overlay
 
 ! 2023-03-05 https://music.apple.com
+||music.apple.com^$removeparam=/^(at|ct|itscg|itsct)$/
 music.apple.com##cwc-music-upsell-banner-web
 
 ! 2023-03-06 https://vk.com
@@ -1078,6 +1079,9 @@ leetcode.cn##.modal-container
 ! 2023 open.spotify.com
 open.spotify.com##[title="Upgrade to Premium"]
 open.spotify.com##[href*="/download"]
+open.spotify.com##div[data-testid="signup-bar"]
+open.spotify.com##button:matches-attr(title=/Premium/)
+open.spotify.com##div[aria-live="polite"]
 
 ! 2023- douyu.com
 douyu.com##.ScreenBannerAd
