@@ -1,7 +1,6 @@
 ! Title:        ESILXE's Block List for Android
 ! Author:       esilxe
-! Version:      3.4
-! Last updated: 2023-04-21
+! Last updated: 2023.06.08
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Android.txt
 
 ! 30/07/2020 https://wap.gamersky.com
@@ -30,4 +29,10 @@ m.bilibili.com##.visible-open-app-btn > .m-video-main-launchapp.launch-app-btn
 m.bilibili.com##.openapp-content
 m.bilibili.com##.openapp-mask
 
+! 2023-05-01 https://m.slashdot.org
+m.slashdot.org##.close-ad
 
+! 2023-06-07 m.smzdm.com
+m.smzdm.com##.foot-banner
+m.smzdm.com##.footer-banner-wrap
+m.smzdm.com##.app-position
