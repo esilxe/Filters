@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.06.05
+! Last updated:  2023.06.10
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 ! 1. Matching attributes by CSS selector with wild character  https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
@@ -16,7 +16,7 @@
 ###onetrust-consent-sdk
 
 ! --------------- Common Params Remove Start ---------------
-*$removeparam=/^utm_|^spm|^from_|^ref|^track/
+!*$removeparam=/^utm_|^spm|^from_|^ref|^track/
 *$removeparam=/share_app_name|share_medium|share_source|is_share|share_from/
 
 ||amazon.com=/^pd_rd_|^pf_rd/
@@ -28,7 +28,8 @@
 ||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from|broadcast_type|is_room_feed/
 ! baidu.com   st|fr
 ||baidu.com^$removeparam=/sfc|client_type|client_version|unique|is_video|share|entry/
-||taobao.com^$removeparam=/traceId|relationId|union_lens/
+||taobao.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId)$/
+||tmall.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId)$/
 ||yangkeduo.com$removeparam=/goods_sign|duoduo_type|campaign|customParameters|cpsSign|_x_ddjb_act|launch_pdd|cid/
 
 ||epicgames.com^$removeparam=/client_id/
@@ -360,10 +361,9 @@ www.bilibili.com##.lazy-img
 
 ! 未登录时，试看30秒的提示
 bilibili.com##.bpx-player-toast-wrap
-
 bilibili.com##.bpx-player-relation-wrap
-
-
+bilibili.com##.dialog
+live.bilibili.com##.login-guide
 
 ! 2021-2023 https://www.facebook.com
 facebook.com###pagelet_growth_expanding_cta
@@ -415,6 +415,10 @@ youtube.com###lightbox
 youtube.com##.ytd-popup-container.style-scope > .yt-tooltip-renderer.style-scope
 youtube.com##.ytd-popup-container.style-scope > .yt-bubble-hint-renderer.style-scope
 youtube.com##ytd-feed-nudge-renderer.ytd-item-section-renderer.style-scope
+! Popups (Video subscribe and next video) when in the end of the video
+www.youtube.com##.ytp-ce-size-1280.ytp-ce-top-right-quad.ytp-ce-large-round.ytp-ce-element-show.ytd-player.style-scope.ytp-ce-video.ytp-ce-element
+www.youtube.com##.ytp-ce-size-1280.ytp-ce-bottom-right-quad.ytp-ce-large-round.ytp-ce-element-show.ytd-player.style-scope.ytp-ce-playlist.ytp-ce-element
+www.youtube.com##.ytp-ce-size-1280.ytp-ce-bottom-left-quad.ytp-ce-medium-round.ytp-ce-element-show.ytd-player.style-scope.ytp-ce-channel-this.ytp-ce-channel.ytp-ce-element
 ! Video title in the player frame
 youtube.com##.ytp-chrome-top
 !youtube.com##.ytp-title-text
@@ -473,7 +477,7 @@ vg247.com##.vertical-align-content
 vg247.com##.ot-fade-in.onetrust-pc-dark-filter
 
 ! 2021-2023 zhihu.com
-!zhihu.com##.Card.Pc-card
+zhihu.com##.Card.Pc-card
 zhihu.com##[class*="css-"]:has-text("登录知乎")
 !zhihu.com##.Modal-enter-done.undefined.Modal-wrapper
 zhihu.com##.Banner-link
@@ -489,7 +493,6 @@ polygon.com##.desktop
 polygon.com##.image__background
 polygon.com##.c-toaster-stuck.c-toaster-active.c-toaster
 
-
 ! 2021-04-08 https://www.huijiwiki.com
 www.huijiwiki.com###fndAdContainer
 
@@ -503,7 +506,7 @@ cdn.concert.io##.desktop
 ||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 ||hoyoverse.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 
-||miyoushe.com^$removeparam=/^(hyl_|mhy_|^bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
+||miyoushe.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 ||mihoyogift.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 ||mihoyo.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 
@@ -577,8 +580,11 @@ www.ted.com##.md\:hidden
 ||sourcepoint.theguardian.com/index.html$subdocument
 
 ! 2022-01-17 https://pro.imdb.com
-pro.imdb.com##.logged-out-modal-v2.a-section
-pro.imdb.com##.ab_widget
+imdb.com##.logged-out-modal-v2.a-section
+imdb.com##.ab_widget
+imdb.com##.navbar__coachmark
+imdb.com##div[data-menu-id="navImdbPro"]
+
 
 ! 2022-01-18 https://dict.youdao.com
 dict.youdao.com##.win-download.dialog-guide-download
@@ -920,7 +926,7 @@ moegirl.org.cn##[href*="mp.weixin.qq.com/s?__biz="]
 zh.moegirl.org.cn##.desktop-only
 zh.moegirl.org.cn##[target="undefined"]
 zh.moegirl.org.cn##i:has-text("【广告】点击")
-
+zh.moegirl.org.cn##a[href^="https://l.tapdb.net/"]
 
 ! 2023-01-28 https://slashdot.org
 slashdot.org###announcement
@@ -1090,10 +1096,6 @@ douyu.com##.Bottom-ad
 ! 2023-04-20 https://www.douyu.com
 www.douyu.com##.is-advert
 www.douyu.com##[href*="g.wan.douyu.com"]
-
-! 2023-04-20 https://live.bilibili.com
-live.bilibili.com##.login-guide
-
 ! 2020  medium.com
 medium.com##.mx.mw.mv.mu.mt.ms.mr.mq.mp.mo.mn.mm.ml.mk.mj.mi.mh.mg.mf.me.md.mc.mb.ma.lz.ly.lx.lw.lv.lu.lt.ai.ls.lr.t.lq
 
