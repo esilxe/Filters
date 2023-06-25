@@ -1,7 +1,8 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.06.10
+! Last updated:  2023.06.25
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
+! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Windows.txt
 
 ! 1. Matching attributes by CSS selector with wild character  https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
 ! web.com##[href*="ad.web.com"]   # Matches all attributes that its value contains "ad.web.com"
@@ -13,24 +14,25 @@
 ! --------------- Common Contents Block Start ---------------
 ##.contentBlock
 ##.js-consent-banner
-###onetrust-consent-sdk
+*###onetrust-consent-sdk
 
 ! --------------- Common Params Remove Start ---------------
-!*$removeparam=/^utm_|^spm|^from_|^ref|^track/
-*$removeparam=/share_app_name|share_medium|share_source|is_share|share_from/
+*$removeparam=/^(utm_|spm|from_|ref|track)/
+*$removeparam=/^(share_app_name|share_medium|share_source|is_share|share_from)/
 
 ||amazon.com=/^pd_rd_|^pf_rd/
 
-||jd.com^$removeparam=/^ad_od|^gx|cu/
+||jd.com^$removeparam=/^(ad_od|gx|wxa_|cu)/
 ||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
 ||gcores.com^$removeparam=/x-oss-process/
-||bilibili.com^$removeparam=/vd_source|zw/
-||bilibili.com^$removeparam=/hotRank|launch_id|live_from|extra_jump_from|broadcast_type|is_room_feed/
-! baidu.com   st|fr
-||baidu.com^$removeparam=/sfc|client_type|client_version|unique|is_video|share|entry/
-||taobao.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId)$/
-||tmall.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId)$/
-||yangkeduo.com$removeparam=/goods_sign|duoduo_type|campaign|customParameters|cpsSign|_x_ddjb_act|launch_pdd|cid/
+||ithome.com^$removeparam=/x-bce-process/
+||bilibili.com^$removeparam=/^(spm_|from_|hotRank|launch_id|plat_id|up_id|broadcast_type|vd_source|zw|is_|buvid|timestamp|unique_)/
+
+! baidu.com   st|fr|share
+||baidu.com^$removeparam=/^(sfc|client_type|client_version|unique|is_video|entry)/
+||taobao.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_)/
+||tmall.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_)/
+||yangkeduo.com$removeparam=/^(_oak_|_wv|_x_|goods_sign|duoduo_type|campaign|customParameters|cpsSignjb_act|launch_pdd|cid)/
 
 ||epicgames.com^$removeparam=/client_id/
 
@@ -81,7 +83,9 @@ mail.rambler.ru##.AutoAppContainer.pfhph > div:nth-of-type(3)
 mail.rambler.ru##body > div:nth-of-type(6)
 
 ! 2021-2023  gamersky.com  fhyx.com  fhyx.hk
-!||www.gamersky.com/zhuanti/JumpToLoadPage/^$document
+||fhyx.com^$removeparam=/^(buyChannel|gsAppRefArticleId|uf)/
+||fhyx.hk^$removeparam=/^(buyChannel|gsAppRefArticleId|uf)/
+||www.gamersky.com/zhuanti/JumpToLoadPage/^$document
 gamersky.com##.bgAdWrap
 gamersky.com##.close
 gamersky.com##.lxyygg.yyggtit.Midtit
@@ -150,9 +154,14 @@ gamersky.com###ADback
 fhyx.com##.appdown_detail_alert
 fhyx.com##a.products_right_menu_li:nth-of-type(2)
 fhyx.com##.fhyxhk_adv
+fhyx.com##.detail_tg
+fhyx.com##.adviste_body
+fhyx.com##.fhyxDownApp
 fhyx.hk##.appdown_detail_alert
 fhyx.hk##a.products_right_menu_li:nth-of-type(2)
 fhyx.hk##.fhyxhk_adv
+fhyx.hk##.detail_tg
+fhyx.hk##.adviste_body
 
 ! 2020-2023  myanimelist.net
 myanimelist.net##.root
@@ -179,6 +188,15 @@ ali213.net##.n_show_s
 ali213.net##.fengxiang.share-container
 !  suggest on the right
 ali213.net##.right_box.gl_r
+ali213.net##.ali-kx
+ali213.net###tmp_ggao
+ali213.net##.go-lb
+ali213.net##.coopSteambox
+ali213.net##.downWayBottom
+ali213.net##.mt10.downtips
+ali213.net##.paddingStyle.basePluginContainer
+ali213.net##.gameNavContainer
+ali213.net###game591Box > .picBg
 
 ! 2020-2023 huya.com
 huya.com##.danmu-report-tips
@@ -362,7 +380,7 @@ www.bilibili.com##.lazy-img
 ! 未登录时，试看30秒的提示
 bilibili.com##.bpx-player-toast-wrap
 bilibili.com##.bpx-player-relation-wrap
-bilibili.com##.dialog
+www.bilibili.com##.dialog
 live.bilibili.com##.login-guide
 
 ! 2021-2023 https://www.facebook.com
@@ -408,7 +426,7 @@ share.dmhy.org###pkpk
 
 ! 2021-2023 youtube.com
 ||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_|game_biz|lang)/
-||youtube.com^$removeparam=/embeds_euri|source_ve_path|embeds_referring_/
+||youtube.com^$removeparam=/^(embeds_euri|source_ve_path|embeds_referring_|feature)/
 youtube-nocookie.com##.ytp-scroll-min.ytp-pause-overlay
 youtube.com##.opened
 youtube.com###lightbox
@@ -464,6 +482,7 @@ sj.qq.com##[dt-eid="yyb_brand"]
 sj.qq.com##[dt-eid="yybn_game_buttonlayer"]
 sj.qq.com##[class*="BrandBanner_mask"]
 weread.qq.com##.wr_book_detail_footer_float.wr_book_detail_footer
+dnf.qq.com###_overlay_
 
 ! 2021-03-28 https://www.alamy.com
 www.alamy.com###automationCookieBannerText
@@ -566,6 +585,7 @@ juejin.cn##.sticky-block.sidebar-block
 juejin.cn##.vip-entry.nav-item
 juejin.cn##.guide-collect-popover
 juejin.cn##.dark-mode-transition.dark-mode-notification
+juejin.cn##.login-guide-popup.login-guide-wrap
 
 ! 2021-11-26 https://www.ted.com
 www.ted.com###recommends-banner
@@ -581,10 +601,9 @@ www.ted.com##.md\:hidden
 
 ! 2022-01-17 https://pro.imdb.com
 imdb.com##.logged-out-modal-v2.a-section
-imdb.com##.ab_widget
 imdb.com##.navbar__coachmark
 imdb.com##div[data-menu-id="navImdbPro"]
-
+imdb.com##.ipc-snackbar
 
 ! 2022-01-18 https://dict.youdao.com
 dict.youdao.com##.win-download.dialog-guide-download
@@ -689,8 +708,9 @@ www.88hd.tv##.download
 ||static-res-1251729847.file.myqcloud.com/moe321/main_bg.jpg$image
 
 ! 2022 etymonline.com
-||cdn.etymonline.com/web/logo.png$image
+!||cdn.etymonline.com/web/logo.png$image
 www.etymonline.com###detail-app-guide
+etymonline.com##div[data-ad-container="true"]
 
 ! 2022-02023 itee.com
 gitee.com##.pendan-widget
@@ -985,7 +1005,6 @@ pcgamer.com##.exit-intent__background.exit-intent
 www.goodreads.com##.Overlay--floating.Overlay
 
 ! 2023-03-05 https://music.apple.com
-||music.apple.com^$removeparam=/^(at|ct|itscg|itsct)$/
 music.apple.com##cwc-music-upsell-banner-web
 
 ! 2023-03-06 https://vk.com
@@ -1003,8 +1022,6 @@ amazon.co.uk###sp-cc
 opentip.kaspersky.com##[theme="dark"]
 
 metadefender.opswat.com##.cookieWrapper
-
-!dictionary.cambridge.org###onetrust-consent-sdk
 
 ! 2023-03-09 https://maimai.cn
 maimai.cn##.downloadFixed
@@ -1027,6 +1044,7 @@ m.ximalaya.com##.btn-open.schema-link.init-code
 m.ximalaya.com##.Z_E.album-btn-container
 www.ximalaya.com##.xz_.dl-pc
 www.ximalaya.com##.Kl_.container
+ximalaya.com##._ur.himalaya-wrapper
 
 ! 2023-03-16 https://blog.51cto.com
 blog.51cto.com##.right-fixadv
@@ -1036,14 +1054,21 @@ blog.51cto.com##.action-aside-left.action-aside
 blog.51cto.com##.signIn
 blog.51cto.com##.editArticle > .new_bloger
 
-! 2023 https://outlook.live.com
+! 2023  live.com
 outlook.live.com##span:has-text( Microsoft 365 )
 !outlook.live.com##span:has-text(广告)
 !outlook.live.com##[data-icon-name="OutlookLogo"]
-
-
 !outlook.live.com##:xpath(/html/body/div[2]/div/div[2]/div[2]/div[2]/div[1]/div/div/div[4])
 outlook.live.com##:xpath(//div[@id="MainModule"]/div/div/div[4])
+onedrive.live.com##.od-OverlayHost
+outlook.live.com##div:has-text(/^Get the latest premium/)
+outlook.live.com##div:has-text(/^Upgrade Your Account/)
+outlook.live.com##div:has(div:has(div:has(div:has(div:has(button[aria-label="Click to see more"])))))
+outlook.live.com##div:has(span:has-text(Go ad-free))
+outlook.live.com##span:has-text(/^Microsoft Outlook/)
+onedrive.live.com##.root-200.is-open.ms-Modal
+onedrive.live.com##.od-PremiumUpsellBanner
+
 
 ! 2023-04-03 https://www.1688.com
 1688.com##.active.section-bottom
@@ -1114,12 +1139,6 @@ sohu.com##div:matches-attr(class=/god/)
 manybooks.net##.ui-front.ui-widget-content.ui-widget.ui-corner-all.ui-dialog
 manybooks.net##.ui-front.ui-widget-overlay
 
-! 2023-05-05 https://outlook.live.com
-outlook.live.com##div:has-text(/^Get the latest premium/)
-outlook.live.com##div:has-text(/^Upgrade Your Account/)
-outlook.live.com##div:has(div:has(div:has(div:has(div:has(button[aria-label="Click to see more"])))))
-outlook.live.com##div:has(span:has-text(Go ad-free))
-outlook.live.com##span:has-text(/^Microsoft Outlook/)
 
 ! 2023  ithome.com
 ithome.com##.shareto
@@ -1128,6 +1147,9 @@ ithome.com##.sideweixin.sfa
 m.ithome.com##.open-app-banner
 m.ithome.com##.fixed-btn > .open-app-a
 m.ithome.com##.open-app.ft-item
+ithome.com##[href^="https://lapin.ithome.com"]
+ithome.com##.ad
+ithome.com###login-guide-box
 
 ! 2023 www.99danhao.cn
 www.99danhao.cn##.layui-m-layer0.layui-m-layer
@@ -1145,4 +1167,14 @@ xiaohongshu.com##.login-modal.reds-modal-open.reds-modal
 
 ! 2023  linkedin.com
 linkedin.com##.full-lockout
+
+! 2023-06-22 https://pan.baidu.com
+pan.baidu.com##.nd-cert-dialog
+
+! 2023-06-23 https://www.freebuf.com
+www.freebuf.com##.ant-tooltip-content
+
+! 2023-06-23 https://open.spotify.com
+open.spotify.com##.tippy-content
+
 
