@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.06.25
+! Last updated:  2023.07.23
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 ! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Windows.txt
 
@@ -17,8 +17,10 @@
 *###onetrust-consent-sdk
 
 ! --------------- Common Params Remove Start ---------------
-*$removeparam=/^(utm_|spm|from_|ref|track)/
+*$removeparam=/^(utm_source|utm_medium|utm_sources|utm_term|utm_campaign|utm_referrer)/
+*$removeparam=/^(spm|from_|ref_|track)/
 *$removeparam=/^(share_app_name|share_medium|share_source|is_share|share_from)/
+
 
 ||amazon.com=/^pd_rd_|^pf_rd/
 
@@ -167,6 +169,7 @@ fhyx.hk##.adviste_body
 myanimelist.net##.root
 myanimelist.net##.fade-in.popup-background.welcome-back
 myanimelist.net##.ga-impression.bottom-bar
+myanimelist.net##.ga-impression.top_signup
 
 ! https://*.ali213.net
 ||*b*.ali213.net/*$image
@@ -266,7 +269,6 @@ baidu.com###con-ar > .xpath-log.result-op
 baidu.com##[tpl="feed-ad"]
 baidu.com##.tieba-custom-pass-login
 
-
 baijiahao.baidu.com##.headDeflectorContainer
 baijiahao.baidu.com##.infinite-scroll-component__outerdiv
 baijiahao.baidu.com##:xpath(/html/body/div[1]/div/div/div[2]/div/div[2]/div/div[2])
@@ -278,6 +280,8 @@ baike.baidu.com##.wgt-baikeapp-promote-container
 haokan.baidu.com##[id*="TANGRAM__PSP"]
 haokan.baidu.com##.login-popover
 haokan.baidu.com##.type1.page-top-rightinfo-download.page-top-rightinfo-btn
+
+jingyan.baidu.com##.wgt-left-promo
 
 pan.baidu.com##div.wp-s-header__right-item:nth-of-type(2)
 pan.baidu.com##span.wp-s-header__right-item
@@ -295,6 +299,8 @@ pan.baidu.com##.is-dot.u-badge__content
 pan.baidu.com##.wp-s-header-user__tooltip
 pan.baidu.com##.wp-s-header-user__member-status
 pan.baidu.com##.nd-chat-guide
+pan.baidu.com##.nd-cert-dialog
+pan.baidu.com##.wp-s-header__right-item.gameEntry
 
 tieba.baidu.com##.label_text
 tieba.baidu.com##.j_click_close.close_btn
@@ -309,14 +315,38 @@ tieba.baidu.com##.tbui_slideshow_container.plat_recom_carousel
 tieba.baidu.com##.notice-wrap-fixed.notice-wrap-top.notice_item.item
 tieba.baidu.com##.app_download_box
 tieba.baidu.com###spage_game_tab_wrapper
-http://tb2.bdstatic.com/tb/static-user/widget/my_tieba/images/*$image
-||tb2.bdstatic.com/tb/static-pb/widget/post_list/img/*$image
 tieba.baidu.com##[ad-dom-img="true"]
 tieba.baidu.com##.lu-home-wrapper
 tieba.baidu.com###aside-ad-wrapper
 tieba.baidu.com##[add-shield-track="1"]
 tieba.baidu.com##.xiu8_follow_warn
 tieba.baidu.com##.bus-top-activity-wrap
+tieba.baidu.com##.couplet_right.j_couplet
+tieba.baidu.com##.couplet_left.j_couplet
+tieba.baidu.com##.lu-search-box
+
+http://tb2.bdstatic.com/tb/static-user/widget/my_tieba/images/*$image
+||tb2.bdstatic.com/tb/static-pb/widget/post_list/img/*$image
+ala.baidu.com##.label_text
+ala.baidu.com##.j_click_close.close_btn
+ala.baidu.com###fixed_bar
+ala.baidu.com###aside-ad
+ala.baidu.com##div.thread_item_box.clearfix
+ala.baidu.com##.fengchao-wrap-feed
+
+ala.baidu.com###branding_ads
+ala.baidu.com##.tbui_slideshow_container.plat_recom_carousel
+! 2023-03-05 https://ala.baidu.com
+ala.baidu.com##.notice-wrap-fixed.notice-wrap-top.notice_item.item
+ala.baidu.com##.app_download_box
+ala.baidu.com###spage_game_tab_wrapper
+ala.baidu.com##[ad-dom-img="true"]
+ala.baidu.com##.lu-home-wrapper
+ala.baidu.com###aside-ad-wrapper
+ala.baidu.com##[add-shield-track="1"]
+ala.baidu.com##.xiu8_follow_warn
+ala.baidu.com##.bus-top-activity-wrap
+
 
 wenku.baidu.com##.new-privilege-wrap.vip-privilege-card-wrap.vip-privilege
 wenku.baidu.com##.inner-vip.comp-vip-pop
@@ -425,7 +455,7 @@ share.dmhy.org###\31 280_ad
 share.dmhy.org###pkpk
 
 ! 2021-2023 youtube.com
-||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_|game_biz|lang)/
+||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_|game_biz)/
 ||youtube.com^$removeparam=/^(embeds_euri|source_ve_path|embeds_referring_|feature)/
 youtube-nocookie.com##.ytp-scroll-min.ytp-pause-overlay
 youtube.com##.opened
@@ -464,6 +494,7 @@ uiiiuiii.com##.modal-show.modal-part-middle.modal-part.modal-login-panel
 uiiiuiii.com##.modal-show.modal-mark.mark
 
 ! 2021-03-28 https://ke.qq.com
+helper.qq.com^$removeparam=/^(source|env|isFromBiliBili|sIsVideo|sVid|iDocId|cCurrentGameId|type)/
 qq.com##.ad-right-wrap
 qq.com##.recommend-con
 qq.com##.cf.gg-3.qq-gg.layout
@@ -483,6 +514,7 @@ sj.qq.com##[dt-eid="yybn_game_buttonlayer"]
 sj.qq.com##[class*="BrandBanner_mask"]
 weread.qq.com##.wr_book_detail_footer_float.wr_book_detail_footer
 dnf.qq.com###_overlay_
+cdn.helper.qq.com##.qr-box
 
 ! 2021-03-28 https://www.alamy.com
 www.alamy.com###automationCookieBannerText
@@ -669,7 +701,7 @@ sina.com.cn##[id*="sinaadToolkitBox"]
 sina.com.cn##.article-content-left > div > .sinaads-done.sinaads
 sina.com.cn##.clearfix.blk-zcapp
 sina.com.cn##.clearfix.blk-related
-
+sina.com.cn##.side-btns-jfyb-resize.side-btns-jifen2022
 
 ! 2022-03.14-3.17 http://sdhtby.com
 sdhtby.com##.classification_works.works_recommend
@@ -693,9 +725,7 @@ mangabz.com###HMcoupletDivleft
 mangabz.com##.top-bar
 ||*.mangabz.com/wxhfm.html$subdocument
 
-! 2022-03-18 https://www.landian.vip
-www.landiannews.com##section.module-radius
-! 2022-12-27 https://www.landiannews.com
+! 2022 landian.vip
 www.landiannews.com##section.module-radius.home-html-code:nth-of-type(3)
 
 ! 2022-03-18 https://www.solidot.org
@@ -947,6 +977,8 @@ zh.moegirl.org.cn##.desktop-only
 zh.moegirl.org.cn##[target="undefined"]
 zh.moegirl.org.cn##i:has-text("【广告】点击")
 zh.moegirl.org.cn##a[href^="https://l.tapdb.net/"]
+moegirl.org.cn##[src*="https://storage.moegirl.org.cn/console-plus/uploads/2023/07/13/"]
+moegirl.org.cn##[href*="http://sycm.mmstat.com"]
 
 ! 2023-01-28 https://slashdot.org
 slashdot.org###announcement
@@ -956,6 +988,7 @@ freebuf.com##.user-guide
 freebuf.com##.ant-layout > .floating-view > .qianbao.floating-view-item
 freebuf.com##.content-view > .floating-view > .qianbao.floating-view-item
 freebuf.com##.qianbao.floating-view-item
+www.freebuf.com##.ant-tooltip-content
 
 ! 2023-02-04 https://detail.zol.com.cn
 zol.com.cn###questionnaire
@@ -1069,6 +1102,15 @@ outlook.live.com##span:has-text(/^Microsoft Outlook/)
 onedrive.live.com##.root-200.is-open.ms-Modal
 onedrive.live.com##.od-PremiumUpsellBanner
 
+! 2022 5kfz.com
+5kfz.com##.ltn__slider-style-8
+5kfz.com##.pb-100.pt-110
+5kfz.com##.pt-80.ltn__feature-area
+5kfz.com###ltnr_counterUp
+5kfz.com###ltnr_download
+5kfz.com##.mt-30.ltn__header-transparent.ltn__header-8.ltn__header-area
+5kfz.com###ltnr_about
+5kfz.com##.pb-40.pt-120.bg-image.section-bg-3.ltn__testimonial-area
 
 ! 2023-04-03 https://www.1688.com
 1688.com##.active.section-bottom
@@ -1113,6 +1155,8 @@ open.spotify.com##[href*="/download"]
 open.spotify.com##div[data-testid="signup-bar"]
 open.spotify.com##button:matches-attr(title=/Premium/)
 open.spotify.com##div[aria-live="polite"]
+open.spotify.com##.tippy-content
+open.spotify.com##div[class*="encore-bright-accent-set"]
 
 ! 2023- douyu.com
 douyu.com##.ScreenBannerAd
@@ -1168,13 +1212,11 @@ xiaohongshu.com##.login-modal.reds-modal-open.reds-modal
 ! 2023  linkedin.com
 linkedin.com##.full-lockout
 
-! 2023-06-22 https://pan.baidu.com
-pan.baidu.com##.nd-cert-dialog
+! 2023-06-27 https://www.amap.com
+www.amap.com##.app-download-panel
+www.amap.com##.usel.amap-app-download
+www.amap.com###amap-result-banner
 
-! 2023-06-23 https://www.freebuf.com
-www.freebuf.com##.ant-tooltip-content
-
-! 2023-06-23 https://open.spotify.com
-open.spotify.com##.tippy-content
-
+! 2023-06-27 https://cloud.tencent.com
+cloud.tencent.com##.mod-commercial
 
