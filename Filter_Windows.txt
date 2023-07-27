@@ -749,7 +749,7 @@ etymonline.com##div[data-ad-container="true"]
 ! 2022-02023 itee.com
 gitee.com##.pendan-widget
 gitee.com##.register-guide
-gitee.com#?[style*="flex !important;"]
+gitee.com##[style*="flex !important;"]
 
 ! 2022-04-07 https://manhua.fffdm.com
 manhua.fffdm.com###fix_top_dom
@@ -1222,4 +1222,3 @@ www.amap.com###amap-result-banner
 
 ! 2023-06-27 https://cloud.tencent.com
 cloud.tencent.com##.mod-commercial
-
