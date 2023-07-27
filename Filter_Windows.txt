@@ -1,8 +1,8 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
 ! Last updated:  2023.07.26
-! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 ! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Windows.txt
+! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
 ! 1. Matching attributes by CSS selector with wild character  https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
 ! web.com##[href*="ad.web.com"]   # Matches all attributes that its value contains "ad.web.com"
