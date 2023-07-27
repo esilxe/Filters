@@ -2,6 +2,7 @@
 ! Author:       esilxe
 ! Last updated: 2023.07.26·
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Android.txt
+! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Android.txt
 
 ! 30/07/2020 https://wap.gamersky.com
 wap.gamersky.com##.ymw-header2019
