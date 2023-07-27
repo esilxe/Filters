@@ -1,6 +1,6 @@
 ! Title:        ESILXE's Block List for Android
 ! Author:       esilxe
-! Last updated: 2023.06.08
+! Last updated: 2023.07.26·
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Android.txt
 
 ! 30/07/2020 https://wap.gamersky.com
@@ -11,6 +11,11 @@ wap.gamersky.com##section.ymw-rel-list
 wap.gamersky.com##.ymw-rel-list.ymw-aside-box
 wap.gamersky.com##.ymw-rel-mgame.ymw-aside-box.ymw-hot-h5-game
 wap.gamersky.com##.ymw-header2021.ymwBootDownload
+club.gamersky.com##.ymw-header2019
+club.gamersky.com##.ymw-footer
+club.gamersky.com##.club-card-comment-gsTgApp
+club.gamersky.com##.gsTgWapConBdshareTopBox
+club.gamersky.com##.ymw-rel-mgame.ymw-aside-box.ymw-hot-h5-game
 
 ! 2023-01-27 https://m.douban.com
 m.douban.com##.TalionNav-static
