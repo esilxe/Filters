@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.07.23
+! Last updated:  2023.07.26
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 ! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Windows.txt
 
@@ -324,6 +324,8 @@ tieba.baidu.com##.bus-top-activity-wrap
 tieba.baidu.com##.couplet_right.j_couplet
 tieba.baidu.com##.couplet_left.j_couplet
 tieba.baidu.com##.lu-search-box
+wan.baidu.com##.game-box-wrapper
+tieba.baidu.com###error_404_iframe
 
 http://tb2.bdstatic.com/tb/static-user/widget/my_tieba/images/*$image
 ||tb2.bdstatic.com/tb/static-pb/widget/post_list/img/*$image
@@ -412,6 +414,8 @@ bilibili.com##.bpx-player-toast-wrap
 bilibili.com##.bpx-player-relation-wrap
 www.bilibili.com##.dialog
 live.bilibili.com##.login-guide
+
+www.bilibili.com##.bilibili-player-video-message
 
 ! 2021-2023 https://www.facebook.com
 facebook.com###pagelet_growth_expanding_cta
@@ -963,6 +967,7 @@ cowlevel.net##.on.flex-center.flex-box.vm-register-footer
 zh.moegirl.org.cn##div.moe-card:nth-of-type(2)
 zh.moegirl.org.cn##.gap-1.flex-column.flex.inner-wrapper > div.moe-card
 ||app.moegirl.org.cn/background/*
+||app.moegirl.org.cn/insight-assets/images/20230404-ShenQiShe/800x300.jpg$image
 zh.moegirl.org.cn##.undefined
 zh.moegirl.org.cn##href:has-text("poster.taptap.cn/appsem/")
 zh.moegirl.org.cn##a:has-text("近期关闭")
@@ -970,14 +975,12 @@ zh.moegirl.org.cn##[style="height: 90px;"]
 !zh.moegirl.org.cn##[style=""]
 zh.moegirl.org.cn##div.desktop-only.moe-flexible-container
 zh.moegirl.org.cn##.n-button--medium-type.n-button--primary-type.n-button
-||app.moegirl.org.cn/insight-assets/images/20230404-ShenQiShe/800x300.jpg$image
-||app.moegirl.org.cn/insight-assets/images/20230404-ShenQiShe/800x300.jpg$image
 moegirl.org.cn##[href*="mp.weixin.qq.com/s?__biz="]
 zh.moegirl.org.cn##.desktop-only
 zh.moegirl.org.cn##[target="undefined"]
 zh.moegirl.org.cn##i:has-text("【广告】点击")
 zh.moegirl.org.cn##a[href^="https://l.tapdb.net/"]
-moegirl.org.cn##[src*="https://storage.moegirl.org.cn/console-plus/uploads/2023/07/13/"]
+moegirl.org.cn##[src*="https://storage.moegirl.org.cn/console-plus/uploads/"]
 moegirl.org.cn##[href*="http://sycm.mmstat.com"]
 
 ! 2023-01-28 https://slashdot.org
