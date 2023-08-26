@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.07.26
+! Last updated:  2023.08.25
 ! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Windows.txt
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
