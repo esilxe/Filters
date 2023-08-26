@@ -32,8 +32,8 @@
 
 ! baidu.com   st|fr|share
 ||baidu.com^$removeparam=/^(sfc|client_type|client_version|unique|is_video|entry)/
-||taobao.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_)/
-||tmall.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_)/
+||taobao.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_|_lgt_|x5referer)|rand/
+||tmall.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_|_lgt_|x5referer)|rand/
 ||yangkeduo.com$removeparam=/^(_oak_|_wv|_x_|goods_sign|duoduo_type|campaign|customParameters|cpsSignjb_act|launch_pdd|cid)/
 
 ||epicgames.com^$removeparam=/client_id/
@@ -44,6 +44,9 @@
 ||prod.outgoing.prod.webservices.mozgcp.net^
 ||shop-links.co^
 ||linkstars.com^
+||tj.shwswl.cn/*$image
+||www.aqours.today/*$image
+||t.xuchuang.com/a/c$subdocument
 
 ! ************************************************** User Defined PC Blocking List **************************************************
 ! 02/08/2020 https://dictionary.cambridge.org
@@ -67,7 +70,6 @@ detail.tmall.com###ks-component475
 3dmgame.com##.Content_R
 3dmgame.com##.warp_f
 
-||tj.shwswl.cn/*$image
 3dmgame.com##.quickdown3.a_list
 3dmgame.com##.quickdown2.tab2.tab
 3dmgame.com##.downl_list
@@ -88,6 +90,13 @@ mail.rambler.ru##body > div:nth-of-type(6)
 ||fhyx.com^$removeparam=/^(buyChannel|gsAppRefArticleId|uf)/
 ||fhyx.hk^$removeparam=/^(buyChannel|gsAppRefArticleId|uf)/
 ||www.gamersky.com/zhuanti/JumpToLoadPage/^$document
+||imgf.gamersky.com/img/szd/*
+||image.gamersky.com/webimg13/web/h5/icon/*
+||ol.gamersky.com/news/202005/1291261.shtml$image
+||g.ieeod0.com/b/1/*$subdocument
+||g.ieeod0.com/b/1/*$media
+||ol.gamersky.com/news/202109/1424305.shtml$image
+||imgf.gamersky.com/img/tqbc2010/37_620x75_0915.mp4$media
 gamersky.com##.bgAdWrap
 gamersky.com##.close
 gamersky.com##.lxyygg.yyggtit.Midtit
@@ -130,14 +139,6 @@ gamersky.com###new_top_allsite_970_6
 gamersky.com###new_page_allsite_620
 
 gamersky.com###top_pd_1060_1
-
-imgf.gamersky.com/img/szd/*
-image.gamersky.com/webimg13/web/h5/icon/*
-||ol.gamersky.com/news/202005/1291261.shtml$image
-||g.ieeod0.com/b/1/*$subdocument
-||g.ieeod0.com/b/1/*$media
-||ol.gamersky.com/news/202109/1424305.shtml$image
-||imgf.gamersky.com/img/tqbc2010/37_620x75_0915.mp4$media
 
 gamersky.com##.MidLpic
 gamersky.com##div.MidLtit:nth-of-type(6)
@@ -214,21 +215,19 @@ huya.com##.liveList-header-r
 huya.com##[class*="LoginBd--"]
 huya.com##[class*="tips-msg"]
 huya.com##.player-play-big
+huya.com##.room-business-game
 
 ! 05/07/2020 https://www.right.com.cn
 www.right.com.cn##h2
 www.right.com.cn##.a_mu
 www.right.com.cn###diy1
 
-! 2023 discord.com [Two methods with same results-]
-!discord.com##[class*="layerContainer-"]
-discord.com##div:matches-attr(class="/^layerContainer-/")
-
 ! 2020-2023
 drive.google.com##.a-ee-zh-k
 translate.google.com##.notification-area
 accounts.google.com###animated-container
 chrome.google.com##elementtagname[aria-labelledby^=""]
+chrome.google.com##div[aria-labelledby^="promo-header"]
 
 ! 2020 https://www.pixivision.net
 pixivision.net##._sticky.sidebar-contents-container
@@ -399,6 +398,9 @@ live.bilibili.com##.w-100.over-hidden.p-relative.flip-view
 live.bilibili.com##.shop-popover
 ! live gift
 live.bilibili.com###gift-control-vm
+live.bilibili.com###anchor-guest-box-id
+live.bilibili.com###gift-control-vm-new
+
 ! 关注
 www.bilibili.com##.bpx-player-top-wrap
 ! 视频暂停后右下角显示的图标
@@ -415,7 +417,12 @@ bilibili.com##.bpx-player-relation-wrap
 www.bilibili.com##.dialog
 live.bilibili.com##.login-guide
 
-www.bilibili.com##.bilibili-player-video-message
+bilibili.com##.bilibili-player-video-message
+bilibili.com##.couplet-locs
+
+wiki.biligame.com##.qchar-container
+wiki.biligame.com###pc-share
+
 
 ! 2021-2023 https://www.facebook.com
 facebook.com###pagelet_growth_expanding_cta
@@ -429,6 +436,7 @@ twitter.com##[data-testid="BottomBar"]
 ! 2021-03-13 https://stackoverflow.com
 stackoverflow.com##.js-dismissable-hero
 stackoverflow.com##.js-consent-banner
+stackoverflow.com##.is-visible.js-notice-sidebar-popover
 
 ! 2021-2023 csdn.net
 csdn.net##.trips-bottom-left.trips
@@ -608,8 +616,11 @@ www.kanshujun.cc###HMRichBox
 www.kanshujun.cc###HMcoupletIconleft
 
 ! 2021-09-05 https://bbs.nga.cn
-bbs.nga.cn###m_posts_c > span
-bbs.nga.cn##.null
+nga.cn^$removeparam=/rand/
+ngabbs.com^$removeparam=/rand/
+nga.cn###m_posts_c > span
+nga.cn##.null
+
 tagtic.cn
 jg.yaowanla.com
 
@@ -627,10 +638,6 @@ juejin.cn##.login-guide-popup.login-guide-wrap
 www.ted.com###recommends-banner
 www.ted.com##.px-10.rounded-t-md.w-full.z-50.right-0.left-0.bottom-0.sticky
 www.ted.com##.md\:hidden
-
-! 2021-12-05 https://dnf.52pk.com
-||t.xuchuang.com/a/c$subdocument
-
 
 ! 2022-01-11 https://www.theguardian.com
 ||sourcepoint.theguardian.com/index.html$subdocument
@@ -749,7 +756,7 @@ etymonline.com##div[data-ad-container="true"]
 ! 2022-02023 itee.com
 gitee.com##.pendan-widget
 gitee.com##.register-guide
-gitee.com##[style*="flex !important;"]
+!gitee.com##[style*="flex !important;"]
 
 ! 2022-04-07 https://manhua.fffdm.com
 manhua.fffdm.com###fix_top_dom
@@ -883,7 +890,9 @@ www.linguee.com##.wide_in_main.l_deepl_ad_container
 uiiiuiii.com##.show-full
 uiiiuiii.com##.singular-txt-show
 
-! 2022-11-09 https://www.reddit.com
+! 2022-11-09 reddit.com
+reddit.com##xpromo-nsfw-blocking-modal-desktop
+reddit.com##.prompt 
 ||www.redditstatic.com/desktop2x/img/upsell/appQrCode/$image
 
 ! 2022-11-16 https://www.5yju.com
@@ -964,24 +973,25 @@ open.163.com##.open-download
 cowlevel.net##.on.flex-center.flex-box.vm-register-footer
 
 ! 2023 moegirl.org.cn
-zh.moegirl.org.cn##div.moe-card:nth-of-type(2)
-zh.moegirl.org.cn##.gap-1.flex-column.flex.inner-wrapper > div.moe-card
 ||app.moegirl.org.cn/background/*
 ||app.moegirl.org.cn/insight-assets/images/20230404-ShenQiShe/800x300.jpg$image
-zh.moegirl.org.cn##.undefined
-zh.moegirl.org.cn##href:has-text("poster.taptap.cn/appsem/")
-zh.moegirl.org.cn##a:has-text("近期关闭")
-zh.moegirl.org.cn##[style="height: 90px;"]
-!zh.moegirl.org.cn##[style=""]
-zh.moegirl.org.cn##div.desktop-only.moe-flexible-container
-zh.moegirl.org.cn##.n-button--medium-type.n-button--primary-type.n-button
-moegirl.org.cn##[href*="mp.weixin.qq.com/s?__biz="]
-zh.moegirl.org.cn##.desktop-only
-zh.moegirl.org.cn##[target="undefined"]
-zh.moegirl.org.cn##i:has-text("【广告】点击")
-zh.moegirl.org.cn##a[href^="https://l.tapdb.net/"]
+moegirl.org.cn##div.moe-card:nth-of-type(2)
+moegirl.org.cn##.gap-1.flex-column.flex.inner-wrapper > div.moe-card
+moegirl.org.cn##.undefined
+moegirl.org.cn##[style="height: 90px;"]
+moegirl.org.cn##div.desktop-only.moe-flexible-container
+moegirl.org.cn##.n-button--medium-type.n-button--primary-type.n-button
+moegirl.org.cn##.desktop-only
+moegirl.org.cn##[target="undefined"]
+moegirl.org.cn##i:has-text("【广告】")
+moegirl.org.cn##a:has-text("近期关闭")
+moegirl.org.cn##a[href^="https://l.tapdb.net/"]
 moegirl.org.cn##[src*="https://storage.moegirl.org.cn/console-plus/uploads/"]
+moegirl.org.cn##[href*="poster.taptap.cn/appsem/"]
 moegirl.org.cn##[href*="http://sycm.mmstat.com"]
+moegirl.org.cn##[href*="mp.weixin.qq.com/s?__biz="]
+moegirl.org.cn##[href*=".tmall.com"]
+moegirl.org.cn##[href*=".taobao.com"]
 
 ! 2023-01-28 https://slashdot.org
 slashdot.org###announcement
@@ -1164,10 +1174,9 @@ open.spotify.com##div[class*="encore-bright-accent-set"]
 ! 2023- douyu.com
 douyu.com##.ScreenBannerAd
 douyu.com##.Bottom-ad
+douyu.com##.is-advert
+douyu.com##[href*="g.wan.douyu.com"]
 
-! 2023-04-20 https://www.douyu.com
-www.douyu.com##.is-advert
-www.douyu.com##[href*="g.wan.douyu.com"]
 ! 2020  medium.com
 medium.com##.mx.mw.mv.mu.mt.ms.mr.mq.mp.mo.mn.mm.ml.mk.mj.mi.mh.mg.mf.me.md.mc.mb.ma.lz.ly.lx.lw.lv.lu.lt.ai.ls.lr.t.lq
 
@@ -1186,7 +1195,6 @@ sohu.com##div:matches-attr(class=/god/)
 manybooks.net##.ui-front.ui-widget-content.ui-widget.ui-corner-all.ui-dialog
 manybooks.net##.ui-front.ui-widget-overlay
 
-
 ! 2023  ithome.com
 ithome.com##.shareto
 ithome.com##.app.sfa
@@ -1197,6 +1205,7 @@ m.ithome.com##.open-app.ft-item
 ithome.com##[href^="https://lapin.ithome.com"]
 ithome.com##.ad
 ithome.com###login-guide-box
+ithome.com##.loaded.has-title.modal
 
 ! 2023 www.99danhao.cn
 www.99danhao.cn##.layui-m-layer0.layui-m-layer
@@ -1214,6 +1223,7 @@ xiaohongshu.com##.login-modal.reds-modal-open.reds-modal
 
 ! 2023  linkedin.com
 linkedin.com##.full-lockout
+linkedin.com##.overflow-hidden[aria-describedby="cta-modal-subheader"]
 
 ! 2023-06-27 https://www.amap.com
 www.amap.com##.app-download-panel
@@ -1222,3 +1232,7 @@ www.amap.com###amap-result-banner
 
 ! 2023-06-27 https://cloud.tencent.com
 cloud.tencent.com##.mod-commercial
+
+! 2023-07-30 https://bbs.acgrip.com
+||bbs.acgrip.com/template/iymfang_fast/src/trbg.webp$image
+
