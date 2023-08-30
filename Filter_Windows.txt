@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.08.25
+! Last updated:  2023.08.30
 ! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Windows.txt
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
@@ -203,6 +203,7 @@ ali213.net##.gameNavContainer
 ali213.net###game591Box > .picBg
 
 ! 2020-2023 huya.com
+||huya.com^$removeparam=/^(promoter)/
 huya.com##.danmu-report-tips
 uya.com###J_roomGgTop
 huya.com###huya-ab
@@ -216,6 +217,13 @@ huya.com##[class*="LoginBd--"]
 huya.com##[class*="tips-msg"]
 huya.com##.player-play-big
 huya.com##.room-business-game
+www.huya.com###UDBSdkLgn
+www.huya.com##.room-mod-ggTop
+www.huya.com##.wrap-ext.chat-wrap-panel
+www.huya.com##.gg-slider
+www.huya.com###player-resource-wrap
+www.huya.com##div[data-cmid="1"]
+www.huya.com##div[data-cmid="2"]
 
 ! 05/07/2020 https://www.right.com.cn
 www.right.com.cn##h2
@@ -228,6 +236,7 @@ translate.google.com##.notification-area
 accounts.google.com###animated-container
 chrome.google.com##elementtagname[aria-labelledby^=""]
 chrome.google.com##div[aria-labelledby^="promo-header"]
+chromewebstore.google.com##div[aria-labelledby^="promo-header"]
 
 ! 2020 https://www.pixivision.net
 pixivision.net##._sticky.sidebar-contents-container
@@ -401,20 +410,23 @@ live.bilibili.com###gift-control-vm
 live.bilibili.com###anchor-guest-box-id
 live.bilibili.com###gift-control-vm-new
 
+bilibili.com##.i_menu_login
+!bilibili.com##.login-panel-popover
+
 ! 关注
-www.bilibili.com##.bpx-player-top-wrap
+bilibili.com##.bpx-player-top-wrap
 ! 视频暂停后右下角显示的图标
-www.bilibili.com##.bpx-player-state-wrap
+bilibili.com##.bpx-player-state-wrap
 ! 推荐
 www.bilibili.com##.bili-show.bili-cmd-shrink
 ! Card Ads
 bilibili.com##[href*="cm.bilibili.com"]
-www.bilibili.com##.lazy-img
+bilibili.com##.lazy-img
 
 ! 未登录时，试看30秒的提示
 bilibili.com##.bpx-player-toast-wrap
 bilibili.com##.bpx-player-relation-wrap
-www.bilibili.com##.dialog
+bilibili.com##.dialog
 live.bilibili.com##.login-guide
 
 bilibili.com##.bilibili-player-video-message
@@ -439,6 +451,7 @@ stackoverflow.com##.js-consent-banner
 stackoverflow.com##.is-visible.js-notice-sidebar-popover
 
 ! 2021-2023 csdn.net
+csdn.net##[src="https://csdnimg.cn/release/blogv2/dist/pc/img/btnGuideSide1.gif"]
 csdn.net##.trips-bottom-left.trips
 csdn.net##.passport-login-mark
 csdn.net##.passport-login-container
@@ -460,6 +473,10 @@ csdn.net##.v-modal
 csdn.net##.top-bar
 csdn.net##.flex-hc.flex-vb.flex > div.flex > .ml-12
 csdn.net##.tool-active-list
+csdn.net##.csdn-toolbar-creative-mp
+csdn.net##.fixed.write-guide-buttom-box
+csdn.net##.write-guide-buttom-box
+csdn.net##.activity-swiper-box
 
 ! 2021-2023 share.dmhy.org
 share.dmhy.org###\31 280_adv
@@ -544,6 +561,7 @@ zhihu.com##.Card.Pc-card
 zhihu.com##[class*="css-"]:has-text("登录知乎")
 !zhihu.com##.Modal-enter-done.undefined.Modal-wrapper
 zhihu.com##.Banner-link
+zhihu.com##div[style="transform-origin: center bottom 0px; margin-top: -8px; opacity: 1; transform: none;"]
 
 ! 2021-04-07 https://www.gameinformer.com
 www.gameinformer.com##.sliding-popup-bottom
@@ -1170,6 +1188,7 @@ open.spotify.com##button:matches-attr(title=/Premium/)
 open.spotify.com##div[aria-live="polite"]
 open.spotify.com##.tippy-content
 open.spotify.com##div[class*="encore-bright-accent-set"]
+spotify.com##.ot-sdk-container
 
 ! 2023- douyu.com
 douyu.com##.ScreenBannerAd
@@ -1225,7 +1244,7 @@ xiaohongshu.com##.login-modal.reds-modal-open.reds-modal
 linkedin.com##.full-lockout
 linkedin.com##.overflow-hidden[aria-describedby="cta-modal-subheader"]
 
-! 2023-06-27 https://www.amap.com
+! 2023 https://www.amap.com
 www.amap.com##.app-download-panel
 www.amap.com##.usel.amap-app-download
 www.amap.com###amap-result-banner
@@ -1233,6 +1252,6 @@ www.amap.com###amap-result-banner
 ! 2023-06-27 https://cloud.tencent.com
 cloud.tencent.com##.mod-commercial
 
-! 2023-07-30 https://bbs.acgrip.com
+! 2023 https://bbs.acgrip.com
 ||bbs.acgrip.com/template/iymfang_fast/src/trbg.webp$image
 
