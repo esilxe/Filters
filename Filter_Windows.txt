@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.08.30
+! Last updated:  2023.10.07
 ! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Windows.txt
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
@@ -16,28 +16,6 @@
 ##.js-consent-banner
 *###onetrust-consent-sdk
 
-! --------------- Common Params Remove Start ---------------
-*$removeparam=/^(utm_source|utm_medium|utm_sources|utm_term|utm_campaign|utm_referrer)/
-*$removeparam=/^(spm|from_|ref_|track)/
-*$removeparam=/^(share_app_name|share_medium|share_source|is_share|share_from)/
-
-
-||amazon.com=/^pd_rd_|^pf_rd/
-
-||jd.com^$removeparam=/^(ad_od|gx|wxa_|cu)/
-||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
-||gcores.com^$removeparam=/x-oss-process/
-||ithome.com^$removeparam=/x-bce-process/
-||bilibili.com^$removeparam=/^(spm_|from_|hotRank|launch_id|plat_id|up_id|broadcast_type|vd_source|zw|is_|buvid|timestamp|unique_)/
-
-! baidu.com   st|fr|share
-||baidu.com^$removeparam=/^(sfc|client_type|client_version|unique|is_video|entry)/
-||taobao.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_|_lgt_|x5referer)|rand/
-||tmall.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_|_lgt_|x5referer)|rand/
-||yangkeduo.com$removeparam=/^(_oak_|_wv|_x_|goods_sign|duoduo_type|campaign|customParameters|cpsSignjb_act|launch_pdd|cid)/
-
-||epicgames.com^$removeparam=/client_id/
-
 ! --------------- Block whole websites or page---------------
 !||suo.yt^|soo.run^|ourl.co^|bit.ly^
 ||adjust.com^
@@ -47,6 +25,44 @@
 ||tj.shwswl.cn/*$image
 ||www.aqours.today/*$image
 ||t.xuchuang.com/a/c$subdocument
+||sjv.io^
+||bestbuy.7tiv.net^
+
+! --------------- Common Params Remove Start ---------------
+*$removeparam=/^(utm_source|utm_medium|utm_sources|utm_term|utm_campaign|utm_referrer)/
+*$removeparam=/^(spm|from_|ref_|track)/
+*$removeparam=/^(share_app_name|share_medium|share_source|is_share|share_from)/
+
+
+||msn.com^$removeparam=/^(ocid|cvid|ei)/
+
+||amazon.com^$removeparam=/^(pd_rd|pf_rd|ascsubtag)/
+||amazon.co.uk^$removeparam=/^(pd_rd|pf_rd|ascsubtag)/
+||amazon.co.jp^$removeparam=/^(pd_rd|pf_rd|ascsubtag)/
+
+||bestbuy.com^$removeparam=/^(ar|acampID|loc|mpid|nrtv_|irclickid|cmp|subId)/
+||bestbuy.ca^$removeparam=/^(ar|acampID|loc|mpid|nrtv_|irclickid|cmp|subId)/
+
+||jd.com^$removeparam=/^(ad_od|_fd|gx|wxa_|cu|jxsid|csid|ss_projid|scan_orig|ss_expid|ss_sexpid|ss_ruleid|ss_sruleid|ss_symbol|ss_mtest|sceneval)/
+
+||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
+||gcores.com^$removeparam=/x-oss-process/
+||ithome.com^$removeparam=/x-bce-process/
+||bilibili.com^$removeparam=/^(spm_|from|hotRank|launch_id|plat_id|up_id|broadcast_type|vd_source|zw|is_|buvid|timestamp|unique_|preUrl|schema)/
+||s1.hdslb.com/bfs/static/jinkela/video/stardust-video.47b79406e492861cd14a81ef13df1bfc113e73f4.js
+
+! baidu.com   st|fr|share
+||baidu.com^$removeparam=/^(sfc|client_type|client_version|unique|is_video|entry|qq-pf-to)/
+||taobao.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_|_lgt_|x5referer)|rand/
+||tmall.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_|_lgt_|x5referer)|rand/
+||1688.com^$removeparam=/^(spm|scm|trace)/
+
+||yangkeduo.com$removeparam=/^(_oak_|_wv|_x_|goods_sign|duoduo_type|campaign|customParameters|cpsSignjb_act|launch_pdd|cid)/
+
+||newegg.com^$removeparam=/cm_sp/
+
+||epicgames.com^$removeparam=/client_id/
+
 
 ! ************************************************** User Defined PC Blocking List **************************************************
 ! 02/08/2020 https://dictionary.cambridge.org
@@ -334,6 +350,8 @@ tieba.baidu.com##.couplet_left.j_couplet
 tieba.baidu.com##.lu-search-box
 wan.baidu.com##.game-box-wrapper
 tieba.baidu.com###error_404_iframe
+tieba.baidu.com##.recom-wrapper
+tieba.baidu.com##.rec-title
 
 http://tb2.bdstatic.com/tb/static-user/widget/my_tieba/images/*$image
 ||tb2.bdstatic.com/tb/static-pb/widget/post_list/img/*$image
@@ -356,6 +374,8 @@ ala.baidu.com###aside-ad-wrapper
 ala.baidu.com##[add-shield-track="1"]
 ala.baidu.com##.xiu8_follow_warn
 ala.baidu.com##.bus-top-activity-wrap
+ala.baidu.com##.recom-wrapper
+ala.baidu.com##.rec-title
 
 
 wenku.baidu.com##.new-privilege-wrap.vip-privilege-card-wrap.vip-privilege
@@ -380,6 +400,8 @@ bbc.com###sign_in-bg
 bilibili.com##.adblock-tips
 bilibili.com##.unlogin
 bilibili.com##.login-tip
+bilibili.com##.i_menu_login
+bilibili.com##.vip-login-tip
 bilibili.com##.unlogin-popover
 bilibili.com##.unlogin-popover-avatar
 bilibili.com##.bilibili-player-video-popup-vote
@@ -410,7 +432,6 @@ live.bilibili.com###gift-control-vm
 live.bilibili.com###anchor-guest-box-id
 live.bilibili.com###gift-control-vm-new
 
-bilibili.com##.i_menu_login
 !bilibili.com##.login-panel-popover
 
 ! 关注
@@ -449,6 +470,7 @@ twitter.com##[data-testid="BottomBar"]
 stackoverflow.com##.js-dismissable-hero
 stackoverflow.com##.js-consent-banner
 stackoverflow.com##.is-visible.js-notice-sidebar-popover
+stackoverflow.com##.is-visible.sm\:d-none.sm\:wmn-initial
 
 ! 2021-2023 csdn.net
 csdn.net##[src="https://csdnimg.cn/release/blogv2/dist/pc/img/btnGuideSide1.gif"]
@@ -477,6 +499,8 @@ csdn.net##.csdn-toolbar-creative-mp
 csdn.net##.fixed.write-guide-buttom-box
 csdn.net##.write-guide-buttom-box
 csdn.net##.activity-swiper-box
+csdn.net##.passport-auto-tip-login-container
+csdn.net##.side-chatdoc-desc-box
 
 ! 2021-2023 share.dmhy.org
 share.dmhy.org###\31 280_adv
@@ -484,8 +508,8 @@ share.dmhy.org###\31 280_ad
 share.dmhy.org###pkpk
 
 ! 2021-2023 youtube.com
-||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_|game_biz)/
-||youtube.com^$removeparam=/^(embeds_euri|source_ve_path|embeds_referring_|feature)/
+||youtube.com^$removeparam=/^(hyl_|mhy_|bbs_|game_biz)/  
+||youtube.com^$removeparam=/^(embeds_euri|source_ve_path|embeds_referring_|feature|service|passive|action_handle_signin|app)/
 youtube-nocookie.com##.ytp-scroll-min.ytp-pause-overlay
 youtube.com##.opened
 youtube.com###lightbox
@@ -604,6 +628,7 @@ hoyolab.com###driver-page-overlay
 hoyolab.com##.mhy-guider-popover.mhy-popover-group-b
 www.hoyolab.com##.appearance-dark.is-hoyoverse.is-pc.bbs-theme.mhy-account-flow-dialog.mhy-account-flow
 act.hoyolab.com##[class*="components-home-assets-__sign-guide_---guide"]
+act.hoyolab.com##.bbs-qr__en-us.bbs-qr
 
 miyoushe.com##.mhy-qrcode-bottom-card.fixed_side
 miyoushe.com##.mhy-qrcode-bottom-card-show
@@ -933,21 +958,23 @@ geeksforgeeks.org##.login-modal-div
 www.androidauthority.com##div.-_-Pg:nth-of-type(26)
 
 ! 2023 douyin.com tiktok.com
-||p3-pc-sign.douyinpic.com/$image
+||douyin.com^$removeparam=/^(aweme_id|enter_method)/
 douyin.com##.fullscreen_capture
 douyin.com:.box-align-center
 douyin.com:.login-mask-enter-done
 douyin.com:.box-align-center
-douyin.com##.login-mask-enter-done.screen-mask
 douyin.com##[xmlns="http://www.w3.org/2000/svg"]
 douyin.com##[data-e2e="recommend-guide-mask"]
 douyin.com###douyin-sidebar
-douyin.com###captcha_container
+douyin.com##span[style="right: -5px; top: 1px;"]
 tiktok.com###login-modal
 tiktok.com##[style="z-index: 1001; position: fixed;"]
+!douyin.com###captcha_container
+
 
 ! 2023-01-10 https://duckduckgo.com
 duckduckgo.com##.english.badge-link--pctaexp.atb-new.js-badge-link.ddg-extension-hide.badge-link--serp.badge-link
+duckduckgo.com##.english.atb-new.js-badge-link.ddg-extension-hide.badge-link--serp.badge-link
 
 ! 2023-01-11 https://www.kisssub.org
 kisssub.org##div.text_center.clear:nth-of-type(3)
@@ -1143,8 +1170,10 @@ onedrive.live.com##.od-PremiumUpsellBanner
 5kfz.com###ltnr_about
 5kfz.com##.pb-40.pt-120.bg-image.section-bg-3.ltn__testimonial-area
 
-! 2023-04-03 https://www.1688.com
+! 2023 https://www.1688.com
 1688.com##.active.section-bottom
+1688.com##.active.loginInfo-section-bottom
+1688.com##.opened.next-overlay-wrapper
 
 beqege.cc##div:has(div):has-text("下载APP")
 
@@ -1197,7 +1226,7 @@ douyu.com##.is-advert
 douyu.com##[href*="g.wan.douyu.com"]
 
 ! 2020  medium.com
-medium.com##.mx.mw.mv.mu.mt.ms.mr.mq.mp.mo.mn.mm.ml.mk.mj.mi.mh.mg.mf.me.md.mc.mb.ma.lz.ly.lx.lw.lv.lu.lt.ai.ls.lr.t.lq
+medium.com##div[style="bottom: 0px;"]
 
 ! 2022 vgtime.com
 vgtime.com##.vg_download_app
@@ -1252,6 +1281,8 @@ www.amap.com###amap-result-banner
 ! 2023-06-27 https://cloud.tencent.com
 cloud.tencent.com##.mod-commercial
 
-! 2023 https://bbs.acgrip.com
+! 2023 bbs.acgrip.com
 ||bbs.acgrip.com/template/iymfang_fast/src/trbg.webp$image
 
+! 2023 https://sspai.com
+sspai.com##.comp__SsFeaturePopover.ss__feature__popover__wrapper
