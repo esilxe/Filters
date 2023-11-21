@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.10.07
+! Last updated:  2023.11.21
 ! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Windows.txt
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
@@ -29,12 +29,16 @@
 ||bestbuy.7tiv.net^
 
 ! --------------- Common Params Remove Start ---------------
-*$removeparam=/^(utm_source|utm_medium|utm_sources|utm_term|utm_campaign|utm_referrer)/
-*$removeparam=/^(spm|from_|ref_|track)/
-*$removeparam=/^(share_app_name|share_medium|share_source|is_share|share_from)/
+!*$removeparam=/^(utm_source|utm_medium|utm_sources|utm_term|utm_campaign|utm_referrer)/
+!*$removeparam=/^(spm|from_|ref_|track|refer_)/
+!*$removeparam=/^(share_app_name|share_medium|share_source|is_share|share_from)/
 
 
 ||msn.com^$removeparam=/^(ocid|cvid|ei)/
+||xbox.com^$removeparam=/^(ocid|cvid|ei)/
+||microsoft.com^$removeparam=/^(ocid|cvid|ei)/
+||live.com^$removeparam=/^(ocid|cvid|ei)/
+||office.com^$removeparam=/^(ocid|cvid|ei)/
 
 ||amazon.com^$removeparam=/^(pd_rd|pf_rd|ascsubtag)/
 ||amazon.co.uk^$removeparam=/^(pd_rd|pf_rd|ascsubtag)/
@@ -44,15 +48,17 @@
 ||bestbuy.ca^$removeparam=/^(ar|acampID|loc|mpid|nrtv_|irclickid|cmp|subId)/
 
 ||jd.com^$removeparam=/^(ad_od|_fd|gx|wxa_|cu|jxsid|csid|ss_projid|scan_orig|ss_expid|ss_sexpid|ss_ruleid|ss_sruleid|ss_symbol|ss_mtest|sceneval)/
+! 禁止京东自动跳转登录页
+||storage.360buyimg.com/jsresource/risk/handler.js$script
 
 ||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
 ||gcores.com^$removeparam=/x-oss-process/
 ||ithome.com^$removeparam=/x-bce-process/
-||bilibili.com^$removeparam=/^(spm_|from|hotRank|launch_id|plat_id|up_id|broadcast_type|vd_source|zw|is_|buvid|timestamp|unique_|preUrl|schema)/
+||bilibili.com^$removeparam=/^(spm_|from|share_|hotRank|launch_id|plat_id|up_id|broadcast_type|vd_source|zw|buvid|timestamp|unique_|is_|preUrl|schema)/
 ||s1.hdslb.com/bfs/static/jinkela/video/stardust-video.47b79406e492861cd14a81ef13df1bfc113e73f4.js
 
 ! baidu.com   st|fr|share
-||baidu.com^$removeparam=/^(sfc|client_type|client_version|unique|is_video|entry|qq-pf-to)/
+||baidu.com^$removeparam=/^(sfc|client_type|client_version|unique|is_video|entry|qq-pf-to|sourceFrom)/
 ||taobao.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_|_lgt_|x5referer)|rand/
 ||tmall.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_|_lgt_|x5referer)|rand/
 ||1688.com^$removeparam=/^(spm|scm|trace)/
@@ -62,6 +68,9 @@
 ||newegg.com^$removeparam=/cm_sp/
 
 ||epicgames.com^$removeparam=/client_id/
+
+||bluestacks~$removeparam=/^(platform|device)|client_uuid|app_pkg|preferred_/
+||bluestacks~$removeparam=/(_version)$/
 
 
 ! ************************************************** User Defined PC Blocking List **************************************************
@@ -128,6 +137,9 @@ gamersky.com##.Mid_ad
 gamersky.com##.Mid2_R
 gamersky.com##.Mid5_R
 gamersky.com##.Mid1R_pic
+gamersky.com###top_pd_1060_1
+gamersky.com##.advert
+gamersky.com##.header
 mail.rambler.ru##.nrbjkyc.AppContainer-adWrapper-1o.AppContainer-fullHeight-3i
 gamersky.com##.yyimg
 gamersky.com###ADcover
@@ -144,7 +156,6 @@ gamersky.com###FuGai
 gamersky.com###gsincome_tips_all_tips
 gamersky.com###gsincome_tips_all_acg_tips > div:nth-of-type(1)
 
-gamersky.com##.header
 gamersky.com###new_top_allsite_acg_970_1 > div:nth-of-type(1)
 gamersky.com###new_top_allsite_970_1
 gamersky.com###new_top_allsite_970_2
@@ -153,8 +164,6 @@ gamersky.com###new_top_allsite_970_4
 gamersky.com###new_top_allsite_970_5
 gamersky.com###new_top_allsite_970_6
 gamersky.com###new_page_allsite_620
-
-gamersky.com###top_pd_1060_1
 
 gamersky.com##.MidLpic
 gamersky.com##div.MidLtit:nth-of-type(6)
@@ -169,6 +178,7 @@ gamersky.com##.Comment > .lx0.MidLtit
 gamersky.com##.home.Top
 gamersky.com##.app.alik
 gamersky.com###ADback
+gamersky.com##.ad_cmt_cont
 
 fhyx.com##.appdown_detail_alert
 fhyx.com##a.products_right_menu_li:nth-of-type(2)
@@ -254,6 +264,9 @@ chrome.google.com##elementtagname[aria-labelledby^=""]
 chrome.google.com##div[aria-labelledby^="promo-header"]
 chromewebstore.google.com##div[aria-labelledby^="promo-header"]
 
+! chrome.com
+developer.chrome.com##.hairline-top.cookie-banner
+
 ! 2020 https://www.pixivision.net
 pixivision.net##._sticky.sidebar-contents-container
 pixivision.net##.within-area.with-popup.white._floated-bottom-bar
@@ -300,6 +313,7 @@ baijiahao.baidu.com##:xpath(/html/body/div[1]/div/div/div[2]/div/div[2]/div/div[
 
 baike.baidu.com##.share-list
 baike.baidu.com##.wgt-baikeapp-promote-container
+baike.baidu.com###J-union-wrapper
 
 haokan.baidu.com##[id*="TANGRAM__PSP"]
 haokan.baidu.com##.login-popover
@@ -326,6 +340,7 @@ pan.baidu.com##.nd-chat-guide
 pan.baidu.com##.nd-cert-dialog
 pan.baidu.com##.wp-s-header__right-item.gameEntry
 
+||tiebapic.baidu.com/tieba/pic/item/ac345982b2b7d0a290d7bfa98def76094b369aec.jpg$image
 tieba.baidu.com##.label_text
 tieba.baidu.com##.j_click_close.close_btn
 tieba.baidu.com###fixed_bar
@@ -352,6 +367,8 @@ wan.baidu.com##.game-box-wrapper
 tieba.baidu.com###error_404_iframe
 tieba.baidu.com##.recom-wrapper
 tieba.baidu.com##.rec-title
+tieba.baidu.com##.head_ad_pop
+tieba.baidu.com##.head_banner
 
 http://tb2.bdstatic.com/tb/static-user/widget/my_tieba/images/*$image
 ||tb2.bdstatic.com/tb/static-pb/widget/post_list/img/*$image
@@ -387,10 +404,12 @@ zhidao.baidu.com##.task-list-button
 zhidao.baidu.com##.jump-goto-star
 zhidao.baidu.com##.answerlist.wgt-ads
 zhidao.baidu.com##.qbleftdown.wgt-ads
+zhidao.baidu.com##.knowledge-answer
 
 ! 2021-2023 https://www.bbc.com
 bbc.com###sign_in
 bbc.com###sign_in-bg
+bbc.com##header[role="banner"]
 
 ! 2021-2022 https://www.88kan.com
 88kan.com###ad_rightBottom
@@ -501,6 +520,8 @@ csdn.net##.write-guide-buttom-box
 csdn.net##.activity-swiper-box
 csdn.net##.passport-auto-tip-login-container
 csdn.net##.side-chatdoc-desc-box
+csdn.net##.false.passport-login-tip-container
+csdn.net##.tip-box
 
 ! 2021-2023 share.dmhy.org
 share.dmhy.org###\31 280_adv
@@ -524,7 +545,9 @@ www.youtube.com##.ytp-ce-size-1280.ytp-ce-bottom-left-quad.ytp-ce-medium-round.y
 youtube.com##.ytp-chrome-top
 !youtube.com##.ytp-title-text
 !youtube.com##.ytp-show-cards-title
-!youtube.com##tp-yt-paper-dialog.ytd-popup-container.style-scope
+youtube.com##tp-yt-paper-dialog.ytd-popup-container.style-scope > .ytd-popup-container.style-scope
+! Block Youtube Timeout 
+youtube.com##+js(nano-stb,resolve (1),*,0.001)
 
 ! 2021-03-23 https://www.58pic.com
 58pic.com##.is-has.login-model.qt-model-t
@@ -582,10 +605,12 @@ vg247.com##.ot-fade-in.onetrust-pc-dark-filter
 
 ! 2021-2023 zhihu.com
 zhihu.com##.Card.Pc-card
+zhihu.com##[class*="css-"]:has-text("登录即可")
 zhihu.com##[class*="css-"]:has-text("登录知乎")
-!zhihu.com##.Modal-enter-done.undefined.Modal-wrapper
 zhihu.com##.Banner-link
 zhihu.com##div[style="transform-origin: center bottom 0px; margin-top: -8px; opacity: 1; transform: none;"]
+zhihu.com##.Pc-word
+zhihu.com##.AppBanner.Card
 
 ! 2021-04-07 https://www.gameinformer.com
 www.gameinformer.com##.sliding-popup-bottom
@@ -676,6 +701,7 @@ juejin.cn##.vip-entry.nav-item
 juejin.cn##.guide-collect-popover
 juejin.cn##.dark-mode-transition.dark-mode-notification
 juejin.cn##.login-guide-popup.login-guide-wrap
+juejin.cn##.bottom-login-guide
 
 ! 2021-11-26 https://www.ted.com
 www.ted.com###recommends-banner
@@ -923,7 +949,9 @@ www.docin.com##.slideButton
 
 ! 2022-09-14 https://m.weibo.cn
 m.weibo.cn##.wrap
+m.weibo.cn##.login-box
 video.h5.weibo.cn##.footer-bar.m-btn-orange.m-btn-block.m-btn
+
 
 ! 2022-09-28 https://www.linguee.com
 www.linguee.com##.wide_in_main.l_deepl_ad_container
@@ -1037,6 +1065,7 @@ moegirl.org.cn##[href*="http://sycm.mmstat.com"]
 moegirl.org.cn##[href*="mp.weixin.qq.com/s?__biz="]
 moegirl.org.cn##[href*=".tmall.com"]
 moegirl.org.cn##[href*=".taobao.com"]
+zh.moegirl.org.cn##.n-notification-wrapper
 
 ! 2023-01-28 https://slashdot.org
 slashdot.org###announcement
@@ -1046,7 +1075,11 @@ freebuf.com##.user-guide
 freebuf.com##.ant-layout > .floating-view > .qianbao.floating-view-item
 freebuf.com##.content-view > .floating-view > .qianbao.floating-view-item
 freebuf.com##.qianbao.floating-view-item
-www.freebuf.com##.ant-tooltip-content
+freebuf.com##.ant-tooltip-content
+freebuf.com##.task-center
+freebuf.com##.qb-planet-wraper
+freebuf.com##[src="/freebuf/img/07731a6.gif"]
+freebuf.com##[href="https://wiki.freebuf.com"]
 
 ! 2023-02-04 https://detail.zol.com.cn
 zol.com.cn###questionnaire
@@ -1147,8 +1180,9 @@ blog.51cto.com##.editArticle > .new_bloger
 
 ! 2023  live.com
 outlook.live.com##span:has-text( Microsoft 365 )
-!outlook.live.com##span:has-text(广告)
-!outlook.live.com##[data-icon-name="OutlookLogo"]
+outlook.live.com##span:has-text(广告)
+outlook.live.com##i[data-icon-name="OutlookLogo"]
+live.com##:xpath(//html/body/div[1]/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div[4])
 !outlook.live.com##:xpath(/html/body/div[2]/div/div[2]/div[2]/div[2]/div[1]/div/div/div[4])
 outlook.live.com##:xpath(//div[@id="MainModule"]/div/div/div[4])
 onedrive.live.com##.od-OverlayHost
@@ -1267,7 +1301,7 @@ z701.com,089m.com,089u.com##.bg-light.card
 a9vg.com##.a9-guide-download
 
 ! 2023 xiaohongshu.com
-xiaohongshu.com##.login-modal.reds-modal-open.reds-modal
+!xiaohongshu.com##.login-modal.reds-modal-open.reds-modal
 
 ! 2023  linkedin.com
 linkedin.com##.full-lockout
@@ -1286,3 +1320,14 @@ cloud.tencent.com##.mod-commercial
 
 ! 2023 https://sspai.com
 sspai.com##.comp__SsFeaturePopover.ss__feature__popover__wrapper
+
+! 2023 https://www.nature.com
+nature.com##.cc-banner
+nature.com##.c-site-messages--nature-briefing-email-variant
+
+! 2023 pinterest.com
+pinterest.com##div[data-test-id="giftWrap"]
+
+! 2023-10-20 https://thehackernews.com
+thehackernews.com##.cf.gg-2
+thehackernews.com##a[href*="thn.news/"]
