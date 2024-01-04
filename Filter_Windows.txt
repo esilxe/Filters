@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2023.11.21
+! Last updated:  2024.01.04
 ! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Windows.txt
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
@@ -27,6 +27,9 @@
 ||t.xuchuang.com/a/c$subdocument
 ||sjv.io^
 ||bestbuy.7tiv.net^
+||adtraction.com^
+||anrdoezrs.net^
+
 
 ! --------------- Common Params Remove Start ---------------
 !*$removeparam=/^(utm_source|utm_medium|utm_sources|utm_term|utm_campaign|utm_referrer)/
@@ -40,9 +43,9 @@
 ||live.com^$removeparam=/^(ocid|cvid|ei)/
 ||office.com^$removeparam=/^(ocid|cvid|ei)/
 
-||amazon.com^$removeparam=/^(pd_rd|pf_rd|ascsubtag)/
-||amazon.co.uk^$removeparam=/^(pd_rd|pf_rd|ascsubtag)/
-||amazon.co.jp^$removeparam=/^(pd_rd|pf_rd|ascsubtag)/
+||amazon.com^$removeparam=/^(pd_|pf_|ascsubtag)/
+||amazon.co.uk^$removeparam=/^(pd_|pf_|ascsubtag)/
+||amazon.co.jp^$removeparam=/^(pd_|pf_|ascsubtag)/
 
 ||bestbuy.com^$removeparam=/^(ar|acampID|loc|mpid|nrtv_|irclickid|cmp|subId)/
 ||bestbuy.ca^$removeparam=/^(ar|acampID|loc|mpid|nrtv_|irclickid|cmp|subId)/
@@ -61,7 +64,7 @@
 ||baidu.com^$removeparam=/^(sfc|client_type|client_version|unique|is_video|entry|qq-pf-to|sourceFrom)/
 ||taobao.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_|_lgt_|x5referer)|rand/
 ||tmall.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_|_lgt_|x5referer)|rand/
-||1688.com^$removeparam=/^(spm|scm|trace)/
+||1688.com^$removeparam=/^(spm|scm|trace|pvid|tarcelog)/
 
 ||yangkeduo.com$removeparam=/^(_oak_|_wv|_x_|goods_sign|duoduo_type|campaign|customParameters|cpsSignjb_act|launch_pdd|cid)/
 
@@ -102,6 +105,7 @@ detail.tmall.com###ks-component475
 3dmgame.com##.fl.Indexbox6-4
 3dmgame.com##.clear_.Indexbox1-item
 3dmgame.com##.dj_chinesemode.Content_L > [href="https://www.3dmgame.com/app.html"]
+3dmgame.com##.addownbox_gaosu
 
 ! mail.rambler.ru 27/03/2020
 mail.rambler.ru##.AutoAppContainer.yqff
@@ -143,8 +147,8 @@ gamersky.com##.header
 mail.rambler.ru##.nrbjkyc.AppContainer-adWrapper-1o.AppContainer-fullHeight-3i
 gamersky.com##.yyimg
 gamersky.com###ADcover
-gamersky.com###adscontainer_banner_new_top_index_1060_1
-gamersky.com###adscontainer_block_300_3
+gamersky.com##div[id*="adscontainer_banner_new_top_index_"]
+gamersky.com##div[id*="adscontainer_block_"]
 gamersky.com###adscontainer_conmmon_qtz
 gamersky.com###adTips
 gamersky.com##.fixedCode
@@ -156,14 +160,8 @@ gamersky.com###FuGai
 gamersky.com###gsincome_tips_all_tips
 gamersky.com###gsincome_tips_all_acg_tips > div:nth-of-type(1)
 
-gamersky.com###new_top_allsite_acg_970_1 > div:nth-of-type(1)
-gamersky.com###new_top_allsite_970_1
-gamersky.com###new_top_allsite_970_2
-gamersky.com###new_top_allsite_970_3
-gamersky.com###new_top_allsite_970_4
-gamersky.com###new_top_allsite_970_5
-gamersky.com###new_top_allsite_970_6
-gamersky.com###new_page_allsite_620
+gamersky.com##div[id*="new_top_allsite_"]
+gamersky.com##div[id*="new_page_allsite_"]
 
 gamersky.com##.MidLpic
 gamersky.com##div.MidLtit:nth-of-type(6)
@@ -257,6 +255,7 @@ www.right.com.cn##.a_mu
 www.right.com.cn###diy1
 
 ! 2020-2023
+||google.com^$removeparam=/^(prev)/
 drive.google.com##.a-ee-zh-k
 translate.google.com##.notification-area
 accounts.google.com###animated-container
@@ -340,6 +339,8 @@ pan.baidu.com##.nd-chat-guide
 pan.baidu.com##.nd-cert-dialog
 pan.baidu.com##.wp-s-header__right-item.gameEntry
 
+pos.baidu.com##.container
+
 ||tiebapic.baidu.com/tieba/pic/item/ac345982b2b7d0a290d7bfa98def76094b369aec.jpg$image
 tieba.baidu.com##.label_text
 tieba.baidu.com##.j_click_close.close_btn
@@ -369,6 +370,9 @@ tieba.baidu.com##.recom-wrapper
 tieba.baidu.com##.rec-title
 tieba.baidu.com##.head_ad_pop
 tieba.baidu.com##.head_banner
+tieba.baidu.com##.banner_theme.l_banner
+!tieba.baidu.com##.ui-draggable.dialogJshadow.dialogJfix.tieba-sign-card.dialogJ
+tieba.baidu.com##.dialogJmodal
 
 http://tb2.bdstatic.com/tb/static-user/widget/my_tieba/images/*$image
 ||tb2.bdstatic.com/tb/static-pb/widget/post_list/img/*$image
@@ -409,7 +413,8 @@ zhidao.baidu.com##.knowledge-answer
 ! 2021-2023 https://www.bbc.com
 bbc.com###sign_in
 bbc.com###sign_in-bg
-bbc.com##header[role="banner"]
+!bbc.com##main[role="main"]
+!bbc.com##:xpath()
 
 ! 2021-2022 https://www.88kan.com
 88kan.com###ad_rightBottom
@@ -443,6 +448,8 @@ www.bilibili.com##div.is-rcmd.bili-video-card:nth-of-type(14)
 www.bilibili.com##.video-card-ad-small.ad-report
 www.bilibili.com##div.block-bangumi.block-area > .gg-floor-module
 www.bilibili.com##.sanlian-box
+www.bilibili.com##.desktop-download-tip
+
 live.bilibili.com##.task-gather-entry
 live.bilibili.com##.w-100.over-hidden.p-relative.flip-view
 live.bilibili.com##.shop-popover
@@ -548,6 +555,7 @@ youtube.com##.ytp-chrome-top
 youtube.com##tp-yt-paper-dialog.ytd-popup-container.style-scope > .ytd-popup-container.style-scope
 ! Block Youtube Timeout 
 youtube.com##+js(nano-stb,resolve (1),*,0.001)
+youtube.com###secondary
 
 ! 2021-03-23 https://www.58pic.com
 58pic.com##.is-has.login-model.qt-model-t
@@ -951,6 +959,8 @@ www.docin.com##.slideButton
 m.weibo.cn##.wrap
 m.weibo.cn##.login-box
 video.h5.weibo.cn##.footer-bar.m-btn-orange.m-btn-block.m-btn
+weibo.com##div[class*="TipsAd_bottomGap_"]
+weibo.com##div[class*="TipsAd_topGap_"]
 
 
 ! 2022-09-28 https://www.linguee.com
@@ -1235,9 +1245,7 @@ jianshu.com###note-ad
 jianshu.com##a:has-text(抽奖)
 
 ! 2023 eibo.com
-weibo.com##.woo-modal-main
 weibo.com##.woo-modal-mask
-!weibo.com##div.woo-modal-wrap.woo-box-justifyCenter.woo-box-alignCenter.woo-box-flex
 weibo.com##[class*="LoginCard_wrap"]
 
 ! 2023-04-17 https://leetcode.cn
@@ -1331,3 +1339,14 @@ pinterest.com##div[data-test-id="giftWrap"]
 ! 2023-10-20 https://thehackernews.com
 thehackernews.com##.cf.gg-2
 thehackernews.com##a[href*="thn.news/"]
+
+! 2023-12-03 https://www.tsdm39.com
+tsdm39.com##[href^="https://xjxsx.xyz/"]
+
+! 2023-12-12 https://www.123pan.com
+123pan.com##.banner-container-pc
+
+! 2023-12-28 https://www.ixigua.com
+ixigua.com##.xg-right-grid > .common-xgplayer__goHome
+ixigua.com##.common-xgplayer__Logo
+
