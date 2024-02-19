@@ -1,10 +1,10 @@
 ! Title:        ESILXE's Block List for Android
 ! Author:       esilxe
-! Last updated: 2023.07.26·
+! Last updated: 2024.02.19
 ! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Android.txt
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Android.txt
 
-! 30/07/2020 https://wap.gamersky.com
+! 2020-2024 https://wap.gamersky.com
 wap.gamersky.com##.ymw-header2019
 wap.gamersky.com###gsTgWapTop
 wap.gamersky.com##div:nth-of-type(5)
@@ -17,6 +17,9 @@ club.gamersky.com##.ymw-footer
 club.gamersky.com##.club-card-comment-gsTgApp
 club.gamersky.com##.gsTgWapConBdshareTopBox
 club.gamersky.com##.ymw-rel-mgame.ymw-aside-box.ymw-hot-h5-game
+m.gamersky.com##.TopAppDownLoadFixed
+m.gamersky.com##.GsAppCompont_HotRecommend
+m.gamersky.com##.GsAppCompontTopAppDownLoad
 
 ! 2023-01-27 https://m.douban.com
 m.douban.com##.TalionNav-static
@@ -42,3 +45,12 @@ m.slashdot.org##.close-ad
 m.smzdm.com##.foot-banner
 m.smzdm.com##.footer-banner-wrap
 m.smzdm.com##.app-position
+
+! 2024-02-04 https://m.ithome.com
+m.ithome.com##.op
+m.ithome.com##.fixed-btn > .open-app-a > .open-app
+m.ithome.com###rm-login-modal
+
+! 2024-02-16 https://wiki.biligame.com
+wiki.biligame.com##.nav-head > .wiki-logo > .pic-logo
+wiki.biligame.com##.qchar-container
