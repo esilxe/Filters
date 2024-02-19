@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2024.01.04
+! Last updated:  2024.02.19
 ! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Windows.txt
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
@@ -57,7 +57,7 @@
 ||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
 ||gcores.com^$removeparam=/x-oss-process/
 ||ithome.com^$removeparam=/x-bce-process/
-||bilibili.com^$removeparam=/^(spm_|from|share_|hotRank|launch_id|plat_id|up_id|broadcast_type|vd_source|zw|buvid|timestamp|unique_|is_|preUrl|schema)/
+||bilibili.com^$removeparam=/^(spm_|from|share_|hotRank|launch_id|plat_id|up_id|broadcast_type|vd_source|zw|buvid|timestamp|unique_|is_|preUrl|schema|visit_)/
 ||s1.hdslb.com/bfs/static/jinkela/video/stardust-video.47b79406e492861cd14a81ef13df1bfc113e73f4.js
 
 ! baidu.com   st|fr|share
@@ -414,7 +414,7 @@ zhidao.baidu.com##.knowledge-answer
 bbc.com###sign_in
 bbc.com###sign_in-bg
 !bbc.com##main[role="main"]
-!bbc.com##:xpath()
+bbc.com##:xpath(/html/body/div[2]/div/header/div/div[1])
 
 ! 2021-2022 https://www.88kan.com
 88kan.com###ad_rightBottom
@@ -555,7 +555,6 @@ youtube.com##.ytp-chrome-top
 youtube.com##tp-yt-paper-dialog.ytd-popup-container.style-scope > .ytd-popup-container.style-scope
 ! Block Youtube Timeout 
 youtube.com##+js(nano-stb,resolve (1),*,0.001)
-youtube.com###secondary
 
 ! 2021-03-23 https://www.58pic.com
 58pic.com##.is-has.login-model.qt-model-t
@@ -599,9 +598,7 @@ sj.qq.com##[class*="BrandBanner_mask"]
 weread.qq.com##.wr_book_detail_footer_float.wr_book_detail_footer
 dnf.qq.com###_overlay_
 cdn.helper.qq.com##.qr-box
-
-! 2021-03-28 https://www.alamy.com
-www.alamy.com###automationCookieBannerText
+www.qq.com##.gg-4.layout
 
 ! 2021-03-29 https://selicefec.wordpress.com
 wordpress.com##.widget_eu_cookie_law_widget.widget
@@ -634,12 +631,6 @@ polygon.com##.c-toaster-stuck.c-toaster-active.c-toaster
 ! 2021-04-08 https://www.huijiwiki.com
 www.huijiwiki.com###fndAdContainer
 
-! 2021-04-11 https://www.if.ci
-www.if.ci##.navigation-next.navigation
-
-! 2021-04-13 https://cdn.concert.io
-cdn.concert.io##.desktop
-
 ! hoyoverse.com hoyolab.om mihoyo.com,  miyoushe.com mihoyogift.com
 ||hoyolab.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
 ||hoyoverse.com^$removeparam=/^(hyl_|mhy_|bbs_)|subType|x-oss-process|event_channel|device_type|plat_type|game_version/
@@ -666,8 +657,14 @@ act.hoyolab.com##.bbs-qr__en-us.bbs-qr
 miyoushe.com##.mhy-qrcode-bottom-card.fixed_side
 miyoushe.com##.mhy-qrcode-bottom-card-show
 
-! 2021-05-25 https://www.youdao.com
+! 2021-2022  youdao.com
+youdao.com###doc2
+youdao.com###margin3
+youdao.com###footer
+youdao.com##.ads
 www.youdao.com##.win-download.dialog-guide-download
+dict.youdao.com##.win-download.dialog-guide-download
+
 
 ! 2021-07-04 https://share.acgnx.se
 share.acgnx.se##[href^="*://* taobao.com/*"]
@@ -682,23 +679,11 @@ qidian.com##.wrap > .hidden
 qidian.com##.top-bg-op-box
 qidian.com##.top-bg-box
 
-! 2021-08-19 https://www.xinxindm.com
-www.xinxindm.com##.widget-weixin
-
-! 2021-08-30 http://www.kanshujun.cc
-www.kanshujun.cc###HMcoupletDivright
-www.kanshujun.cc###HMimageleft
-www.kanshujun.cc###HMRichBox
-www.kanshujun.cc###HMcoupletIconleft
-
 ! 2021-09-05 https://bbs.nga.cn
 nga.cn^$removeparam=/rand/
 ngabbs.com^$removeparam=/rand/
 nga.cn###m_posts_c > span
 nga.cn##.null
-
-tagtic.cn
-jg.yaowanla.com
 
 ! 2021-2023 juejin.cn
 juejin.cn##.recommend-box
@@ -725,9 +710,6 @@ imdb.com##.navbar__coachmark
 imdb.com##div[data-menu-id="navImdbPro"]
 imdb.com##.ipc-snackbar
 
-! 2022-01-18 https://dict.youdao.com
-dict.youdao.com##.win-download.dialog-guide-download
-
 ! 2022-01-21 https://spiralabyss.org
 spiralabyss.org##.modal-content
 
@@ -742,12 +724,6 @@ gushiwen.cn###btmwx
 wx1.ha.189.cn##.section3.section1.section
 wx1.ha.189.cn##.confirm_btn
 
-! 2022-01-27 https://www.youdao.com
-youdao.com###doc2
-youdao.com###margin3
-youdao.com###footer
-youdao.com##.ads
-
 ! 2022-01-27 https://www.iciba.com
 iciba.com##.MobileDownload_download___VlWK
 iciba.com##.PcDownload_pc__p_4rP
@@ -755,22 +731,8 @@ iciba.com##.Contact_footer___Mjbg
 iciba.com##.Func_func__wzVTn
 iciba.com##.record.jsx-2211446375
 
-
 ! 2022-02-07 https://www.deepmind.com
 www.deepmind.com###cookieBar
-
-! 2022-03-06 https://hot.cnbeta.com
-cnbeta.com###artibody > .article-global
-cnbeta.com##.cnbeta-article-body > .tac
-cnbeta.com###upcoming_box
-cnbeta.com##[id="[a-Z]{10}"]
-! 2022-09-08 https://www.cnbeta.com
-cnbeta.com##.s-carousel.cb-single-carousel.swiper-wrapper
-cnbeta.com##.cnbeta-home-side
-cnbeta.com##div.swiper-slide:nth-of-type(1)
-cnbeta.com##div.cooperation.item:nth-of-type(8)
-cnbeta.com###J_all_item_1311159 > dl
-cnbeta.com##.fr
 
 ! 2022-2023  sina.com.cn
 sina.com.cn##.sina-extension-content
@@ -848,15 +810,6 @@ www.1kkk.com##.view-comment-sub
 manhua.ikukudm.com###HMrichA
 manhua.ikukudm.com###HMRichBox
 
-! 2022-04-07 https://www.bd2020.co
-www.bd2020.co###HMimageleft
-www.bd2020.co###HMimageright
-
-! 2022-04-09 https://www.81zw.com
-www.81zw.com##.box_con > div > div > div
-www.81zw.com##.ywtop
-www.81zw.com##.box_con > div > div
-
 ! 2022-04-11 https://www.ttkcloud.icu
 ||iw233.cn/API/MirlKoi.php$image
 
@@ -868,26 +821,15 @@ m.zhangyue.com##.show.pc.guide-into-app
 tiemug.com###HMcoupletDivleft
 tiemug.com###HMcoupletDivright
 tiemug.com###HMRichBox
+www.tiemug.com##p:nth-of-type(2)
+www.tiemug.com###chapter-content > center
 
 ! 2022-04-19 https://www.sxpdf.com
 sxpdf.com##.header-sub
 
-! 2022-04-19 https://www.tiemug.com
-www.tiemug.com##p:nth-of-type(2)
-www.tiemug.com###chapter-content > center
-
-! 2022-04-19 https://www.81book.com
-www.81book.com##.box_con > div > div > div
-www.81book.com###jubao
-
 ! 2022-04-19 http://www.2cycd.com
-2cycd.com###HMRichBox
-
-! 2022-04-20 https://www.idejian.com
-www.idejian.com##.qr_code
-
-! 2022-04-26 http://www.linshuwu.com
-www.linshuwu.com###rtext > p
+www.2cycd.com###HMRichBox
+www.2cycd.com##.a_pb
 
 ! 2022-05-04 https://imiliy.cn
 imiliy.cn##._th_hidden._th_cover-all-show-times
@@ -896,20 +838,8 @@ imiliy.cn##._th_hidden._th_cover-all-show-times
 52xbq.com###txt > a
 52xbq.com##div.baocuo_style
 
-! 2022-05-14 https://www.aixswx.com
-www.aixswx.com##dd:nth-of-type(5)
-www.aixswx.com##div#center_tip:nth-of-type(2)
-www.aixswx.com##div#center_tip:nth-of-type(4)
-www.aixswx.com##dd:nth-of-type(13)
-www.aixswx.com##dd:nth-of-type(12)
-
 ! 2022-05-21 https://www.paypal-community.com
 www.paypal-community.com##.lia-cookie-banner-alert
-
-
-! 2022-05-24 https://www.qiuyewx.com
-www.qiuyewx.com##.other_links
-www.qiuyewx.com###notice
 
 ! 2022-05-25 https://www.wanben.org
 www.wanben.org##.readerRight
@@ -921,22 +851,12 @@ qidian.com##.top-op-box
 qidian.com##.games-op-wrap
 qidian.com##.mb10.right-op-wrap
 
-! 2022-06-05 https://www.imiaobige.com
-www.imiaobige.com##p:nth-of-type(1)
-
 ! 2022-06-20 https://www.wxsy.net
 www.wxsy.net##.erwm > .erwm
-
-! 2022-06-21 https://www.mhuayun.com
-www.mhuayun.com##.banner-recommand
 
 ! 2022-06-27 https://mora.jp
 mora.jp##.boxShadow.jack.jack_r
 mora.jp##.boxShadow.jack.left_jack
-
-! 2022-07-04 https://www.qbiqu.com
-qbiqu.com##.reader_mark0
-qbiqu.com##.reader_mark1
 
 ! 2022-07-09 https://www.manhuadb.com
 www.manhuadb.com##div.m-0.row:nth-of-type(1)
@@ -962,10 +882,8 @@ video.h5.weibo.cn##.footer-bar.m-btn-orange.m-btn-block.m-btn
 weibo.com##div[class*="TipsAd_bottomGap_"]
 weibo.com##div[class*="TipsAd_topGap_"]
 
-
 ! 2022-09-28 https://www.linguee.com
 www.linguee.com##.wide_in_main.l_deepl_ad_container
-
 
 ! 2022-10-16 https://uiiiuiii.com
 uiiiuiii.com##.show-full
@@ -1296,6 +1214,7 @@ ithome.com##[href^="https://lapin.ithome.com"]
 ithome.com##.ad
 ithome.com###login-guide-box
 ithome.com##.loaded.has-title.modal
+ithome.com###ad-id-17
 
 ! 2023 www.99danhao.cn
 www.99danhao.cn##.layui-m-layer0.layui-m-layer
@@ -1342,6 +1261,8 @@ thehackernews.com##a[href*="thn.news/"]
 
 ! 2023-12-03 https://www.tsdm39.com
 tsdm39.com##[href^="https://xjxsx.xyz/"]
+tsdm39.com##.bm.a_c
+||tsdm39.com/images/sdj.jpg$image
 
 ! 2023-12-12 https://www.123pan.com
 123pan.com##.banner-container-pc
@@ -1349,4 +1270,7 @@ tsdm39.com##[href^="https://xjxsx.xyz/"]
 ! 2023-12-28 https://www.ixigua.com
 ixigua.com##.xg-right-grid > .common-xgplayer__goHome
 ixigua.com##.common-xgplayer__Logo
+
+! 2024 cnbeta.com.tw
+cnbeta.com.tw##.right-column-section
 
