@@ -1,6 +1,6 @@
 ! Title:       ESILXE's Block List for Windows
 ! Author:      esilxe
-! Last updated:  2024.02.19
+! Last updated:  2024.03.21
 ! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Windows.txt
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Windows.txt
 
@@ -57,7 +57,8 @@
 ||weibo.com^$removeparam=/^(entry|ua|_rand|sudaref|refer|band_rank|gid|mark_id)/
 ||gcores.com^$removeparam=/x-oss-process/
 ||ithome.com^$removeparam=/x-bce-process/
-||bilibili.com^$removeparam=/^(spm_|from|share_|hotRank|launch_id|plat_id|up_id|broadcast_type|vd_source|zw|buvid|timestamp|unique_|is_|preUrl|schema|visit_)/
+||bilibili.com^$removeparam=/^(spm_|from|share_|hotRank|launch_id|plat_id|up_id|broadcast_type|vd_source|zw|buvid|timestamp|unique_|is_|preUrl|schema)/
+||bilibili.com^$removeparam=/session_id|visit_|live_/
 ||s1.hdslb.com/bfs/static/jinkela/video/stardust-video.47b79406e492861cd14a81ef13df1bfc113e73f4.js
 
 ! baidu.com   st|fr|share
@@ -66,7 +67,7 @@
 ||tmall.com^$removeparam=/^(traceId|relationId|union_lens|es|disableNav|rootPageId|wx_|_lgt_|x5referer)|rand/
 ||1688.com^$removeparam=/^(spm|scm|trace|pvid|tarcelog)/
 
-||yangkeduo.com$removeparam=/^(_oak_|_wv|_x_|goods_sign|duoduo_type|campaign|customParameters|cpsSignjb_act|launch_pdd|cid)/
+||yangkeduo.com$removeparam=/^(_oak_|_wv|_x_|goods_sign|duoduo_type|campaign|customParameters|cpsSignjb_act|launch_pdd|cid|pxq_secret_key)/
 
 ||newegg.com^$removeparam=/cm_sp/
 
@@ -471,13 +472,15 @@ bilibili.com##[href*="cm.bilibili.com"]
 bilibili.com##.lazy-img
 
 ! 未登录时，试看30秒的提示
-bilibili.com##.bpx-player-toast-wrap
-bilibili.com##.bpx-player-relation-wrap
-bilibili.com##.dialog
+www.bilibili.com##.bpx-player-toast-wrap
+www.bilibili.com##.bpx-player-relation-wrap
+www.bilibili.com##.dialog
 live.bilibili.com##.login-guide
 
-bilibili.com##.bilibili-player-video-message
+www.bilibili.com##.bilibili-player-video-message
 bilibili.com##.couplet-locs
+
+www.bilibili.com###right-bottom-banner
 
 wiki.biligame.com##.qchar-container
 wiki.biligame.com###pc-share
@@ -608,7 +611,8 @@ wordpress.com##.is-compact.gdpr-banner.card
 vg247.com##.vertical-align-content
 vg247.com##.ot-fade-in.onetrust-pc-dark-filter
 
-! 2021-2023 zhihu.com
+! 2021-2024 zhihu.com
+||zhihu.com^$removeparam=/utm_psn/
 zhihu.com##.Card.Pc-card
 zhihu.com##[class*="css-"]:has-text("登录即可")
 zhihu.com##[class*="css-"]:has-text("登录知乎")
@@ -653,6 +657,8 @@ hoyolab.com##.mhy-guider-popover.mhy-popover-group-b
 www.hoyolab.com##.appearance-dark.is-hoyoverse.is-pc.bbs-theme.mhy-account-flow-dialog.mhy-account-flow
 act.hoyolab.com##[class*="components-home-assets-__sign-guide_---guide"]
 act.hoyolab.com##.bbs-qr__en-us.bbs-qr
+www.hoyolab.com###hyv-account-frame
+www.hoyolab.com##.mhy-dialog-nofooter
 
 miyoushe.com##.mhy-qrcode-bottom-card.fixed_side
 miyoushe.com##.mhy-qrcode-bottom-card-show
@@ -919,12 +925,12 @@ douyin.com##.fullscreen_capture
 douyin.com:.box-align-center
 douyin.com:.login-mask-enter-done
 douyin.com:.box-align-center
-douyin.com##[xmlns="http://www.w3.org/2000/svg"]
 douyin.com##[data-e2e="recommend-guide-mask"]
 douyin.com###douyin-sidebar
 douyin.com##span[style="right: -5px; top: 1px;"]
 tiktok.com###login-modal
 tiktok.com##[style="z-index: 1001; position: fixed;"]
+douyin.com##div[id*="login-full-panel"]
 !douyin.com###captcha_container
 
 
