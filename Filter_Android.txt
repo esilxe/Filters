@@ -1,6 +1,6 @@
 ! Title:        ESILXE's Block List for Android
 ! Author:       esilxe
-! Last updated: 2024.02.19
+! Last updated: 2024.03.21
 ! Home page:   https://github.com/esilxe/Filters/blob/main/Filter_Android.txt
 ! Source page:  https://raw.githubusercontent.com/esilxe/Filters/main/Filter_Android.txt
 
@@ -45,6 +45,7 @@ m.slashdot.org##.close-ad
 m.smzdm.com##.foot-banner
 m.smzdm.com##.footer-banner-wrap
 m.smzdm.com##.app-position
+m.smzdm.com##.wrapper
 
 ! 2024-02-04 https://m.ithome.com
 m.ithome.com##.op
@@ -54,3 +55,32 @@ m.ithome.com###rm-login-modal
 ! 2024-02-16 https://wiki.biligame.com
 wiki.biligame.com##.nav-head > .wiki-logo > .pic-logo
 wiki.biligame.com##.qchar-container
+
+
+! 2024-03-10 https://m.tiemug.com
+||waneal.com$all
+||k.tiemug.com$all
+||nowhern.com$all
+
+! 2024-03-10 https://m.52xbq.com
+||0223vq88m.cc$all
+||dmcduio.com$all
+m.52xbq.com##div[tag*=“nth-of-type“]
+m.52xbq.com##div[class*="baocuo"]
+m.52xbq.com##div[class*="pvafvfjt"]
+
+! 2024-03-13 https://m.weather.com.cn
+m.weather.com.cn##.newslist
+m.weather.com.cn##div.guanggao:nth-of-type(10)
+m.weather.com.cn##.tianqizlbody
+m.weather.com.cn##.sjtq
+m.weather.com.cn##.tianqizl
+m.weather.com.cn##div.picTag.news-body:nth-of-type(10)
+m.weather.com.cn##div.picTag.news-body:nth-of-type(8)
+m.weather.com.cn##div.news-body:nth-of-type(6)
+m.weather.com.cn##.footer_2019
+m.weather.com.cn##.travelPush.travelCharts
+m.weather.com.cn##.lte-entry.radius-box
+m.weather.com.cn##div.radius-box:nth-of-type(13)
+m.weather.com.cn##.news-body.radius-box
+m.weather.com.cn##.cedao
